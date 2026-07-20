@@ -1,0 +1,38 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  GeloeschterUndDeaktivierterMarktakteur:
+    attributes:
+      marktakteurMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      marktakteurStatus:
+        instantiates:
+        - xsd:element
+        range: String
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: String
+  GeloeschteUndDeaktivierteMarktakteure:
+    attributes:
+      geloeschterUndDeaktivierterMarktakteur:
+        instantiates:
+        - xsd:element
+        range: GeloeschterUndDeaktivierterMarktakteur
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      geloeschteUndDeaktivierteMarktakteure:
+        instantiates:
+        - xsd:element
+        range: GeloeschteUndDeaktivierteMarktakteure

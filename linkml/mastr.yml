@@ -1,0 +1,4967 @@
+id: https://example.org/mastr
+name: mastr
+title: Marktstammdatenregister (MaStR) Gesamtdatenexport
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  mastr: https://example.org/mastr/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: mastr
+default_range: string
+classes:
+  AnlageEegBiomasse:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der EEG- Anlage
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der EEG- Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage
+      anlagenkennzifferAnlagenregister:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister
+      anlagenkennzifferAnlagenregisterNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister. Nicht- vorhanden Flag
+      installierteLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Installierte Nettonennleistung der EEG-Anlage
+      ausschliesslicheVerwendungBiomasse:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ausschließliche Verwendung von Biomasse im Sinne der Biomasse-Verordnung
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob für die EEG-Anlage Im Rahmen des Ausschreibungsverfahren der Bundesnetzagentur ein Zuschlag erlangt wurde
+      zuschlagsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nummern
+      biogasInanspruchnahmeFlexiPraemie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob für die Anlage Flexibilitätsprämie in anspruch genommen wird
+      biogasDatumInanspruchnahmeFlexiPraemie:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der erstmaligen Inanspruchnahme der Flexibilitätsprämie
+      biogasLeistungserhoehung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob die Leistung der Anlage im Zusammenhang mit der Flexibilitätsprämie erhöht wird
+      biogasDatumLeistungserhoehung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme der Leistungserhöhung
+      biogasUmfangLeistungserhoehung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Umfang der Leistungserhöhung bei dieser Biogas-Anlage nach dem 31.07.2014
+      biogasGaserzeugungskapazitaet:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Leistungsangabe: Kapazität an Gas, das erzeugt werden kann. Gasproduktionskapazität nach Genehmigungsbescheid, bzw. anhand der eingesetzten Inputstoffe.'
+      biogasGaserzeugungskapazitaetNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Leistungsangabe: Kapazität an Gas, das erzeugt werden kann. Gasproduktionskapazität nach Genehmigungsbescheid, bzw. anhand der eingesetzten Inputstoffe. Nicht-vorhanden Flag'
+      biogasHoechstbemessungsleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Höchstbemessungsleistung der Anlage
+      biomethanErstmaligerEinsatz:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des erstmaligen ausschließlichen Einsatzes von Biomethan
+      biomethanErstmaligerEinsatzNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Datum des erstmaligen ausschließlichen Einsatzes von Biomethan. Nicht-vorhanden Flag
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageEegGeothermieGrubengasDruckentspannung:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der EEG- Anlage
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der EEG-Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage
+      anlagenkennzifferAnlagenregister:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister
+      anlagenkennzifferAnlagenregisterNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister. Nicht- vorhanden Flag
+      installierteLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Installierte Nettonennleistung der EEG-Anlage
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageEegSolar:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der EEG- Anlage
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der EEG- Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      inanspruchnahmeZahlungNachEeg:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Werden oder wurden für die Solaranlage Zahlungen des Netzbetreibers in Anspruch genommen?
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage
+      anlagenkennzifferAnlagenregister:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister
+      anlagenkennzifferAnlagenregisterNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister. Nicht- vorhanden Flag
+      installierteLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Installierte Nettonennleistung der EEG-Anlage
+      registrierungsnummerPvMeldeportal:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Durch die Bundesagentur vergeben Nummer bei der Registrierung im PV- Meldeportal
+      registrierungsnummerPvMeldeportalNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Durch die Bundesagentur vergeben Nummer bei der Registrierung im PV- Meldeportal. Nicht-vorhanden Flag
+      mieterstromZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Gibt an, ob die Solaranlage der Veräußerungsform des Mieterstromzuschlags zugeordnet wurde
+      mieterstromMeldedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      mieterstromErsteZuordnungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum, an dem die Anlage erstmalig der Veräußerungsform des Mieterstromzuschlags zugeordnet worden ist.
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob für die EEG-Anlage Im Rahmen des Ausschreibungsverfahren der Bundesnetzagentur ein Zuschlag erlangt wurde
+      zugeordneteGebotsmenge:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bezuschlagte Gebotsmenge, die der EEG-Anlage zugeordnet wurde
+      zuschlagsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nummern (Mehrfachnennung möglich)
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageEegSpeicher:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der EEG-Anlage
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der EEG-Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG- Anlage
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob für die EEG- Anlage Im Rahmen des Ausschreibungsverfahren der Bundesnetzagentur ein Zuschlag erlangt wurde
+      zuschlagsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nummern
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageEegWasser:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der EEG- Anlage
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der EEG-Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage
+      anlagenkennzifferAnlagenregister:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister
+      anlagenkennzifferAnlagenregisterNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister. Nicht- vorhanden Flag
+      installierteLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Installierte Nettonennleistung der EEG-Anlage
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      ertuechtigungIds:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Ertüchtigungen
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageEegWind:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der EEG- Anlage
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der EEG-Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      anlagenkennzifferAnlagenregister:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister
+      anlagenkennzifferAnlagenregisterNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister. Nicht- vorhanden Flag
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage
+      prototypAnlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Windenergieanlage ist als Prototyp zertifiziert.
+      pilotAnlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Windenergieanlage ist eine Pilotwindanlage
+      installierteLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Installierte Nettonennleistung der EEG-Anlage
+      verhaeltnisErtragsschaetzungReferenzertrag:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Verhältnis der Ertragseinschätzung zum Referenzertrag ermittelt nach Anlage 2 des EEG
+      verhaeltnisErtragsschaetzungReferenzertragNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Verhältnis der Ertragseinschätzung zum Referenzertrag ermittelt nach Anlage 2 des EEG. Nicht- vorhanden Flag
+      verhaeltnisReferenzertragErtrag5Jahre:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums von 5 Jahren ermittelt nach Anlage 2 des EEG
+      verhaeltnisReferenzertragErtrag5JahreNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums von 5 Jahren ermittelt nach Anlage 2 des EEG. Nicht-vorhanden Flag
+      verhaeltnisReferenzertragErtrag10Jahre:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums von 10 Jahren ermittelt nach Anlage 2 des EEG
+      verhaeltnisReferenzertragErtrag10JahreNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verhaeltnisReferenzertragErtrag15Jahre:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums von 15 Jahren ermittelt nach Anlage 2 des EEG
+      verhaeltnisReferenzertragErtrag15JahreNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums von 15 Jahren ermittelt nach Anlage 2 des EEG. Nicht-vorhanden Flag
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob für die EEG-Anlage Im Rahmen des Ausschreibungsverfahren der Bundesnetzagentur ein Zuschlag erlangt wurde
+      zuschlagsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nummern
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageGasSpeicher:
+    attributes:
+      maStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des Gas Speichers
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      speichername:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name des Gas Speichers
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum des Speichers
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageKwk:
+    attributes:
+      kwkMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Anlage
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Wurde für die KWK-Anlage Im Rahmen des Ausschreibungsverfahren der Bundesnetzagentur ein Zuschlag erlangt?
+      zuschlagnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nummer.
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Inbetriebnahmedatum der KWK-Anlage
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der KWK- Anlage
+      thermischeNutzleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Die höchste Nutzwärmeerzeugung unter Nennbedingungen, die die KWKG-Anlage abgeben kann.
+      elektrischeKwkLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Die höchste an den Generatorklemmen abgebbare elektrische Wirkleistung der Anlage
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+  AnlageStromSpeicher:
+    attributes:
+      maStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des Strom Speichers
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum des Speichers
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      nutzbareSpeicherkapazitaet:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nutzbare Speicherkapazität in kWh
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt. Katalogkategorie: Anlagenbetriebstatus'
+  Bilanzierungsgebiet:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Id des Bilanzierungsgebietes
+      yeic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Y-Code des Bilanzierungsgebietes
+      bilanzierungsgebietNetzanschlusspunkt:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bezeichnung des Bilanzierungsgebietes
+      regelzoneNetzanschlusspunkt:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Regelzone des Netzanschlusspunktes. Katalogkategorie: Regelzone'
+  EinheitBiomasse:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht-vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur- Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur- Kraftwerksnummer. Nicht-vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zu dieser Einheit zugeordneten Genehmigung
+      hauptbrennstoff:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt. Katalogkategorie: BiomasseBrennstoff'
+      biomasseart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Art der Biomasse. Katalogkategorie: BiomasseArt'
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Stromerzeugung. Katalogkategorie: TechnologieVerbrennungsanlage'
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zugeordneten EEG-Anlage
+      kwkMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der verknüpften KWK-Anlage Ist die Einheit - unter Beteiligung der
+      netzreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet Datum der Überführung in die
+      datumNetzreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Netzreserve Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der
+      kapazitaetsreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Kapazitätsreserve nach dem KapResV zugeordnet? Datum der Überführung in die
+      datumKapazitaetsreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Kapazitätsreserve
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitGasErzeuger:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameGaserzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Gaserzeugungseinheit.
+      speicherMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des zu dieser Einheit zugeordneten Speichers
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Gaserzeugung: Katalogkategorie: TechnologieGasErzeuger'
+      erzeugungsleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Leistung der Gaserzeugungseinheit
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitGasSpeicher:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameGasspeicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Gasspeichereinheit.
+      speicherart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Art der Gasspeicherung. Katalogkategorie: GasSpeicherart'
+      maximalNutzbaresArbeitsgasvolumen:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Maximal nutzbares Arbeitsgasvolumen
+      maximaleEinspeicherleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Maximale Einspeicherleistung
+      maximaleAusspeicherleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Maximale Ausspeicherleistung
+      durchschnittlicherBrennwert:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Durchschnittlicher Brennwert des Gas im Speicher
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Einheit
+      weicNa:
+        instantiates:
+        - xsd:element
+        range: Integer
+      speicherMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zu dieser Einheit zugeordneten Gasspeicheranlage
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitGasverbraucher:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameGasverbrauchsseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+      maximaleGasbezugsleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Maximale Gasbezugsleistung zur Stromerzeugung
+      einheitDientDerStromerzeugung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob die Gasverbrauchseinheit zur Stromerzeugung dient (Gaskraftwerk)
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitGenehmigung:
+    attributes:
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Genehmigung
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      art:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Art der Genehmigung. Katalogkategorie: GenehmigungsArt'
+      datum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum, ab dem die Genehmigung für Bau oder Betrieb der Stromerzeugungseinheit erteilt ist
+      behoerde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Behörde, die Genehmigung ausgestellt hat
+      aktenzeichen:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Aktenzeichen der Genehmigung, welche die Genehmigungsbehörde vergeben hat
+      frist:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum, bis zu dem gemäß der Genehmigung mit der Errichtung oder dem Betrieb der Anlage begonnen werden muss
+      fristNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Datum, bis zu dem gemäß der Genehmigung mit der Errichtung oder dem Betrieb der Anlage begonnen werden muss. Nicht-vorhanden Flag
+      wasserrechtsNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Nummer der wasserrechtlichen Genehmigung
+      wasserrechtAblaufdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum, an dem die wasserrechtliche Genehmigung abläuft.
+      wasserrechtAblaufdatumNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Datum, an dem die wasserrechtliche Genehmigung abläuft. Nicht- vorhanden Flag
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Genehmigung
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+      datumDerAntragstellung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Antragstellung
+  EinheitGeothermieGrubengasDruckentspannung:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht-vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur- Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur- Kraftwerksnummer. Nicht-vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Stromerzeugung. Katalogkategorie: TechnologieVerbrennungsanlage'
+      kwkMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der verknüpften KWK-Anlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zugeordneten EEG-Anlage
+      netzreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet
+      datumNetzreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Netzreserve
+      kapazitaetsreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapazitätsreserve nach dem KapResV zugeordnet?
+      datumKapazitaetsreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Kapazitätsreserve
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitKernkraft:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht- vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur- Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur- Kraftwerksnummer. Nicht- vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      nameKraftwerk:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung des Kraftwerks, dessen Teil die Stromerzeugungseinheit ist.
+      nameKraftwerksblock:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die Stromerzeugungseinheit ist.
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Stromerzeugung. Katalogkategorie: TechnologieKernkraft'
+      netzreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet
+      datumNetzreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Netzreserve
+      kapazitaetsreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapazitätsreserve nach dem KapResV zugeordnet?
+      datumKapazitaetsreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Kapazitätsreserve
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitSolar:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG-Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht- vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG-Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR- Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht- vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur-Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur-Kraftwerksnummer. Nicht- vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      zugeordneteWirkleistungWechselrichter:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Wechselrichterleistung der Stromerzeugungseinheit
+      anzahlModule:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anzahl der Module dieser Stromerzeugungseinheit
+      artDerSolaranlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Art der Solaranlage. Katalogkategorie: ArtDerSolaranlage'
+      leistungsbegrenzung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Die Leistung der Stromerzeugungseinheit ist auf einen bestimmten prozentualen Leistungsanteil begrenzt. Katalogkategorie: SolarLeistungsbegrenzung'
+      einheitlicheAusrichtungUndNeigungswinkel:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob einheitliche Ausrichtung und Neigungswinkel bestehen.
+      hauptausrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Die Ausrichtung bezeichnet die Himmelsrichtung. Katalogkategorie: AnlagenartSolarAusrichtung'
+      hauptausrichtungNeigungswinkel:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Neigungswinkel bezeichnet den Winkel gegenüber der Horizontalen. Katalogkategorie: AnlagenartSolarNeigungswinkel'
+      nebenausrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Die Ausrichtung bezeichnet die Himmelsrichtung. Katalogkategorie: AnlagenartSolarAusrichtung'
+      nebenausrichtungNeigungswinkel:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Neigungswinkel bezeichnet den Winkel gegenüber der Horizontalen (Nebenausrichtung). Katalogkategorie: AnlagenartSolarNeigungswinkel'
+      nutzungsbereich:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Vorrangige Nutzung des in Anspruch genommenen Gebäudes. Katalogkategorie: Nutzungsbereich'
+      buergerenergie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bürgerenergieeigenschaft der Einheit
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zugeordneten EEG-Anlage
+      groesseDerInAnspruchGenommenenFlaecheInHektar:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Größe der in Anspruch genommene Fläche
+      ueberwiegendeNutzungsartDerFlaecheVorErrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Überwiegende Nutzungsart der Fläche vor Errichtung der Anlage. Katalogkategorie: VorherigeNutzungsartengruppe'
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      speicherAmGleichenOrt:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Speicher am gleichen Ort
+      nameDesSolarparks:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Der Name des Solarparks
+      vorherigerNutzungsartenbereichDerFlaeche:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Katalog: Vorheriger Nutzungsartenbereich der Fläche'
+      zusaetzlicheMerkmaleDerFlaecheUndDerAktuellenFlaechennutzung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      lichteHoehe:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Lichte Höhe in Meter
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitStromSpeicher:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht- vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur- Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur- Kraftwerksnummer. Nicht- vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      einsatzort:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat betrieben. Katalogkategorie: Einsatzort'
+      acDcKoppelung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'AC oder DC gekoppeltes System. Katalogkategorie: Systemkopplung'
+      batterietechnologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Batterietechnologie
+      pumpbetriebLeistungsaufnahme:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Höchste elektrische Dauerleistung, die dem Netz für den Pumpbetrieb unter Nennbedingungen entnommen werden kann
+      pumpbetriebKontinuierlichRegelbar:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Wasserkraftanlage ist im Pumpbetrieb kontinuierlich regelbar
+      pumpspeichertechnologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie des Pumpspeichers. Katalogkategorie: Pumpspeichertechnologie'
+      notstromaggregat:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob die Stromerzeugungseinheit zur Versorgung bei Stromnetzstörungen dient (Notstromaggregat)
+      bestandteilGrenzkraftwerk:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Gehört die Stromerzeugungseinheit zu einem Grenzkraftwerk
+      nettonennleistungDeutschland:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeugungseinheit, die in ein deutsches Stromnetz eingespeist werden kann.
+      zugeordnenteWirkleistungWechselrichter:
+        instantiates:
+        - xsd:element
+        range: Float
+      speMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der verknüpften Speicheranlage
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zugeordneten EEG-Anlage
+      eegAnlagentyp:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Typ der Einheit. Katalogkategorie: Einheitentyp'
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Stromspeicherung. Katalogkategorie: TechnologieSpeicher'
+      gemeinsamRegistrierteSolareinheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Zum Speicher registrierte Solareinheit
+      netzreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet
+      datumNetzreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Netzreserve
+      kapazitaetsreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapazitätsreserve nach dem KapResV zugeordnet?
+      datumKapazitaetsreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Kapazitätsreserve
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitStromVerbraucher:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG-Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      nameStromverbrauchseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromverbrauchseinheit.
+      anzahlStromverbrauchseinheitenGroesser50Mw:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Anzahl einzelner Stromverbrauchseinheiten größer 50 MW
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitVerbrennung:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht-vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht- vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur- Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur- Kraftwerksnummer. Nicht- vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      nameKraftwerk:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die Stromerzeugungseinheit ist.
+      nameKraftwerksblock:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die Stromerzeugungseinheit ist.
+      anlageIstImKombibetrieb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob die Stromerzeugungseinheit im Kombibetrieb betrieben wird
+      hauptbrennstoff:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt. Katalogkategorie: VerbrennungBrennstoff'
+      bestandteilGrenzkraftwerk:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Gehört die Stromerzeugungseinheit zu einem Grenzkraftwerk
+      weitererHauptbrennstoff:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Katalogkategorie: ErweiterterWeitereBrennstoffe'
+      weitereBrennstoffe:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Katalogkategorie: ErweiterterWeitereBrennstoffe'
+      notstromaggregat:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe ob die Stromerzeugungseinheit zur Versorgung bei Stromnetzstörungen dient (Notstromaggregat)
+      kwkMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der verknüpften KWK-Anlage
+      einsatzort:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat betrieben. Katalogkategorie: Einsatzort'
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Stromerzeugung. Katalogkategorie: TechnologieVerbrennungsanlage'
+      steigerungNettonennleistungKombibetrieb:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Steigerung der Nettonennleistung durch Kombibetrieb
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      mastrNummernKombibetrieb:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummern der Einheiten im Kombibetrieb
+      datumBaubeginn:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Tatsächlicher bzw. geplanter Spatenstich auf der Baustelle
+      sicherheitsbereitschaftAbDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des Übergangs in die Sicherheitsbereitschaft
+      nettonennleistungDeutschland:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeugungseinheit, die in ein deutsches Stromnetz eingespeist werden kann.
+      ausschliesslicheVerwendungImKombibetrieb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Außschließlcihe Verwendung im Kombibetrieb
+      netzreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet
+      datumNetzreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Netzreserve
+      kapazitaetsreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapazitätsreserve nach dem KapResV zugeordnet?
+      datumKapazitaetsreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Kapazitätsreserve
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitWasser:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht- vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG-Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht-vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur- Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur- Kraftwerksnummer. Nicht- vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      nameKraftwerk:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name des Kraftwerks
+      artDerWasserkraftanlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Art der Stromerzeugung aus Wasserkraft. Katalogkategorie: ArtDerWasserkraftanlage'
+      minderungStromerzeugung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Auflagen, die zur Minderung der Stromerzeugung führen?
+      bestandteilGrenzkraftwerk:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Gehört die Stromerzeugungseinheit zu einem Grenzkraftwerk
+      nettonennleistungDeutschland:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeugungseinheit, die in ein deutsches Stromnetz eingespeist werden kann.
+      artDesZuflusses:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Welche Art von Zufluss wird zur Stromerzeugung verwendet. Katalogkategorie: Zuflussart'
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zugeordneten EEG-Anlage
+      netzreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet
+      datumNetzreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Netzreserve
+      kapazitaetsreserveZugeordnet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapazitätsreserve nach dem KapResV zugeordnet?
+      datumKapazitaetsreserve:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Überführung in die Kapazitätsreserve
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+  EinheitWind:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung'
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer des Betreibers der Einheit
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Land: Katalogkategorie: Land'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Landkreis'
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeinde'
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemeindeschlüssel'
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Postleitzahl'
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Gemarkung'
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Flur und/oder Flurstücke'
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Straße'
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Straße nicht aus dem BKG-Adressdatenbestand stammt
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Hausnummer'
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Standort der Einheit: Hausnummer. Nicht- vorhanden Flag'
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, dass die angegebene Hausnummer nicht aus dem BKG-Adressdatenbestand stammt
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Adresszusatz'
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Standort der Einheit: Ort'
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Längengrad'
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: 'Koordinaten der Einheit: Breitengrad'
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Registrierungsdatum der Einheit
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Inbetriebnahme
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der endgültigen Stilllegung der Einheit
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Beginn der vorläufigen Stilllegung der Einheit
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Wiederaufnahme des Betriebs
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angaben über optional vorhandene MaStR- Nummer aus der Bestandsanlagenverwaltung
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe über das Nichtvorhandensein in den migrierten Einheiten
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum des realen Betreiberwechsels
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Datum der Registrierung des Betreiberwechsels
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+        description: W-Code der Stromerzeugungseinheit
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: W-Code der Stromerzeugungseinheit. Nicht- vorhanden Flag
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Displayname des W-EIC
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bundesnetzagentur-Kraftwerksnummer
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bundesnetzagentur-Kraftwerksnummer. Nicht- vorhanden Flag
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Bruttoleistung in kW
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Nettonennleistung in kW
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Marktpartner-ID des Einsatzverantwortlichen
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Netzbetreiber
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Fernsteuerbarkeit der Einheit durch einen Direktvermarkter
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStRNummer der zu dieser Einheit zugeordneten Genehmigung
+      nameWindpark:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vom Betreiber frei wählbare Bezeichnung des Windparks, dessen Teil die Einheit ist
+      windAnLandOderAufSee:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Angabe, ob die Stromerzeugungseinheit an Land oder auf See errichtet wurde. Katalogkategorie: WindAnLandOderAufSee'
+      seelage:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Wird die Windenergieanlage in der Nordsee oder in der Ostsee betrieben? Katalogkategorie: Seelage'
+      gebietNachDemFlaechenentwicklungsplanNordsee:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Gebiet nach dem Flächenentwicklungsplan in der Ostsee. Katalogkategorie: GebietNachDemFlaechenentwicklungsplanNor dsee'
+      gebietNachDemFlaechenentwicklungsplanOstsee:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Gebiet nach dem Flächenentwicklungsplan in der Ostsee. Katalogkategorie: GebietNachDemFlaechenentwicklungsplanOst see'
+      hersteller:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Hersteller der Einheit. Katalogwert: Hersteller'
+      technologie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Stromerzeugung: Horizontalläufer oder Vertikalläufer. Katalogkategorie: WindanlageTechnologie'
+      typenbezeichnung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Typenbezeichnung der Einheit
+      nabenhoehe:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Die Nabenhöhe der Erzeugungseinheit
+      rotordurchmesser:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Rotordurchmesser
+      rotorblattenteisungssystem:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ein Rotorblattenteisungssystem, auch als Rotorblattenteisungsanlage bezeichnet, ist eine Vorrichtung, die dazu dient, die Rotorblätter von Windkraftanlagen eisfrei zu halten
+      auflageAbschaltungLeistungsbegrenzung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Auflagen zu Abschaltungen oder Leistungsbegrenzungen?
+      auflagenAbschaltungSchallimmissionsschutzNachts:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob Auflagen zur Abschaltung auf Grund von Schallimmissionsschutz in der Nacht bestehen
+      auflagenAbschaltungSchallimmissionsschutzTagsueber:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob Auflagen zur Abschaltung auf Grund von Schallimmissionsschutz tagsüber bestehen
+      auflagenAbschaltungSchattenwurf:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob Auflagen zur Abschaltung auf Grund von Schattenwurf bestehen
+      auflagenAbschaltungTierschutz:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob Auflagen zur Abschaltung auf Grund von Tierschutz bestehen
+      auflagenAbschaltungEiswurf:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob Auflagen zur Abschaltung auf Grund von Eiswurf bestehen
+      auflagenAbschaltungSonstige:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Angabe, ob Auflagen zur Abschaltung auf Grund von sonstigen Gründen bestehen
+      nachtkennzeichnung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Nachtkennzeichnung der Einheit
+      buergerenergie:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Bürgerenergieeigenschaft der Einheit
+      wassertiefe:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Wassertiefe am Standort der Stromerzeugungseinheit
+      kuestenentfernung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Küstenentfernung des Standort der Stromerzeugungseinheit
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der zugeordneten EEG-Anlage
+      technologieFlugwindenergieanlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Technologie der Flugwindenergieanlage Katalogkategorie: TechnologieFlugwindenergieanlage'
+      flughoehe:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Flughöhe einer Flugwindenergieanlage
+      flugradius:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Flugradius einer Flugwindenergieanlage
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Inbetriebnahme am aktuellen Standort
+      groesseDerInAnspruchGenommenenFlaeche:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Größe der in Anspruch genommenen Fläche
+      ueberwiegendeNutzungsartDerFlaecheVorErrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Überwiegende Nutzungsart der Fläche vor Errichtung Katalogkategorie: VorherigeNutzungsartengruppe'
+      vorherigerNutzungsartenbereichDerFlaeche:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Vorheriger Nutzungsartenbereich der Fläche Katalogkategorie: VorherigerNutzungsartenbereichDerFlaeche'
+  EinheitenAenderungNetzbetreiberzuordnung:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Einheit
+      lokationMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation MaStR-Nummer des
+      netzanschlusspunktMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Netzanschlusspunktes, ggf. kommasepariert MaStR-Nummer des ehemaligen
+      netzbetreiberMastrNummerAlt:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Anschluss-Netzbetreibers MaStR-Nummer des neuen Anschluss-
+      netzbetreiberMastrNummerNeu:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Netzbetreibers
+      artDerAenderung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Art der Änderung der
+      registrierungsdatumNetzbetreiberzuordnungsaenderung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Netzbetreiberzuordnungsänderung
+      netzbetreiberzuordnungsaenderungsdatum:
+        instantiates:
+        - xsd:element
+        range: DateTime
+  Einheitentyp:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: ID des Einheitentyps
+      wert:
+        instantiates:
+        - xsd:element
+        range: String
+  Ertuechtigung:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Eindeutiger Identifikator
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      eegMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die MaStR-Nummer der zugehörigen EEG-Anlage
+      ertuechtigungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Art der Ertüchtigung. Katalogkategorie: Ertüchtigungsart'
+      ertuechtigungIstZulassungspflichtig:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Ist die Ertüchtigung Zulassungspflichtig
+      leistungserhoehung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Wert der Leistungserhöhung
+      wiederinbetriebnahmeDatum:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der Wiederinbetriebnahme
+  GeloeschteUndDeaktivierteEinheit:
+    attributes:
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      einheittyp:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Typ der Einheit: Objekt: Einheitentyp'
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
+  GeloeschterUndDeaktivierterMarktakteur:
+    attributes:
+      marktakteurMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die MaStR-Nummer de s Marktakteurs
+      marktakteurStatus:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Der Status des Marktakteurs. Katalogkategorie: MarktakteurStatusKatalog'
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Datum der letzten Aktualisierung an diesem Objekt
+  Katalogkategorie:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Id der Katalogkategorie
+      name:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name der Katalogkategorie
+  Katalogwert:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Id des Katalogwertes
+      wert:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Wert des Katalogwertes
+      katalogKategorieId:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Wert der Katalogkategorie
+  Lokation:
+    attributes:
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      mastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die MaStR-Nummer der Lokation
+      nameDerTechnischenLokation:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name der technischen Lokation
+      lokationtyp:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Typ der Lokation. Systemkatalog: Lokationstyp'
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste von MaStR Nummern mit den verknüpften Stromerzeugern
+      netzanschlusspunkteMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Liste der MaStR Nummern der Netzanschlusspunkte der Lokation
+  Lokationstyp:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: ID des Lokationstyps
+      wert:
+        instantiates:
+        - xsd:element
+        range: String
+  Marktakteur:
+    attributes:
+      mastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die MaStR-Nummer des gewünschten Marktakteurs
+      datumLetzeAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      personenart:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Angabe der Personenart des Marktakteurs: Natürliche Person oder Organisation mit Personenbezug oder Organisation. Katalogkategorie: Personenart'
+      marktakteurAnrede:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Details zur Personenart. Katalogkategorie: Anrede'
+      marktakteurTitel:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Titel der natürlichen Person. Katalogkategorie: Titel'
+      marktakteurVorname:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Vorname der natürlichen Person
+      marktakteurNachname:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Nachname der natürlichen Person
+      firmenname:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name der Firma mit dem rechtsformergänzenden Namenszusatz
+      marktfunktion:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Marktfunktion des Marktakteurs. Systemkatalog: Marktfunktion'
+      rechtsform:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Rechtsform der Organsiation. Katalogkategorie: Rechtsform'
+      sonstigeRechtsform:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angabe der Rechtsform, wenn Sonstige gewählt wurde
+      marktrollen:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Auflistung der zugeordneten Marktrollen und deren Daten. Kommasepariert. Objekt: Marktrolle'
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Das Land, in dem der Marktakteur seinen Sitz hat. Katalogkategorie: Land'
+      region:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Region
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die Straße, in der der Marktakteur seinen Sitz hat.
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die Hausnummer, an der der Marktakteur seinen Sitz hat.
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Hausnummer, an der der Marktakteur seinen Sitz hat. Nicht- vorhanden Flag
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Optionaler Zusatz zur Anschrift des Marktakteurs.
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die Postleitzahl, in deren Gebiet der Marktakteur seinen Sitz hat.
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Der Ort, in dem der Marktakteur seinen Sitz hat.
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Das Bundesland, in dem der Marktakteur seinen Sitz hat. Katalogkategorie: Bundesland'
+      netz:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Netz des Netzbetreibers (nur bei Netzbetreibern)
+      nuts2:
+        instantiates:
+        - xsd:element
+        range: String
+        description: NUTS-II-Region
+      email:
+        instantiates:
+        - xsd:element
+        range: String
+        description: E-Mail des Marktakteurs
+      telefon:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Telefonnummer des Marktakteurs
+      fax:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Faxnummer des Marktakteurs
+      faxNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Faxnummer des Marktakteurs. Nicht-vorhanden Flag
+      webseite:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Internetadresse des Marktakteurs
+      webseiteNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Internetadresse des Marktakteurs. Nicht-vorhanden Flag
+      registergericht:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Angabe des Registergerichts, bei dem die Organisation registriert ist. Katalogkategorie: Amtsgericht'
+      registergerichtAusland:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Angabe des Registergerichts, bei dem die Organisation registriert ist, wenn im Ausland
+      registernummerPraefix:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Präfix mit dem die Registernummer beginnt
+      registernummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Registernummer des Marktakteurs
+      registernummerAusland:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Registernummer des Marktakteurs, wenn im Ausland
+      taetigkeitsbeginn:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Tätigkeitsbeginn des Marktakteurs
+      acerCode:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Der ACER-Code des Marktakteurs
+      acerCodeNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Der ACER-Code des Marktakteurs. Nicht-vorhanden Flag
+      umsatzsteueridentifikationsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die USt-Id Nummer des Marktakteurs
+      umsatzsteueridentifikationsnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die USt-Id Nummer des Marktakteurs. Nicht-vorhanden Flag
+      taetigkeitsende:
+        instantiates:
+        - xsd:element
+        range: Date
+        description: Das Tätigkeitsende des Marktakteurs
+      bundesnetzagenturBetriebsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: BNetzA-Betriebsnummer des Netzbetreibers (nur bei Stromnetzbetreiber, Gasnetzbetreiber)
+      bundesnetzagenturBetriebsnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: BNetzA-Betriebsnummer des Netzbetreibers (nur bei Stromnetzbetreiber, Gasnetzbetreiber). Nicht- vorhanden Flag
+      landAnZustelladresse:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Land - Zustelladresse. Katalogkategorie: Land'
+      postleitzahlAnZustelladresse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Postleitzahl - Zustelladresse
+      ortAnZustelladresse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Ort - Zustelladresse
+      strasseAnZustelladresse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Straße - Zustelladresse
+      hausnummerAnZustelladresse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Hausnummer - Zustelladresse
+      hausnummerAnZustelladresseNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Hausnummer - Zustelladresse
+      adresszusatzAnZustelladresse:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Adresszusatz - Zustelladresse
+      kmu:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Kleinst-, Klein- oder mittleres Unternehmen?
+      registrierungsdatumMarktakteur:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Registrierungsdatum
+      hauptwirtdschaftszweigAbteilung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      hauptwirtdschaftszweigGruppe:
+        instantiates:
+        - xsd:element
+        range: Integer
+      hauptwirtdschaftszweigAbschnitt:
+        instantiates:
+        - xsd:element
+        range: Integer
+      direktvermarktungsunternehmen:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Direktvermarktungsunternehmen
+      belieferungVonLetztverbrauchernStrom:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Belieferung von Letztverbrauchern
+      belieferungHaushaltskundenStrom:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Belieferung von Haushaltskunden mit Strom
+      gasgrosshaendler:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Gasgroßhändler
+      stromgrosshaendler:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Stromgroßhändler
+      belieferungVonLetztverbrauchernGas:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Belieferung von Letztverbrauchern
+      belieferungHaushaltskundenGas:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Belieferung von Haushaltskunden mit Gas
+      webportalDesNetzbetreibers:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Webportal des Netzbetreibers
+  MarktakteurUndRolle:
+    attributes:
+      marktakteurMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des Marktakteurs der diese Rolle angegeben hat
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      mastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die MaStR-Nummer der Marktrolle des Marktakteurs entsprechend dem Nummernkreis
+      marktrolle:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die Marktrolle des Marktakteurs.
+      bundesnetzagenturBetriebsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: BNetzA-Betriebsnummer (nur bei Messtellenbetreiber, Stromlieferanten, Transportkunden)
+      bundesnetzagenturBetriebsnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: BNetzA-Betriebsnummer (nur bei Messtellenbetreiber, Stromlieferanten, Transportkunden). Nicht-vorhanden Flag
+      marktpartneridentifikationsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die Marktpartneridentifikationsnummer (MP-ID) (nicht bei Übertragungsnetzbetreiber, Marktgebietsverantwortlichen)
+      marktpartneridentifikationsnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Die Marktpartneridentifikationsnummer (MP-ID) (nicht bei Übertragungsnetzbetreiber, Marktgebietsverantwortlichen). Nicht-vorhanden Flag
+      kontaktdatenMarktrolle:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name des verantwortlichen Marktakteursvertreter und dessen Kontaktdaten (E-Mail, Telefon)
+  Marktfunktion:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: ID der Marktfunktion
+      wert:
+        instantiates:
+        - xsd:element
+        range: String
+  Marktrolle:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: ID der Rolle
+      wert:
+        instantiates:
+        - xsd:element
+        range: String
+  Netz:
+    attributes:
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      mastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die MaStR-Nummer des Netzes
+      sparte:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Spartes des Netzes, Katalogkategorie: Sparte'
+      kundenAngeschlossen:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Sind Kunden angeschlossen
+      geschlossenesVerteilnetz:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Handelt es sich um ein geschlossenes Verteilnetz
+      bezeichnung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Die Bezeichnung des Netzes
+      marktgebiet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Marktgebiet des Gasnetzes. Katalogkategorie: Marktgebiet'
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: String
+        description: 'Bundesländer des Netzes. Katalogkategorie: Bundesland Bilanzierungsgebiete des Netzgebietes (bei'
+      bilanzierungsgebiete:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Stromnetzbetreibern), ggf. Mehrfachangabe
+  Netzanschlusspunkt:
+    attributes:
+      netzanschlusspunktMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des Netzanschlusspunktes
+      netzanschlusspunktBezeichnung:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Bezeichnung des Netzanschlusspunktes
+      letzteAenderung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+        description: Datum der letzten Aktualisierung an diesem Objekt
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer der Lokation
+      nameDerTechnischenLokation:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Name der technischen Lokation
+      lokationtyp:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Typ der Lokation. Systemkatalog: Lokationstyp'
+      maximaleEinspeiseleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Maximale Einspeiseleistung am Netzanschlusspunkt
+      maximaleAusspeiseleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Technisch maximale Ausspeiseleistung am jeweiligen Netzanschlusspunkt (nur bei Gasverbrauchern)
+      gasqualitaet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Gasqualität am Netzanschlusspunkt. Katalogwert: Gasqualität'
+      messlokation:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Messlokation gemäß Metering Code, VDE-AR-N 4400
+      marktgebiet:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Marktgebiet des Netzanschlusspunktes. Katalogkategorie: Marktgebiet'
+      spannungsebene:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Spannungsebene des Netzanschlusspunktes. Katalogwert: Spannungsebene'
+      nettoengpassleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Erzielbare Dauerleistung der Erzeugungseinheiten am jeweiligen Netzanschlusspunkt
+      bilanzierungsgebietNetzanschlusspunktId:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Id des Bilanzierungsgebietes
+      netzanschlusskapazitaet:
+        instantiates:
+        - xsd:element
+        range: Float
+        description: Kapazität des Netzanschlusspunktes
+      regelzoneNetzanschlusspunkt:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: 'Regelzone des Netzanschlusspunktes. Katalogkategorie: Regelzone'
+      netzMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: MaStR-Nummer des Netzes an dem der Netzanschlusspunkt angeschlossen ist
+      nochInPlanung:
+        instantiates:
+        - xsd:element
+        range: Integer
+        description: Kennzeichen, ob der Anschluss noch in Planung ist MaStR-Nummer des
+      netzbetreiberMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+        description: Netzbetreibers

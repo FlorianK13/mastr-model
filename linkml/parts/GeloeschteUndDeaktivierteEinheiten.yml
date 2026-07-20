@@ -1,0 +1,46 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  GeloeschteUndDeaktivierteEinheit:
+    attributes:
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      einheittyp:
+        instantiates:
+        - xsd:element
+        range: Integer
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+  GeloeschteUndDeaktivierteEinheiten:
+    attributes:
+      geloeschteUndDeaktivierteEinheit:
+        instantiates:
+        - xsd:element
+        range: GeloeschteUndDeaktivierteEinheit
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      geloeschteUndDeaktivierteEinheiten:
+        instantiates:
+        - xsd:element
+        range: GeloeschteUndDeaktivierteEinheiten

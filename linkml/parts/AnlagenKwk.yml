@@ -1,0 +1,66 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  AnlageKwk:
+    attributes:
+      kwkMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+      zuschlagnummer:
+        instantiates:
+        - xsd:element
+        range: String
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      thermischeNutzleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+      elektrischeKwkLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+  AnlagenKwk:
+    attributes:
+      anlageKwk:
+        instantiates:
+        - xsd:element
+        range: AnlageKwk
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      anlagenKwk:
+        instantiates:
+        - xsd:element
+        range: AnlagenKwk

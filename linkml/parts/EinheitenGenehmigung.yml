@@ -1,0 +1,82 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  EinheitGenehmigung:
+    attributes:
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      art:
+        instantiates:
+        - xsd:element
+        range: Integer
+      datum:
+        instantiates:
+        - xsd:element
+        range: Date
+      behoerde:
+        instantiates:
+        - xsd:element
+        range: String
+      aktenzeichen:
+        instantiates:
+        - xsd:element
+        range: String
+      frist:
+        instantiates:
+        - xsd:element
+        range: Date
+      fristNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      wasserrechtsNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      wasserrechtAblaufdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      wasserrechtAblaufdatumNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+      datumDerAntragstellung:
+        instantiates:
+        - xsd:element
+        range: Date
+  EinheitenGenehmigung:
+    attributes:
+      einheitGenehmigung:
+        instantiates:
+        - xsd:element
+        range: EinheitGenehmigung
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      einheitenGenehmigung:
+        instantiates:
+        - xsd:element
+        range: EinheitenGenehmigung

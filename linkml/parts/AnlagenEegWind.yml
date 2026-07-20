@@ -1,0 +1,114 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  AnlageEegWind:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      anlagenkennzifferAnlagenregister:
+        instantiates:
+        - xsd:element
+        range: String
+      anlagenkennzifferAnlagenregisterNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+      prototypAnlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+      pilotAnlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+      installierteLeistung:
+        instantiates:
+        - xsd:element
+        range: Float
+      verhaeltnisErtragsschaetzungReferenzertrag:
+        instantiates:
+        - xsd:element
+        range: Float
+      verhaeltnisErtragsschaetzungReferenzertragNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verhaeltnisReferenzertragErtrag5Jahre:
+        instantiates:
+        - xsd:element
+        range: Float
+      verhaeltnisReferenzertragErtrag5JahreNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verhaeltnisReferenzertragErtrag10Jahre:
+        instantiates:
+        - xsd:element
+        range: Float
+      verhaeltnisReferenzertragErtrag10JahreNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verhaeltnisReferenzertragErtrag15Jahre:
+        instantiates:
+        - xsd:element
+        range: Float
+      verhaeltnisReferenzertragErtrag15JahreNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+      zuschlagsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+  AnlagenEegWind:
+    attributes:
+      anlageEegWind:
+        instantiates:
+        - xsd:element
+        range: AnlageEegWind
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      anlagenEegWind:
+        instantiates:
+        - xsd:element
+        range: AnlagenEegWind

@@ -1,0 +1,58 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  AnlageEegSpeicher:
+    attributes:
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      eegInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      anlagenschluesselEeg:
+        instantiates:
+        - xsd:element
+        range: String
+      ausschreibungZuschlag:
+        instantiates:
+        - xsd:element
+        range: Integer
+      zuschlagsnummer:
+        instantiates:
+        - xsd:element
+        range: String
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+  AnlagenEegSpeicher:
+    attributes:
+      anlageEegSpeicher:
+        instantiates:
+        - xsd:element
+        range: AnlageEegSpeicher
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      anlagenEegSpeicher:
+        instantiates:
+        - xsd:element
+        range: AnlagenEegSpeicher

@@ -1,0 +1,12 @@
+[project]
+name = "mastr-model"
+version = "0.1.0"
+description = "Using LinkML to represent the Marktstammdatenregister (MaStR) data model"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "linkml>=1.11.1",
+    "pdfplumber>=0.11.10",
+    "ruamel-yaml>=0.19.1",
+    "schema-automator>=0.5.6",
+]

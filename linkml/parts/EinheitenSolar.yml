@@ -1,0 +1,310 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  EinheitSolar:
+    attributes:
+      einheitMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      lokationMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      netzbetreiberpruefungStatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      netzbetreiberpruefungDatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      anlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      land:
+        instantiates:
+        - xsd:element
+        range: Integer
+      bundesland:
+        instantiates:
+        - xsd:element
+        range: Integer
+      landkreis:
+        instantiates:
+        - xsd:element
+        range: String
+      gemeinde:
+        instantiates:
+        - xsd:element
+        range: String
+      gemeindeschluessel:
+        instantiates:
+        - xsd:element
+        range: String
+      postleitzahl:
+        instantiates:
+        - xsd:element
+        range: String
+      strasse:
+        instantiates:
+        - xsd:element
+        range: String
+      gemarkung:
+        instantiates:
+        - xsd:element
+        range: String
+      flurFlurstuecknummern:
+        instantiates:
+        - xsd:element
+        range: String
+      strasseNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+      hausnummer:
+        instantiates:
+        - xsd:element
+        range: String
+      hausnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      hausnummerNichtGefunden:
+        instantiates:
+        - xsd:element
+        range: Integer
+      adresszusatz:
+        instantiates:
+        - xsd:element
+        range: String
+      ort:
+        instantiates:
+        - xsd:element
+        range: String
+      laengengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+      breitengrad:
+        instantiates:
+        - xsd:element
+        range: Float
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      inbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      datumEndgueltigeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+      datumBeginnVoruebergehendeStilllegung:
+        instantiates:
+        - xsd:element
+        range: Date
+      datumWiederaufnahmeBetrieb:
+        instantiates:
+        - xsd:element
+        range: Date
+      geplantesInbetriebnahmedatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      einheitSystemstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      einheitBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      bestandsanlageMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      nichtVorhandenInMigriertenEinheiten:
+        instantiates:
+        - xsd:element
+        range: Integer
+      altAnlagenbetreiberMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      datumDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+      datumRegistrierungDesBetreiberwechsels:
+        instantiates:
+        - xsd:element
+        range: Date
+      nameStromerzeugungseinheit:
+        instantiates:
+        - xsd:element
+        range: String
+      weic:
+        instantiates:
+        - xsd:element
+        range: String
+      weicNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      weicDisplayName:
+        instantiates:
+        - xsd:element
+        range: String
+      kraftwerksnummer:
+        instantiates:
+        - xsd:element
+        range: String
+      kraftwerksnummerNv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      energietraeger:
+        instantiates:
+        - xsd:element
+        range: Integer
+      bruttoleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+      nettonennleistung:
+        instantiates:
+        - xsd:element
+        range: Float
+      anschlussAnHoechstOderHochSpannung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      fernsteuerbarkeitNb:
+        instantiates:
+        - xsd:element
+        range: Integer
+      fernsteuerbarkeitDv:
+        instantiates:
+        - xsd:element
+        range: Integer
+      einspeisungsart:
+        instantiates:
+        - xsd:element
+        range: Integer
+      zugeordneteWirkleistungWechselrichter:
+        instantiates:
+        - xsd:element
+        range: Float
+      anzahlModule:
+        instantiates:
+        - xsd:element
+        range: Integer
+      artDerSolaranlage:
+        instantiates:
+        - xsd:element
+        range: Integer
+      leistungsbegrenzung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      einheitlicheAusrichtungUndNeigungswinkel:
+        instantiates:
+        - xsd:element
+        range: Integer
+      hauptausrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      hauptausrichtungNeigungswinkel:
+        instantiates:
+        - xsd:element
+        range: Integer
+      nebenausrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      nebenausrichtungNeigungswinkel:
+        instantiates:
+        - xsd:element
+        range: Integer
+      nutzungsbereich:
+        instantiates:
+        - xsd:element
+        range: Integer
+      buergerenergie:
+        instantiates:
+        - xsd:element
+        range: Integer
+      eegMaStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      groesseDerInAnspruchGenommenenFlaecheInHektar:
+        instantiates:
+        - xsd:element
+        range: Float
+      ueberwiegendeNutzungsartDerFlaecheVorErrichtung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      einsatzverantwortlicher:
+        instantiates:
+        - xsd:element
+        range: String
+      genMastrNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      speicherAmGleichenOrt:
+        instantiates:
+        - xsd:element
+        range: Integer
+      nameDesSolarparks:
+        instantiates:
+        - xsd:element
+        range: String
+      vorherigerNutzungsartenbereichDerFlaeche:
+        instantiates:
+        - xsd:element
+        range: Integer
+      zusaetzlicheMerkmaleDerFlaecheUndDerAktuellenFlaechennutzung:
+        instantiates:
+        - xsd:element
+        range: Integer
+      lichteHoehe:
+        instantiates:
+        - xsd:element
+        range: Float
+      inbetriebnahmedatumAmAktuellenStandort:
+        instantiates:
+        - xsd:element
+        range: DateTime
+  EinheitenSolar:
+    attributes:
+      einheitSolar:
+        instantiates:
+        - xsd:element
+        range: EinheitSolar
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      einheitenSolar:
+        instantiates:
+        - xsd:element
+        range: EinheitenSolar

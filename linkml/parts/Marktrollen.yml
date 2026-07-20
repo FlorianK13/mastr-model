@@ -1,0 +1,34 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  Marktrolle:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+      wert:
+        instantiates:
+        - xsd:element
+        range: String
+  Marktrollen:
+    attributes:
+      marktrolle:
+        instantiates:
+        - xsd:element
+        range: Marktrolle
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      marktrollen:
+        instantiates:
+        - xsd:element
+        range: Marktrollen

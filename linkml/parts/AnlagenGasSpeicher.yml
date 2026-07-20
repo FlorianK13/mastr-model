@@ -1,0 +1,50 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  AnlageGasSpeicher:
+    attributes:
+      maStRNummer:
+        instantiates:
+        - xsd:element
+        range: String
+      datumLetzteAktualisierung:
+        instantiates:
+        - xsd:element
+        range: DateTime
+      speichername:
+        instantiates:
+        - xsd:element
+        range: String
+      registrierungsdatum:
+        instantiates:
+        - xsd:element
+        range: Date
+      anlageBetriebsstatus:
+        instantiates:
+        - xsd:element
+        range: Integer
+      verknuepfteEinheitenMaStRNummern:
+        instantiates:
+        - xsd:element
+        range: String
+  AnlagenGasSpeicher:
+    attributes:
+      anlageGasSpeicher:
+        instantiates:
+        - xsd:element
+        range: AnlageGasSpeicher
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      anlagenGasSpeicher:
+        instantiates:
+        - xsd:element
+        range: AnlagenGasSpeicher

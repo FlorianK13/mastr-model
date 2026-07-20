@@ -1,0 +1,42 @@
+name: test-schema
+id: http://example.org/test-schema
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  test_schema: http://example.org/test-schema/
+  xsd: http://www.w3.org/2001/XMLSchema
+default_prefix: test_schema
+default_range: string
+classes:
+  Bilanzierungsgebiet:
+    attributes:
+      id:
+        instantiates:
+        - xsd:element
+        range: Integer
+      yeic:
+        instantiates:
+        - xsd:element
+        range: String
+      bilanzierungsgebietNetzanschlusspunkt:
+        instantiates:
+        - xsd:element
+        range: String
+      regelzoneNetzanschlusspunkt:
+        instantiates:
+        - xsd:element
+        range: Integer
+  Bilanzierungsgebiete:
+    attributes:
+      bilanzierungsgebiet:
+        instantiates:
+        - xsd:element
+        range: Bilanzierungsgebiet
+  SchemaRoot:
+    description: Entry point of the schema, treated as a class
+    attributes:
+      bilanzierungsgebiete:
+        instantiates:
+        - xsd:element
+        range: Bilanzierungsgebiete
