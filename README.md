@@ -32,3 +32,6 @@ touched by the generator.
 
 ## AI Usage
 The python scripts in this repo were created by LLMs.
+
+## License
+The source docs files (xsd and Dokumentation MaStR Gesamtdatenexport.pdf) are from the Marktstammdatenregister, which is licensed under the **Datenlizenz Deutschland – Namensnennung – Version 2.0** (DL-DE-BY-2.0) | Copyright: [Marktstammdatenregister](https://www.marktstammdatenregister.de/MaStR) - © Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen | [DL-DE-BY-2.0](https://www.govdata.de/dl-de/by-2-0).
