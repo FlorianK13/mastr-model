@@ -1,0 +1,2073 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LinkML-Datenmodell des Marktstammdatenregister (MaStR) Gesamtdatenexports">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Schema - Marktstammdatenregister (MaStR) Datenmodell</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#marktstammdatenregister-mastr-gesamtdatenexport" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Marktstammdatenregister (MaStR) Datenmodell" class="md-header__button md-logo" aria-label="Marktstammdatenregister (MaStR) Datenmodell" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Marktstammdatenregister (MaStR) Datenmodell
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FlorianK13/mastr-model" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mastr-model
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Marktstammdatenregister (MaStR) Datenmodell" class="md-nav__button md-logo" aria-label="Marktstammdatenregister (MaStR) Datenmodell" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Marktstammdatenregister (MaStR) Datenmodell
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FlorianK13/mastr-model" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mastr-model
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subsets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subsets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="marktstammdatenregister-mastr-gesamtdatenexport">Marktstammdatenregister (MaStR) Gesamtdatenexport</h1>
+<p>URI: https://example.org/mastr</p>
+<p>Name: mastr</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="classes/Anlage/">Anlage</a></td>
+<td>Gemeinsame Attribute der Anlage-Klassen</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageEegBiomasse/">AnlageEegBiomasse</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageEegGeothermieGrubengasDruckentspannung/">AnlageEegGeothermieGrubengasDruckentspannung</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageEegSolar/">AnlageEegSolar</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageEegSpeicher/">AnlageEegSpeicher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageEegWasser/">AnlageEegWasser</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageEegWind/">AnlageEegWind</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageGasSpeicher/">AnlageGasSpeicher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageKwk/">AnlageKwk</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/AnlageStromSpeicher/">AnlageStromSpeicher</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Bilanzierungsgebiet/">Bilanzierungsgebiet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Einheit/">Einheit</a></td>
+<td>Gemeinsame Attribute der Einheit-Klassen</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitBiomasse/">EinheitBiomasse</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitGasErzeuger/">EinheitGasErzeuger</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitGasSpeicher/">EinheitGasSpeicher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitGasverbraucher/">EinheitGasverbraucher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitGeothermieGrubengasDruckentspannung/">EinheitGeothermieGrubengasDruckentspannung</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitKernkraft/">EinheitKernkraft</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitSolar/">EinheitSolar</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitStromSpeicher/">EinheitStromSpeicher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitStromVerbraucher/">EinheitStromVerbraucher</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitVerbrennung/">EinheitVerbrennung</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitWasser/">EinheitWasser</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="classes/EinheitWind/">EinheitWind</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/EinheitenAenderungNetzbetreiberzuordnung/">EinheitenAenderungNetzbetreiberzuordnung</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Einheitentyp/">Einheitentyp</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/EinheitGenehmigung/">EinheitGenehmigung</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Ertuechtigung/">Ertuechtigung</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/GeloeschterUndDeaktivierterMarktakteur/">GeloeschterUndDeaktivierterMarktakteur</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/GeloeschteUndDeaktivierteEinheit/">GeloeschteUndDeaktivierteEinheit</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Katalogkategorie/">Katalogkategorie</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Katalogwert/">Katalogwert</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Lokation/">Lokation</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Lokationstyp/">Lokationstyp</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Marktakteur/">Marktakteur</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/MarktakteurUndRolle/">MarktakteurUndRolle</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Marktfunktion/">Marktfunktion</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Marktrolle/">Marktrolle</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Netz/">Netz</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="classes/Netzanschlusspunkt/">Netzanschlusspunkt</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="slots/acDcKoppelung/">acDcKoppelung</a></td>
+<td>AC oder DC gekoppeltes System</td>
+</tr>
+<tr>
+<td><a href="slots/acerCode/">acerCode</a></td>
+<td>Der ACER-Code des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/acerCodeNv/">acerCodeNv</a></td>
+<td>Der ACER-Code des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/adresszusatz/">adresszusatz</a></td>
+<td>Standort der Einheit: Adresszusatz</td>
+</tr>
+<tr>
+<td><a href="slots/adresszusatzAnZustelladresse/">adresszusatzAnZustelladresse</a></td>
+<td>Adresszusatz - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/aktenzeichen/">aktenzeichen</a></td>
+<td>Aktenzeichen der Genehmigung, welche die Genehmigungsbehörde vergeben hat</td>
+</tr>
+<tr>
+<td><a href="slots/altAnlagenbetreiberMastrNummer/">altAnlagenbetreiberMastrNummer</a></td>
+<td>MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel...</td>
+</tr>
+<tr>
+<td><a href="slots/anlageBetriebsstatus/">anlageBetriebsstatus</a></td>
+<td>Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt</td>
+</tr>
+<tr>
+<td><a href="slots/anlageIstImKombibetrieb/">anlageIstImKombibetrieb</a></td>
+<td>Angabe ob die Stromerzeugungseinheit im Kombibetrieb betrieben wird</td>
+</tr>
+<tr>
+<td><a href="slots/anlagenbetreiberMastrNummer/">anlagenbetreiberMastrNummer</a></td>
+<td>MaStRNummer des Betreibers der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/anlagenkennzifferAnlagenregister/">anlagenkennzifferAnlagenregister</a></td>
+<td>Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister</td>
+</tr>
+<tr>
+<td><a href="slots/anlagenkennzifferAnlagenregisterNv/">anlagenkennzifferAnlagenregisterNv</a></td>
+<td>Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister</td>
+</tr>
+<tr>
+<td><a href="slots/anlagenschluesselEeg/">anlagenschluesselEeg</a></td>
+<td>Vom Netzbetreiber vergebene Kennziffer zur Identifikation der EEG-Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/anschlussAnHoechstOderHochSpannung/">anschlussAnHoechstOderHochSpannung</a></td>
+<td>Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschl...</td>
+</tr>
+<tr>
+<td><a href="slots/anzahlModule/">anzahlModule</a></td>
+<td>Anzahl der Module dieser Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/anzahlStromverbrauchseinheitenGroesser50Mw/">anzahlStromverbrauchseinheitenGroesser50Mw</a></td>
+<td>Anzahl einzelner Stromverbrauchseinheiten größer 50 MW</td>
+</tr>
+<tr>
+<td><a href="slots/art/">art</a></td>
+<td>Art der Genehmigung</td>
+</tr>
+<tr>
+<td><a href="slots/artDerAenderung/">artDerAenderung</a></td>
+<td>Art der Änderung der</td>
+</tr>
+<tr>
+<td><a href="slots/artDerSolaranlage/">artDerSolaranlage</a></td>
+<td>Art der Solaranlage</td>
+</tr>
+<tr>
+<td><a href="slots/artDerWasserkraftanlage/">artDerWasserkraftanlage</a></td>
+<td>Art der Stromerzeugung aus Wasserkraft</td>
+</tr>
+<tr>
+<td><a href="slots/artDesZuflusses/">artDesZuflusses</a></td>
+<td>Welche Art von Zufluss wird zur Stromerzeugung verwendet</td>
+</tr>
+<tr>
+<td><a href="slots/auflageAbschaltungLeistungsbegrenzung/">auflageAbschaltungLeistungsbegrenzung</a></td>
+<td>Auflagen zu Abschaltungen oder Leistungsbegrenzungen?</td>
+</tr>
+<tr>
+<td><a href="slots/auflagenAbschaltungEiswurf/">auflagenAbschaltungEiswurf</a></td>
+<td>Angabe, ob Auflagen zur Abschaltung auf Grund von Eiswurf bestehen</td>
+</tr>
+<tr>
+<td><a href="slots/auflagenAbschaltungSchallimmissionsschutzNachts/">auflagenAbschaltungSchallimmissionsschutzNachts</a></td>
+<td>Angabe, ob Auflagen zur Abschaltung auf Grund von Schallimmissionsschutz in d...</td>
+</tr>
+<tr>
+<td><a href="slots/auflagenAbschaltungSchallimmissionsschutzTagsueber/">auflagenAbschaltungSchallimmissionsschutzTagsueber</a></td>
+<td>Angabe, ob Auflagen zur Abschaltung auf Grund von Schallimmissionsschutz tags...</td>
+</tr>
+<tr>
+<td><a href="slots/auflagenAbschaltungSchattenwurf/">auflagenAbschaltungSchattenwurf</a></td>
+<td>Angabe, ob Auflagen zur Abschaltung auf Grund von Schattenwurf bestehen</td>
+</tr>
+<tr>
+<td><a href="slots/auflagenAbschaltungSonstige/">auflagenAbschaltungSonstige</a></td>
+<td>Angabe, ob Auflagen zur Abschaltung auf Grund von sonstigen Gründen bestehen</td>
+</tr>
+<tr>
+<td><a href="slots/auflagenAbschaltungTierschutz/">auflagenAbschaltungTierschutz</a></td>
+<td>Angabe, ob Auflagen zur Abschaltung auf Grund von Tierschutz bestehen</td>
+</tr>
+<tr>
+<td><a href="slots/ausschliesslicheVerwendungBiomasse/">ausschliesslicheVerwendungBiomasse</a></td>
+<td>Ausschließliche Verwendung von Biomasse im Sinne der Biomasse-Verordnung</td>
+</tr>
+<tr>
+<td><a href="slots/ausschliesslicheVerwendungImKombibetrieb/">ausschliesslicheVerwendungImKombibetrieb</a></td>
+<td>Außschließlcihe Verwendung im Kombibetrieb</td>
+</tr>
+<tr>
+<td><a href="slots/ausschreibungZuschlag/">ausschreibungZuschlag</a></td>
+<td>Angabe ob für die EEG-Anlage Im Rahmen des Ausschreibungsverfahren der Bundes...</td>
+</tr>
+<tr>
+<td><a href="slots/batterietechnologie/">batterietechnologie</a></td>
+<td>Batterietechnologie</td>
+</tr>
+<tr>
+<td><a href="slots/behoerde/">behoerde</a></td>
+<td>Behörde, die Genehmigung ausgestellt hat</td>
+</tr>
+<tr>
+<td><a href="slots/belieferungHaushaltskundenGas/">belieferungHaushaltskundenGas</a></td>
+<td>Belieferung von Haushaltskunden mit Gas</td>
+</tr>
+<tr>
+<td><a href="slots/belieferungHaushaltskundenStrom/">belieferungHaushaltskundenStrom</a></td>
+<td>Belieferung von Haushaltskunden mit Strom</td>
+</tr>
+<tr>
+<td><a href="slots/belieferungVonLetztverbrauchernGas/">belieferungVonLetztverbrauchernGas</a></td>
+<td>Belieferung von Letztverbrauchern</td>
+</tr>
+<tr>
+<td><a href="slots/belieferungVonLetztverbrauchernStrom/">belieferungVonLetztverbrauchernStrom</a></td>
+<td>Belieferung von Letztverbrauchern</td>
+</tr>
+<tr>
+<td><a href="slots/bestandsanlageMastrNummer/">bestandsanlageMastrNummer</a></td>
+<td>Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltu...</td>
+</tr>
+<tr>
+<td><a href="slots/bestandteilGrenzkraftwerk/">bestandteilGrenzkraftwerk</a></td>
+<td>Gehört die Stromerzeugungseinheit zu einem Grenzkraftwerk</td>
+</tr>
+<tr>
+<td><a href="slots/bezeichnung/">bezeichnung</a></td>
+<td>Die Bezeichnung des Netzes</td>
+</tr>
+<tr>
+<td><a href="slots/bilanzierungsgebiete/">bilanzierungsgebiete</a></td>
+<td>Stromnetzbetreibern), ggf</td>
+</tr>
+<tr>
+<td><a href="slots/bilanzierungsgebietNetzanschlusspunkt/">bilanzierungsgebietNetzanschlusspunkt</a></td>
+<td>Bezeichnung des Bilanzierungsgebietes</td>
+</tr>
+<tr>
+<td><a href="slots/bilanzierungsgebietNetzanschlusspunktId/">bilanzierungsgebietNetzanschlusspunktId</a></td>
+<td>Id des Bilanzierungsgebietes</td>
+</tr>
+<tr>
+<td><a href="slots/biogasDatumInanspruchnahmeFlexiPraemie/">biogasDatumInanspruchnahmeFlexiPraemie</a></td>
+<td>Datum der erstmaligen Inanspruchnahme der Flexibilitätsprämie</td>
+</tr>
+<tr>
+<td><a href="slots/biogasDatumLeistungserhoehung/">biogasDatumLeistungserhoehung</a></td>
+<td>Datum der Inbetriebnahme der Leistungserhöhung</td>
+</tr>
+<tr>
+<td><a href="slots/biogasGaserzeugungskapazitaet/">biogasGaserzeugungskapazitaet</a></td>
+<td>Leistungsangabe: Kapazität an Gas, das erzeugt werden kann</td>
+</tr>
+<tr>
+<td><a href="slots/biogasGaserzeugungskapazitaetNv/">biogasGaserzeugungskapazitaetNv</a></td>
+<td>Leistungsangabe: Kapazität an Gas, das erzeugt werden kann</td>
+</tr>
+<tr>
+<td><a href="slots/biogasHoechstbemessungsleistung/">biogasHoechstbemessungsleistung</a></td>
+<td>Höchstbemessungsleistung der Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/biogasInanspruchnahmeFlexiPraemie/">biogasInanspruchnahmeFlexiPraemie</a></td>
+<td>Angabe ob für die Anlage Flexibilitätsprämie in anspruch genommen wird</td>
+</tr>
+<tr>
+<td><a href="slots/biogasLeistungserhoehung/">biogasLeistungserhoehung</a></td>
+<td>Angabe, ob die Leistung der Anlage im Zusammenhang mit der Flexibilitätsprämi...</td>
+</tr>
+<tr>
+<td><a href="slots/biogasUmfangLeistungserhoehung/">biogasUmfangLeistungserhoehung</a></td>
+<td>Umfang der Leistungserhöhung bei dieser Biogas-Anlage nach dem 31</td>
+</tr>
+<tr>
+<td><a href="slots/biomasseart/">biomasseart</a></td>
+<td>Art der Biomasse</td>
+</tr>
+<tr>
+<td><a href="slots/biomethanErstmaligerEinsatz/">biomethanErstmaligerEinsatz</a></td>
+<td>Datum des erstmaligen ausschließlichen Einsatzes von Biomethan</td>
+</tr>
+<tr>
+<td><a href="slots/biomethanErstmaligerEinsatzNv/">biomethanErstmaligerEinsatzNv</a></td>
+<td>Datum des erstmaligen ausschließlichen Einsatzes von Biomethan</td>
+</tr>
+<tr>
+<td><a href="slots/breitengrad/">breitengrad</a></td>
+<td>Koordinaten der Einheit: Breitengrad</td>
+</tr>
+<tr>
+<td><a href="slots/bruttoleistung/">bruttoleistung</a></td>
+<td>Bruttoleistung in kW</td>
+</tr>
+<tr>
+<td><a href="slots/buergerenergie/">buergerenergie</a></td>
+<td>Bürgerenergieeigenschaft der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/bundesland/">bundesland</a></td>
+<td>Standort der Einheit: Bundesland</td>
+</tr>
+<tr>
+<td><a href="slots/bundesnetzagenturBetriebsnummer/">bundesnetzagenturBetriebsnummer</a></td>
+<td>BNetzA-Betriebsnummer des Netzbetreibers (nur bei Stromnetzbetreiber, Gasnetz...</td>
+</tr>
+<tr>
+<td><a href="slots/bundesnetzagenturBetriebsnummerNv/">bundesnetzagenturBetriebsnummerNv</a></td>
+<td>BNetzA-Betriebsnummer des Netzbetreibers (nur bei Stromnetzbetreiber, Gasnetz...</td>
+</tr>
+<tr>
+<td><a href="slots/datum/">datum</a></td>
+<td>Datum, ab dem die Genehmigung für Bau oder Betrieb der Stromerzeugungseinheit...</td>
+</tr>
+<tr>
+<td><a href="slots/datumBaubeginn/">datumBaubeginn</a></td>
+<td>Tatsächlicher bzw</td>
+</tr>
+<tr>
+<td><a href="slots/datumBeginnVoruebergehendeStilllegung/">datumBeginnVoruebergehendeStilllegung</a></td>
+<td>Beginn der vorläufigen Stilllegung der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/datumDerAntragstellung/">datumDerAntragstellung</a></td>
+<td>Datum der Antragstellung</td>
+</tr>
+<tr>
+<td><a href="slots/datumDesBetreiberwechsels/">datumDesBetreiberwechsels</a></td>
+<td>Datum des realen Betreiberwechsels</td>
+</tr>
+<tr>
+<td><a href="slots/datumEndgueltigeStilllegung/">datumEndgueltigeStilllegung</a></td>
+<td>Datum der endgültigen Stilllegung der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/datumKapazitaetsreserve/">datumKapazitaetsreserve</a></td>
+<td>Kapazitätsreserve</td>
+</tr>
+<tr>
+<td><a href="slots/datumLetzeAktualisierung/">datumLetzeAktualisierung</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/datumLetzteAktualisierung/">datumLetzteAktualisierung</a></td>
+<td>Datum der letzten Aktualisierung an diesem Objekt</td>
+</tr>
+<tr>
+<td><a href="slots/datumNetzreserve/">datumNetzreserve</a></td>
+<td>Netzreserve Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreiber...</td>
+</tr>
+<tr>
+<td><a href="slots/datumRegistrierungDesBetreiberwechsels/">datumRegistrierungDesBetreiberwechsels</a></td>
+<td>Datum der Registrierung des Betreiberwechsels</td>
+</tr>
+<tr>
+<td><a href="slots/datumWiederaufnahmeBetrieb/">datumWiederaufnahmeBetrieb</a></td>
+<td>Datum der Wiederaufnahme des Betriebs</td>
+</tr>
+<tr>
+<td><a href="slots/direktvermarktungsunternehmen/">direktvermarktungsunternehmen</a></td>
+<td>Direktvermarktungsunternehmen</td>
+</tr>
+<tr>
+<td><a href="slots/durchschnittlicherBrennwert/">durchschnittlicherBrennwert</a></td>
+<td>Durchschnittlicher Brennwert des Gas im Speicher</td>
+</tr>
+<tr>
+<td><a href="slots/eegAnlagentyp/">eegAnlagentyp</a></td>
+<td>Typ der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/eegInbetriebnahmedatum/">eegInbetriebnahmedatum</a></td>
+<td>Inbetriebnahmedatum der EEG- Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/eegMaStRNummer/">eegMaStRNummer</a></td>
+<td>MaStR-Nummer der Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/eegMastrNummer/">eegMastrNummer</a></td>
+<td>Die MaStR-Nummer der zugehörigen EEG-Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/einheitBetriebsstatus/">einheitBetriebsstatus</a></td>
+<td>Betriebsstatus der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/einheitDientDerStromerzeugung/">einheitDientDerStromerzeugung</a></td>
+<td>Angabe ob die Gasverbrauchseinheit zur Stromerzeugung dient (Gaskraftwerk)</td>
+</tr>
+<tr>
+<td><a href="slots/einheitlicheAusrichtungUndNeigungswinkel/">einheitlicheAusrichtungUndNeigungswinkel</a></td>
+<td>Angabe, ob einheitliche Ausrichtung und Neigungswinkel bestehen</td>
+</tr>
+<tr>
+<td><a href="slots/einheitMastrNummer/">einheitMastrNummer</a></td>
+<td>MaStR-Nummer der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/einheitSystemstatus/">einheitSystemstatus</a></td>
+<td>Systemstatus der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/einheittyp/">einheittyp</a></td>
+<td>Typ der Einheit: Objekt: Einheitentyp</td>
+</tr>
+<tr>
+<td><a href="slots/einsatzort/">einsatzort</a></td>
+<td>An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat be...</td>
+</tr>
+<tr>
+<td><a href="slots/einsatzverantwortlicher/">einsatzverantwortlicher</a></td>
+<td>Marktpartner-ID des Einsatzverantwortlichen</td>
+</tr>
+<tr>
+<td><a href="slots/einspeisungsart/">einspeisungsart</a></td>
+<td>Volleinspeisung oder Teileinspeisung</td>
+</tr>
+<tr>
+<td><a href="slots/elektrischeKwkLeistung/">elektrischeKwkLeistung</a></td>
+<td>Die höchste an den Generatorklemmen abgebbare elektrische Wirkleistung der An...</td>
+</tr>
+<tr>
+<td><a href="slots/email/">email</a></td>
+<td>E-Mail des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/energietraeger/">energietraeger</a></td>
+<td>Energieträger der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/ertuechtigungIds/">ertuechtigungIds</a></td>
+<td>Ertüchtigungen</td>
+</tr>
+<tr>
+<td><a href="slots/ertuechtigungIstZulassungspflichtig/">ertuechtigungIstZulassungspflichtig</a></td>
+<td>Ist die Ertüchtigung Zulassungspflichtig</td>
+</tr>
+<tr>
+<td><a href="slots/ertuechtigungsart/">ertuechtigungsart</a></td>
+<td>Art der Ertüchtigung</td>
+</tr>
+<tr>
+<td><a href="slots/erzeugungsleistung/">erzeugungsleistung</a></td>
+<td>Leistung der Gaserzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/fax/">fax</a></td>
+<td>Faxnummer des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/faxNv/">faxNv</a></td>
+<td>Faxnummer des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/fernsteuerbarkeitDv/">fernsteuerbarkeitDv</a></td>
+<td>Fernsteuerbarkeit der Einheit durch einen Direktvermarkter</td>
+</tr>
+<tr>
+<td><a href="slots/fernsteuerbarkeitNb/">fernsteuerbarkeitNb</a></td>
+<td>Fernsteuerbarkeit der Einheit durch einen Netzbetreiber</td>
+</tr>
+<tr>
+<td><a href="slots/firmenname/">firmenname</a></td>
+<td>Name der Firma mit dem rechtsformergänzenden Namenszusatz</td>
+</tr>
+<tr>
+<td><a href="slots/flughoehe/">flughoehe</a></td>
+<td>Flughöhe einer Flugwindenergieanlage</td>
+</tr>
+<tr>
+<td><a href="slots/flugradius/">flugradius</a></td>
+<td>Flugradius einer Flugwindenergieanlage</td>
+</tr>
+<tr>
+<td><a href="slots/flurFlurstuecknummern/">flurFlurstuecknummern</a></td>
+<td>Standort der Einheit: Flur und/oder Flurstücke</td>
+</tr>
+<tr>
+<td><a href="slots/frist/">frist</a></td>
+<td>Datum, bis zu dem gemäß der Genehmigung mit der Errichtung oder dem Betrieb d...</td>
+</tr>
+<tr>
+<td><a href="slots/fristNv/">fristNv</a></td>
+<td>Datum, bis zu dem gemäß der Genehmigung mit der Errichtung oder dem Betrieb d...</td>
+</tr>
+<tr>
+<td><a href="slots/gasgrosshaendler/">gasgrosshaendler</a></td>
+<td>Gasgroßhändler</td>
+</tr>
+<tr>
+<td><a href="slots/gasqualitaet/">gasqualitaet</a></td>
+<td>Gasqualität am Netzanschlusspunkt</td>
+</tr>
+<tr>
+<td><a href="slots/gebietNachDemFlaechenentwicklungsplanNordsee/">gebietNachDemFlaechenentwicklungsplanNordsee</a></td>
+<td>Gebiet nach dem Flächenentwicklungsplan in der Ostsee</td>
+</tr>
+<tr>
+<td><a href="slots/gebietNachDemFlaechenentwicklungsplanOstsee/">gebietNachDemFlaechenentwicklungsplanOstsee</a></td>
+<td>Gebiet nach dem Flächenentwicklungsplan in der Ostsee</td>
+</tr>
+<tr>
+<td><a href="slots/gemarkung/">gemarkung</a></td>
+<td>Standort der Einheit: Gemarkung</td>
+</tr>
+<tr>
+<td><a href="slots/gemeinde/">gemeinde</a></td>
+<td>Standort der Einheit: Gemeinde</td>
+</tr>
+<tr>
+<td><a href="slots/gemeindeschluessel/">gemeindeschluessel</a></td>
+<td>Standort der Einheit: Gemeindeschlüssel</td>
+</tr>
+<tr>
+<td><a href="slots/gemeinsamRegistrierteSolareinheitMastrNummer/">gemeinsamRegistrierteSolareinheitMastrNummer</a></td>
+<td>Zum Speicher registrierte Solareinheit</td>
+</tr>
+<tr>
+<td><a href="slots/genMastrNummer/">genMastrNummer</a></td>
+<td>MaStR-Nummer der zu dieser Einheit zugeordneten Genehmigung</td>
+</tr>
+<tr>
+<td><a href="slots/geplantesInbetriebnahmedatum/">geplantesInbetriebnahmedatum</a></td>
+<td>Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/geschlossenesVerteilnetz/">geschlossenesVerteilnetz</a></td>
+<td>Handelt es sich um ein geschlossenes Verteilnetz</td>
+</tr>
+<tr>
+<td><a href="slots/groesseDerInAnspruchGenommenenFlaeche/">groesseDerInAnspruchGenommenenFlaeche</a></td>
+<td>Größe der in Anspruch genommenen Fläche</td>
+</tr>
+<tr>
+<td><a href="slots/groesseDerInAnspruchGenommenenFlaecheInHektar/">groesseDerInAnspruchGenommenenFlaecheInHektar</a></td>
+<td>Größe der in Anspruch genommene Fläche</td>
+</tr>
+<tr>
+<td><a href="slots/hauptausrichtung/">hauptausrichtung</a></td>
+<td>Die Ausrichtung bezeichnet die Himmelsrichtung</td>
+</tr>
+<tr>
+<td><a href="slots/hauptausrichtungNeigungswinkel/">hauptausrichtungNeigungswinkel</a></td>
+<td>Der Neigungswinkel bezeichnet den Winkel gegenüber der Horizontalen</td>
+</tr>
+<tr>
+<td><a href="slots/hauptbrennstoff/">hauptbrennstoff</a></td>
+<td>Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt</td>
+</tr>
+<tr>
+<td><a href="slots/hauptwirtdschaftszweigAbschnitt/">hauptwirtdschaftszweigAbschnitt</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/hauptwirtdschaftszweigAbteilung/">hauptwirtdschaftszweigAbteilung</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/hauptwirtdschaftszweigGruppe/">hauptwirtdschaftszweigGruppe</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/hausnummer/">hausnummer</a></td>
+<td>Standort der Einheit: Hausnummer</td>
+</tr>
+<tr>
+<td><a href="slots/hausnummerAnZustelladresse/">hausnummerAnZustelladresse</a></td>
+<td>Hausnummer - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/hausnummerAnZustelladresseNv/">hausnummerAnZustelladresseNv</a></td>
+<td>Hausnummer - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/hausnummerNichtGefunden/">hausnummerNichtGefunden</a></td>
+<td>Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand ...</td>
+</tr>
+<tr>
+<td><a href="slots/hausnummerNv/">hausnummerNv</a></td>
+<td>Standort der Einheit: Hausnummer</td>
+</tr>
+<tr>
+<td><a href="slots/hersteller/">hersteller</a></td>
+<td>Hersteller der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/id/">id</a></td>
+<td>Id des Bilanzierungsgebietes</td>
+</tr>
+<tr>
+<td><a href="slots/inanspruchnahmeZahlungNachEeg/">inanspruchnahmeZahlungNachEeg</a></td>
+<td>Werden oder wurden für die Solaranlage Zahlungen des Netzbetreibers in Anspru...</td>
+</tr>
+<tr>
+<td><a href="slots/inbetriebnahmedatum/">inbetriebnahmedatum</a></td>
+<td>Inbetriebnahmedatum der KWK-Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/inbetriebnahmedatumAmAktuellenStandort/">inbetriebnahmedatumAmAktuellenStandort</a></td>
+<td>Datum der Inbetriebnahme am aktuellen Standort</td>
+</tr>
+<tr>
+<td><a href="slots/installierteLeistung/">installierteLeistung</a></td>
+<td>Installierte Nettonennleistung der EEG-Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/kapazitaetsreserveZugeordnet/">kapazitaetsreserveZugeordnet</a></td>
+<td>Kapazitätsreserve nach dem KapResV zugeordnet? Datum der Überführung in die</td>
+</tr>
+<tr>
+<td><a href="slots/katalogKategorieId/">katalogKategorieId</a></td>
+<td>Wert der Katalogkategorie</td>
+</tr>
+<tr>
+<td><a href="slots/kmu/">kmu</a></td>
+<td>Kleinst-, Klein- oder mittleres Unternehmen?</td>
+</tr>
+<tr>
+<td><a href="slots/kontaktdatenMarktrolle/">kontaktdatenMarktrolle</a></td>
+<td>Name des verantwortlichen Marktakteursvertreter und dessen Kontaktdaten (E-Ma...</td>
+</tr>
+<tr>
+<td><a href="slots/kraftwerksnummer/">kraftwerksnummer</a></td>
+<td>Bundesnetzagentur- Kraftwerksnummer</td>
+</tr>
+<tr>
+<td><a href="slots/kraftwerksnummerNv/">kraftwerksnummerNv</a></td>
+<td>Bundesnetzagentur- Kraftwerksnummer</td>
+</tr>
+<tr>
+<td><a href="slots/kuestenentfernung/">kuestenentfernung</a></td>
+<td>Küstenentfernung des Standort der Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/kundenAngeschlossen/">kundenAngeschlossen</a></td>
+<td>Sind Kunden angeschlossen</td>
+</tr>
+<tr>
+<td><a href="slots/kwkMastrNummer/">kwkMastrNummer</a></td>
+<td>MaStR-Nummer der Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/kwkMaStRNummer/">kwkMaStRNummer</a></td>
+<td>MaStR-Nummer der verknüpften KWK-Anlage Ist die Einheit - unter Beteiligung d...</td>
+</tr>
+<tr>
+<td><a href="slots/laengengrad/">laengengrad</a></td>
+<td>Koordinaten der Einheit: Längengrad</td>
+</tr>
+<tr>
+<td><a href="slots/land/">land</a></td>
+<td>Standort der Einheit: Land: Katalogkategorie: Land</td>
+</tr>
+<tr>
+<td><a href="slots/landAnZustelladresse/">landAnZustelladresse</a></td>
+<td>Land - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/landkreis/">landkreis</a></td>
+<td>Standort der Einheit: Landkreis</td>
+</tr>
+<tr>
+<td><a href="slots/leistungsbegrenzung/">leistungsbegrenzung</a></td>
+<td>Die Leistung der Stromerzeugungseinheit ist auf einen bestimmten prozentualen...</td>
+</tr>
+<tr>
+<td><a href="slots/leistungserhoehung/">leistungserhoehung</a></td>
+<td>Wert der Leistungserhöhung</td>
+</tr>
+<tr>
+<td><a href="slots/letzteAenderung/">letzteAenderung</a></td>
+<td>Datum der letzten Aktualisierung an diesem Objekt</td>
+</tr>
+<tr>
+<td><a href="slots/lichteHoehe/">lichteHoehe</a></td>
+<td>Lichte Höhe in Meter</td>
+</tr>
+<tr>
+<td><a href="slots/lokationMaStRNummer/">lokationMaStRNummer</a></td>
+<td>MaStR-Nummer der Lokation</td>
+</tr>
+<tr>
+<td><a href="slots/lokationMastrNummer/">lokationMastrNummer</a></td>
+<td>MaStR-Nummer der Lokation MaStR-Nummer des</td>
+</tr>
+<tr>
+<td><a href="slots/lokationtyp/">lokationtyp</a></td>
+<td>Typ der Lokation</td>
+</tr>
+<tr>
+<td><a href="slots/marktakteurAnrede/">marktakteurAnrede</a></td>
+<td>Details zur Personenart</td>
+</tr>
+<tr>
+<td><a href="slots/marktakteurMastrNummer/">marktakteurMastrNummer</a></td>
+<td>Die MaStR-Nummer de s Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/marktakteurNachname/">marktakteurNachname</a></td>
+<td>Nachname der natürlichen Person</td>
+</tr>
+<tr>
+<td><a href="slots/marktakteurStatus/">marktakteurStatus</a></td>
+<td>Der Status des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/marktakteurTitel/">marktakteurTitel</a></td>
+<td>Titel der natürlichen Person</td>
+</tr>
+<tr>
+<td><a href="slots/marktakteurVorname/">marktakteurVorname</a></td>
+<td>Vorname der natürlichen Person</td>
+</tr>
+<tr>
+<td><a href="slots/marktfunktion/">marktfunktion</a></td>
+<td>Marktfunktion des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/marktgebiet/">marktgebiet</a></td>
+<td>Marktgebiet des Gasnetzes</td>
+</tr>
+<tr>
+<td><a href="slots/marktpartneridentifikationsnummer/">marktpartneridentifikationsnummer</a></td>
+<td>Die Marktpartneridentifikationsnummer (MP-ID) (nicht bei Übertragungsnetzbetr...</td>
+</tr>
+<tr>
+<td><a href="slots/marktpartneridentifikationsnummerNv/">marktpartneridentifikationsnummerNv</a></td>
+<td>Die Marktpartneridentifikationsnummer (MP-ID) (nicht bei Übertragungsnetzbetr...</td>
+</tr>
+<tr>
+<td><a href="slots/marktrolle/">marktrolle</a></td>
+<td>Die Marktrolle des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/marktrollen/">marktrollen</a></td>
+<td>Auflistung der zugeordneten Marktrollen und deren Daten</td>
+</tr>
+<tr>
+<td><a href="slots/maStRNummer/">maStRNummer</a></td>
+<td>MaStR-Nummer des Gas Speichers</td>
+</tr>
+<tr>
+<td><a href="slots/mastrNummer/">mastrNummer</a></td>
+<td>Die MaStR-Nummer der Lokation</td>
+</tr>
+<tr>
+<td><a href="slots/mastrNummernKombibetrieb/">mastrNummernKombibetrieb</a></td>
+<td>MaStR-Nummern der Einheiten im Kombibetrieb</td>
+</tr>
+<tr>
+<td><a href="slots/maximaleAusspeicherleistung/">maximaleAusspeicherleistung</a></td>
+<td>Maximale Ausspeicherleistung</td>
+</tr>
+<tr>
+<td><a href="slots/maximaleAusspeiseleistung/">maximaleAusspeiseleistung</a></td>
+<td>Technisch maximale Ausspeiseleistung am jeweiligen Netzanschlusspunkt (nur be...</td>
+</tr>
+<tr>
+<td><a href="slots/maximaleEinspeicherleistung/">maximaleEinspeicherleistung</a></td>
+<td>Maximale Einspeicherleistung</td>
+</tr>
+<tr>
+<td><a href="slots/maximaleEinspeiseleistung/">maximaleEinspeiseleistung</a></td>
+<td>Maximale Einspeiseleistung am Netzanschlusspunkt</td>
+</tr>
+<tr>
+<td><a href="slots/maximaleGasbezugsleistung/">maximaleGasbezugsleistung</a></td>
+<td>Maximale Gasbezugsleistung zur Stromerzeugung</td>
+</tr>
+<tr>
+<td><a href="slots/maximalNutzbaresArbeitsgasvolumen/">maximalNutzbaresArbeitsgasvolumen</a></td>
+<td>Maximal nutzbares Arbeitsgasvolumen</td>
+</tr>
+<tr>
+<td><a href="slots/messlokation/">messlokation</a></td>
+<td>Messlokation gemäß Metering Code, VDE-AR-N 4400</td>
+</tr>
+<tr>
+<td><a href="slots/mieterstromErsteZuordnungZuschlag/">mieterstromErsteZuordnungZuschlag</a></td>
+<td>Datum, an dem die Anlage erstmalig der Veräußerungsform des Mieterstromzuschl...</td>
+</tr>
+<tr>
+<td><a href="slots/mieterstromMeldedatum/">mieterstromMeldedatum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/mieterstromZugeordnet/">mieterstromZugeordnet</a></td>
+<td>Gibt an, ob die Solaranlage der Veräußerungsform des Mieterstromzuschlags zug...</td>
+</tr>
+<tr>
+<td><a href="slots/minderungStromerzeugung/">minderungStromerzeugung</a></td>
+<td>Auflagen, die zur Minderung der Stromerzeugung führen?</td>
+</tr>
+<tr>
+<td><a href="slots/nabenhoehe/">nabenhoehe</a></td>
+<td>Die Nabenhöhe der Erzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/nachtkennzeichnung/">nachtkennzeichnung</a></td>
+<td>Nachtkennzeichnung der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/name/">name</a></td>
+<td>Name der Katalogkategorie</td>
+</tr>
+<tr>
+<td><a href="slots/nameDerTechnischenLokation/">nameDerTechnischenLokation</a></td>
+<td>Name der technischen Lokation</td>
+</tr>
+<tr>
+<td><a href="slots/nameDesSolarparks/">nameDesSolarparks</a></td>
+<td>Der Name des Solarparks</td>
+</tr>
+<tr>
+<td><a href="slots/nameGaserzeugungseinheit/">nameGaserzeugungseinheit</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung der Gaserzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/nameGasspeicher/">nameGasspeicher</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung der Gasspeichereinheit</td>
+</tr>
+<tr>
+<td><a href="slots/nameGasverbrauchsseinheit/">nameGasverbrauchsseinheit</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/nameKraftwerk/">nameKraftwerk</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung des Kraftwerks, dessen Teil die Strom...</td>
+</tr>
+<tr>
+<td><a href="slots/nameKraftwerksblock/">nameKraftwerksblock</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die...</td>
+</tr>
+<tr>
+<td><a href="slots/nameStromerzeugungseinheit/">nameStromerzeugungseinheit</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/nameStromverbrauchseinheit/">nameStromverbrauchseinheit</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung der Stromverbrauchseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/nameWindpark/">nameWindpark</a></td>
+<td>Vom Betreiber frei wählbare Bezeichnung des Windparks, dessen Teil die Einhei...</td>
+</tr>
+<tr>
+<td><a href="slots/nebenausrichtung/">nebenausrichtung</a></td>
+<td>Die Ausrichtung bezeichnet die Himmelsrichtung</td>
+</tr>
+<tr>
+<td><a href="slots/nebenausrichtungNeigungswinkel/">nebenausrichtungNeigungswinkel</a></td>
+<td>Der Neigungswinkel bezeichnet den Winkel gegenüber der Horizontalen (Nebenaus...</td>
+</tr>
+<tr>
+<td><a href="slots/nettoengpassleistung/">nettoengpassleistung</a></td>
+<td>Erzielbare Dauerleistung der Erzeugungseinheiten am jeweiligen Netzanschlussp...</td>
+</tr>
+<tr>
+<td><a href="slots/nettonennleistung/">nettonennleistung</a></td>
+<td>Nettonennleistung in kW</td>
+</tr>
+<tr>
+<td><a href="slots/nettonennleistungDeutschland/">nettonennleistungDeutschland</a></td>
+<td>Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeu...</td>
+</tr>
+<tr>
+<td><a href="slots/netz/">netz</a></td>
+<td>Netz des Netzbetreibers (nur bei Netzbetreibern)</td>
+</tr>
+<tr>
+<td><a href="slots/netzanschlusskapazitaet/">netzanschlusskapazitaet</a></td>
+<td>Kapazität des Netzanschlusspunktes</td>
+</tr>
+<tr>
+<td><a href="slots/netzanschlusspunktBezeichnung/">netzanschlusspunktBezeichnung</a></td>
+<td>Bezeichnung des Netzanschlusspunktes</td>
+</tr>
+<tr>
+<td><a href="slots/netzanschlusspunkteMaStRNummern/">netzanschlusspunkteMaStRNummern</a></td>
+<td>Liste der MaStR Nummern der Netzanschlusspunkte der Lokation</td>
+</tr>
+<tr>
+<td><a href="slots/netzanschlusspunktMastrNummer/">netzanschlusspunktMastrNummer</a></td>
+<td>Netzanschlusspunktes, ggf</td>
+</tr>
+<tr>
+<td><a href="slots/netzbetreiberMaStRNummer/">netzbetreiberMaStRNummer</a></td>
+<td>Netzbetreibers</td>
+</tr>
+<tr>
+<td><a href="slots/netzbetreiberMastrNummerAlt/">netzbetreiberMastrNummerAlt</a></td>
+<td>Anschluss-Netzbetreibers MaStR-Nummer des neuen Anschluss-</td>
+</tr>
+<tr>
+<td><a href="slots/netzbetreiberMastrNummerNeu/">netzbetreiberMastrNummerNeu</a></td>
+<td>Netzbetreibers</td>
+</tr>
+<tr>
+<td><a href="slots/netzbetreiberpruefungDatum/">netzbetreiberpruefungDatum</a></td>
+<td>Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde</td>
+</tr>
+<tr>
+<td><a href="slots/netzbetreiberpruefungStatus/">netzbetreiberpruefungStatus</a></td>
+<td>Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde</td>
+</tr>
+<tr>
+<td><a href="slots/netzbetreiberzuordnungsaenderungsdatum/">netzbetreiberzuordnungsaenderungsdatum</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/netzMaStRNummer/">netzMaStRNummer</a></td>
+<td>MaStR-Nummer des Netzes an dem der Netzanschlusspunkt angeschlossen ist</td>
+</tr>
+<tr>
+<td><a href="slots/netzreserveZugeordnet/">netzreserveZugeordnet</a></td>
+<td>Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet Datum der Überführun...</td>
+</tr>
+<tr>
+<td><a href="slots/nichtVorhandenInMigriertenEinheiten/">nichtVorhandenInMigriertenEinheiten</a></td>
+<td>Angabe über das Nichtvorhandensein in den migrierten Einheiten</td>
+</tr>
+<tr>
+<td><a href="slots/nochInPlanung/">nochInPlanung</a></td>
+<td>Kennzeichen, ob der Anschluss noch in Planung ist MaStR-Nummer des</td>
+</tr>
+<tr>
+<td><a href="slots/notstromaggregat/">notstromaggregat</a></td>
+<td>Angabe ob die Stromerzeugungseinheit zur Versorgung bei Stromnetzstörungen di...</td>
+</tr>
+<tr>
+<td><a href="slots/nuts2/">nuts2</a></td>
+<td>NUTS-II-Region</td>
+</tr>
+<tr>
+<td><a href="slots/nutzbareSpeicherkapazitaet/">nutzbareSpeicherkapazitaet</a></td>
+<td>Nutzbare Speicherkapazität in kWh</td>
+</tr>
+<tr>
+<td><a href="slots/nutzungsbereich/">nutzungsbereich</a></td>
+<td>Vorrangige Nutzung des in Anspruch genommenen Gebäudes</td>
+</tr>
+<tr>
+<td><a href="slots/ort/">ort</a></td>
+<td>Standort der Einheit: Ort</td>
+</tr>
+<tr>
+<td><a href="slots/ortAnZustelladresse/">ortAnZustelladresse</a></td>
+<td>Ort - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/personenart/">personenart</a></td>
+<td>Angabe der Personenart des Marktakteurs: Natürliche Person oder Organisation ...</td>
+</tr>
+<tr>
+<td><a href="slots/pilotAnlage/">pilotAnlage</a></td>
+<td>Die Windenergieanlage ist eine Pilotwindanlage</td>
+</tr>
+<tr>
+<td><a href="slots/postleitzahl/">postleitzahl</a></td>
+<td>Standort der Einheit: Postleitzahl</td>
+</tr>
+<tr>
+<td><a href="slots/postleitzahlAnZustelladresse/">postleitzahlAnZustelladresse</a></td>
+<td>Postleitzahl - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/prototypAnlage/">prototypAnlage</a></td>
+<td>Die Windenergieanlage ist als Prototyp zertifiziert</td>
+</tr>
+<tr>
+<td><a href="slots/pumpbetriebKontinuierlichRegelbar/">pumpbetriebKontinuierlichRegelbar</a></td>
+<td>Die Wasserkraftanlage ist im Pumpbetrieb kontinuierlich regelbar</td>
+</tr>
+<tr>
+<td><a href="slots/pumpbetriebLeistungsaufnahme/">pumpbetriebLeistungsaufnahme</a></td>
+<td>Höchste elektrische Dauerleistung, die dem Netz für den Pumpbetrieb unter Nen...</td>
+</tr>
+<tr>
+<td><a href="slots/pumpspeichertechnologie/">pumpspeichertechnologie</a></td>
+<td>Technologie des Pumpspeichers</td>
+</tr>
+<tr>
+<td><a href="slots/rechtsform/">rechtsform</a></td>
+<td>Rechtsform der Organsiation</td>
+</tr>
+<tr>
+<td><a href="slots/regelzoneNetzanschlusspunkt/">regelzoneNetzanschlusspunkt</a></td>
+<td>Regelzone des Netzanschlusspunktes</td>
+</tr>
+<tr>
+<td><a href="slots/region/">region</a></td>
+<td>Region</td>
+</tr>
+<tr>
+<td><a href="slots/registergericht/">registergericht</a></td>
+<td>Angabe des Registergerichts, bei dem die Organisation registriert ist</td>
+</tr>
+<tr>
+<td><a href="slots/registergerichtAusland/">registergerichtAusland</a></td>
+<td>Angabe des Registergerichts, bei dem die Organisation registriert ist, wenn i...</td>
+</tr>
+<tr>
+<td><a href="slots/registernummer/">registernummer</a></td>
+<td>Registernummer des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/registernummerAusland/">registernummerAusland</a></td>
+<td>Registernummer des Marktakteurs, wenn im Ausland</td>
+</tr>
+<tr>
+<td><a href="slots/registernummerPraefix/">registernummerPraefix</a></td>
+<td>Präfix mit dem die Registernummer beginnt</td>
+</tr>
+<tr>
+<td><a href="slots/registrierungsdatum/">registrierungsdatum</a></td>
+<td>Registrierungsdatum der EEG- Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/registrierungsdatumMarktakteur/">registrierungsdatumMarktakteur</a></td>
+<td>Registrierungsdatum</td>
+</tr>
+<tr>
+<td><a href="slots/registrierungsdatumNetzbetreiberzuordnungsaenderung/">registrierungsdatumNetzbetreiberzuordnungsaenderung</a></td>
+<td>Netzbetreiberzuordnungsänderung</td>
+</tr>
+<tr>
+<td><a href="slots/registrierungsnummerPvMeldeportal/">registrierungsnummerPvMeldeportal</a></td>
+<td>Durch die Bundesagentur vergeben Nummer bei der Registrierung im PV- Meldepor...</td>
+</tr>
+<tr>
+<td><a href="slots/registrierungsnummerPvMeldeportalNv/">registrierungsnummerPvMeldeportalNv</a></td>
+<td>Durch die Bundesagentur vergeben Nummer bei der Registrierung im PV- Meldepor...</td>
+</tr>
+<tr>
+<td><a href="slots/rotorblattenteisungssystem/">rotorblattenteisungssystem</a></td>
+<td>Ein Rotorblattenteisungssystem, auch als Rotorblattenteisungsanlage bezeichne...</td>
+</tr>
+<tr>
+<td><a href="slots/rotordurchmesser/">rotordurchmesser</a></td>
+<td>Rotordurchmesser</td>
+</tr>
+<tr>
+<td><a href="slots/seelage/">seelage</a></td>
+<td>Wird die Windenergieanlage in der Nordsee oder in der Ostsee betrieben? Katal...</td>
+</tr>
+<tr>
+<td><a href="slots/sicherheitsbereitschaftAbDatum/">sicherheitsbereitschaftAbDatum</a></td>
+<td>Datum des Übergangs in die Sicherheitsbereitschaft</td>
+</tr>
+<tr>
+<td><a href="slots/sonstigeRechtsform/">sonstigeRechtsform</a></td>
+<td>Angabe der Rechtsform, wenn Sonstige gewählt wurde</td>
+</tr>
+<tr>
+<td><a href="slots/spannungsebene/">spannungsebene</a></td>
+<td>Spannungsebene des Netzanschlusspunktes</td>
+</tr>
+<tr>
+<td><a href="slots/sparte/">sparte</a></td>
+<td>Spartes des Netzes, Katalogkategorie: Sparte</td>
+</tr>
+<tr>
+<td><a href="slots/speicherAmGleichenOrt/">speicherAmGleichenOrt</a></td>
+<td>Speicher am gleichen Ort</td>
+</tr>
+<tr>
+<td><a href="slots/speicherart/">speicherart</a></td>
+<td>Art der Gasspeicherung</td>
+</tr>
+<tr>
+<td><a href="slots/speicherMaStRNummer/">speicherMaStRNummer</a></td>
+<td>MaStR-Nummer des zu dieser Einheit zugeordneten Speichers</td>
+</tr>
+<tr>
+<td><a href="slots/speichername/">speichername</a></td>
+<td>Name des Gas Speichers</td>
+</tr>
+<tr>
+<td><a href="slots/speMastrNummer/">speMastrNummer</a></td>
+<td>MaStR-Nummer der verknüpften Speicheranlage</td>
+</tr>
+<tr>
+<td><a href="slots/steigerungNettonennleistungKombibetrieb/">steigerungNettonennleistungKombibetrieb</a></td>
+<td>Steigerung der Nettonennleistung durch Kombibetrieb</td>
+</tr>
+<tr>
+<td><a href="slots/strasse/">strasse</a></td>
+<td>Standort der Einheit: Straße</td>
+</tr>
+<tr>
+<td><a href="slots/strasseAnZustelladresse/">strasseAnZustelladresse</a></td>
+<td>Straße - Zustelladresse</td>
+</tr>
+<tr>
+<td><a href="slots/strasseNichtGefunden/">strasseNichtGefunden</a></td>
+<td>Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stam...</td>
+</tr>
+<tr>
+<td><a href="slots/stromgrosshaendler/">stromgrosshaendler</a></td>
+<td>Stromgroßhändler</td>
+</tr>
+<tr>
+<td><a href="slots/taetigkeitsbeginn/">taetigkeitsbeginn</a></td>
+<td>Tätigkeitsbeginn des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/taetigkeitsende/">taetigkeitsende</a></td>
+<td>Das Tätigkeitsende des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/technologie/">technologie</a></td>
+<td>Technologie der Stromerzeugung</td>
+</tr>
+<tr>
+<td><a href="slots/technologieFlugwindenergieanlage/">technologieFlugwindenergieanlage</a></td>
+<td>Technologie der Flugwindenergieanlage Katalogkategorie: TechnologieFlugwinden...</td>
+</tr>
+<tr>
+<td><a href="slots/telefon/">telefon</a></td>
+<td>Telefonnummer des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/thermischeNutzleistung/">thermischeNutzleistung</a></td>
+<td>Die höchste Nutzwärmeerzeugung unter Nennbedingungen, die die KWKG-Anlage abg...</td>
+</tr>
+<tr>
+<td><a href="slots/typenbezeichnung/">typenbezeichnung</a></td>
+<td>Typenbezeichnung der Einheit</td>
+</tr>
+<tr>
+<td><a href="slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung/">ueberwiegendeNutzungsartDerFlaecheVorErrichtung</a></td>
+<td>Überwiegende Nutzungsart der Fläche vor Errichtung der Anlage</td>
+</tr>
+<tr>
+<td><a href="slots/umsatzsteueridentifikationsnummer/">umsatzsteueridentifikationsnummer</a></td>
+<td>Die USt-Id Nummer des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/umsatzsteueridentifikationsnummerNv/">umsatzsteueridentifikationsnummerNv</a></td>
+<td>Die USt-Id Nummer des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisErtragsschaetzungReferenzertrag/">verhaeltnisErtragsschaetzungReferenzertrag</a></td>
+<td>Verhältnis der Ertragseinschätzung zum Referenzertrag ermittelt nach Anlage 2...</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisErtragsschaetzungReferenzertragNv/">verhaeltnisErtragsschaetzungReferenzertragNv</a></td>
+<td>Verhältnis der Ertragseinschätzung zum Referenzertrag ermittelt nach Anlage 2...</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisReferenzertragErtrag10Jahre/">verhaeltnisReferenzertragErtrag10Jahre</a></td>
+<td>Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums v...</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisReferenzertragErtrag10JahreNv/">verhaeltnisReferenzertragErtrag10JahreNv</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisReferenzertragErtrag15Jahre/">verhaeltnisReferenzertragErtrag15Jahre</a></td>
+<td>Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums v...</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisReferenzertragErtrag15JahreNv/">verhaeltnisReferenzertragErtrag15JahreNv</a></td>
+<td>Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums v...</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisReferenzertragErtrag5Jahre/">verhaeltnisReferenzertragErtrag5Jahre</a></td>
+<td>Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums v...</td>
+</tr>
+<tr>
+<td><a href="slots/verhaeltnisReferenzertragErtrag5JahreNv/">verhaeltnisReferenzertragErtrag5JahreNv</a></td>
+<td>Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums v...</td>
+</tr>
+<tr>
+<td><a href="slots/verknuepfteEinheitenMaStRNummern/">verknuepfteEinheitenMaStRNummern</a></td>
+<td>Liste von MaStR Nummern mit den verknüpften Stromerzeugern</td>
+</tr>
+<tr>
+<td><a href="slots/vorherigerNutzungsartenbereichDerFlaeche/">vorherigerNutzungsartenbereichDerFlaeche</a></td>
+<td>Katalog: Vorheriger Nutzungsartenbereich der Fläche</td>
+</tr>
+<tr>
+<td><a href="slots/wasserrechtAblaufdatum/">wasserrechtAblaufdatum</a></td>
+<td>Datum, an dem die wasserrechtliche Genehmigung abläuft</td>
+</tr>
+<tr>
+<td><a href="slots/wasserrechtAblaufdatumNv/">wasserrechtAblaufdatumNv</a></td>
+<td>Datum, an dem die wasserrechtliche Genehmigung abläuft</td>
+</tr>
+<tr>
+<td><a href="slots/wasserrechtsNummer/">wasserrechtsNummer</a></td>
+<td>Nummer der wasserrechtlichen Genehmigung</td>
+</tr>
+<tr>
+<td><a href="slots/wassertiefe/">wassertiefe</a></td>
+<td>Wassertiefe am Standort der Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/webportalDesNetzbetreibers/">webportalDesNetzbetreibers</a></td>
+<td>Webportal des Netzbetreibers</td>
+</tr>
+<tr>
+<td><a href="slots/webseite/">webseite</a></td>
+<td>Internetadresse des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/webseiteNv/">webseiteNv</a></td>
+<td>Internetadresse des Marktakteurs</td>
+</tr>
+<tr>
+<td><a href="slots/weic/">weic</a></td>
+<td>W-Code der Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/weicDisplayName/">weicDisplayName</a></td>
+<td>Displayname des W-EIC</td>
+</tr>
+<tr>
+<td><a href="slots/weicNa/">weicNa</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/weicNv/">weicNv</a></td>
+<td>W-Code der Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/weitereBrennstoffe/">weitereBrennstoffe</a></td>
+<td>Katalogkategorie: ErweiterterWeitereBrennstoffe</td>
+</tr>
+<tr>
+<td><a href="slots/weitererHauptbrennstoff/">weitererHauptbrennstoff</a></td>
+<td>Katalogkategorie: ErweiterterWeitereBrennstoffe</td>
+</tr>
+<tr>
+<td><a href="slots/wert/">wert</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/wiederinbetriebnahmeDatum/">wiederinbetriebnahmeDatum</a></td>
+<td>Datum der Wiederinbetriebnahme</td>
+</tr>
+<tr>
+<td><a href="slots/windAnLandOderAufSee/">windAnLandOderAufSee</a></td>
+<td>Angabe, ob die Stromerzeugungseinheit an Land oder auf See errichtet wurde</td>
+</tr>
+<tr>
+<td><a href="slots/yeic/">yeic</a></td>
+<td>Y-Code des Bilanzierungsgebietes</td>
+</tr>
+<tr>
+<td><a href="slots/zugeordnenteWirkleistungWechselrichter/">zugeordnenteWirkleistungWechselrichter</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/zugeordneteGebotsmenge/">zugeordneteGebotsmenge</a></td>
+<td>Bezuschlagte Gebotsmenge, die der EEG-Anlage zugeordnet wurde</td>
+</tr>
+<tr>
+<td><a href="slots/zugeordneteWirkleistungWechselrichter/">zugeordneteWirkleistungWechselrichter</a></td>
+<td>Wechselrichterleistung der Stromerzeugungseinheit</td>
+</tr>
+<tr>
+<td><a href="slots/zusaetzlicheMerkmaleDerFlaecheUndDerAktuellenFlaechennutzung/">zusaetzlicheMerkmaleDerFlaecheUndDerAktuellenFlaechennutzung</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="slots/zuschlagnummer/">zuschlagnummer</a></td>
+<td>Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nu...</td>
+</tr>
+<tr>
+<td><a href="slots/zuschlagsnummer/">zuschlagsnummer</a></td>
+<td>Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nu...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="types/Boolean/">Boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="types/Curie/">Curie</a></td>
+<td>a compact URI</td>
+</tr>
+<tr>
+<td><a href="types/Date/">Date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="types/DateOrDatetime/">DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="types/Datetime/">Datetime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="types/Decimal/">Decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="types/Double/">Double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="types/Float/">Float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="types/Integer/">Integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="types/Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="types/Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
+<td><a href="types/Ncname/">Ncname</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="types/Nodeidentifier/">Nodeidentifier</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="types/Objectidentifier/">Objectidentifier</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="types/Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
+</tr>
+<tr>
+<td><a href="types/String/">String</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="types/Time/">Time</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="types/Uri/">Uri</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="types/Uriorcurie/">Uriorcurie</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
