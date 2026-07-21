@@ -12,6 +12,32 @@ import yaml
 PARTS = Path("linkml/parts")
 OUT = Path("linkml/mastr.yml")
 
+# schemauto's XSD importer (schema_automator.importers.xsd_import_engine.TYPE_MAP)
+# emits CamelCase range names such as "String"/"Integer"/"Date" that don't match
+# the actual lowercase type names defined by the linkml:types import (e.g.
+# "string"/"integer"/"date"). Left as-is, SchemaView can't resolve these ranges,
+# which breaks downstream tooling such as the docgen mermaid class diagrams.
+BUILTIN_TYPE_FIXUP = {
+    "Uri": "uri",
+    "Boolean": "boolean",
+    "Date": "date",
+    "DateTime": "datetime",
+    "Decimal": "decimal",
+    "Double": "double",
+    "Float": "float",
+    "String": "string",
+    "Time": "time",
+    "Integer": "integer",
+}
+
+
+def normalize_ranges(cls: dict) -> None:
+    for attr in (cls.get("attributes") or {}).values():
+        range_ = attr.get("range")
+        if range_ in BUILTIN_TYPE_FIXUP:
+            attr["range"] = BUILTIN_TYPE_FIXUP[range_]
+
+
 merged_classes: dict = {}
 for part in sorted(PARTS.glob("*.yml")):
     doc = yaml.safe_load(part.read_text())
@@ -20,6 +46,7 @@ for part in sorted(PARTS.glob("*.yml")):
         # it is not part of the MaStR model and collides across files.
         if name == "SchemaRoot":
             continue
+        normalize_ranges(cls)
         if name in merged_classes and merged_classes[name] != cls:
             print(f"WARNING: class {name!r} differs between files "
                   f"(keeping first, skipping the one in {part.name})")

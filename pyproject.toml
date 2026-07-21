@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "linkml>=1.11.1",
+    "mkdocs-material>=9.7.7",
     "pdfplumber>=0.11.10",
     "ruamel-yaml>=0.19.1",
     "schema-automator>=0.5.6",

@@ -8,3 +8,9 @@ wheels/
 
 # Virtual environments
 .venv
+
+# mkdocs build output
+site/
+
+# intermediate linkml files
+linkml/parts/*
