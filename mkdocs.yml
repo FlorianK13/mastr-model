@@ -2,6 +2,8 @@ site_name: Marktstammdatenregister (MaStR) Datenmodell
 site_description: LinkML-Datenmodell des Marktstammdatenregister (MaStR) Gesamtdatenexports
 docs_dir: docs
 repo_name: mastr-model
+repo_url: https://github.com/FlorianK13/mastr-model
+
 
 nav:
   - Home: index.md
