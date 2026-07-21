@@ -29,3 +29,6 @@ types) are generated directly from that schema using LinkML's `generate doc`
 command and should not be edited by hand — any changes belong in the schema
 source instead. This page, however, is maintained separately and is not
 touched by the generator.
+
+## AI Usage
+The python scripts in this repo were created by LLMs.
