@@ -312,21 +312,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-these-docs-are-built" class="md-nav__link">
+  <a href="#direkt-einsteigen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How these docs are built
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schema reference
+        Direkt einsteigen
       
     </span>
   </a>
@@ -395,21 +384,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-these-docs-are-built" class="md-nav__link">
+  <a href="#direkt-einsteigen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How these docs are built
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schema-reference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Schema reference
+        Direkt einsteigen
       
     </span>
   </a>
@@ -437,34 +415,20 @@
 
 
 <h1 id="marktstammdatenregister-mastr-datenmodell">Marktstammdatenregister (MaStR) Datenmodell</h1>
-<p>This site documents a <a href="https://linkml.io/">LinkML</a> data model for the
-Marktstammdatenregister (MaStR) Gesamtdatenexport.</p>
-<h2 id="how-these-docs-are-built">How these docs are built</h2>
-<p>The source data is the XSD schema files and the PDF documentation
-"Dokumentation des Exports" (Beschreibung des Exports) retrieved from the
-<a href="https://www.marktstammdatenregister.de/MaStR/Datendownload">Marktstammdatenregister</a>.</p>
-<p>The build pipeline is:</p>
-<ol>
-<li><code>xsd-preprocessing.py</code> patches the XSD files so schema-automator can import
-   them (replacing unsupported bounded integer types with <code>xs:integer</code>).</li>
-<li><code>merge-linkml.py</code> merges the per-XSD LinkML schemas from <code>linkml/parts/</code> into
-   <code>linkml/mastr.yml</code>.</li>
-<li><code>pdf-description-extraction.py</code> parses the PDF automatically and injects
-   attribute descriptions from the "Beschreibung" column into the matching
-   schema classes.</li>
-<li><code>extract-base-classes.py</code> induces inheritance: it creates abstract <code>Einheit</code>
-   and <code>Anlage</code> base classes that hold attributes shared across the concrete
-   <code>Einheit*</code> and <code>Anlage*</code> classes, determined by identifying slots that appear
-   in multiple of these classes with identical definitions.</li>
-</ol>
-<p>The schema is defined in <code>linkml/mastr.yml</code> as a LinkML schema. The reference
-pages under <a href="schema/">Schema</a> (classes, slots,
-types) are generated directly from that schema using LinkML's <code>generate doc</code>
-command and should not be edited by hand — any changes belong in the schema
-source instead. This page, however, is maintained separately and is not
-touched by the generator.</p>
-<h2 id="schema-reference">Schema reference</h2>
-<p>Start browsing the generated reference at <a href="schema/">schema/index.md</a>.</p>
+<p>Referenzdokumentation des
+<a href="https://www.marktstammdatenregister.de/MaStR/Datendownload">MaStR</a>
+Gesamtdatenexports als <a href="https://linkml.io/">LinkML</a>-Datenmodell.</p>
+<h2 id="direkt-einsteigen">Direkt einsteigen</h2>
+<ul>
+<li><strong><a href="schema/">Klassen</a></strong> – alle Klassen des Datenmodells mit ihren Attributen
+  (Einheiten, Anlagen, Marktakteure, Lokationen, Netze, …)</li>
+<li><strong><a href="schema/#slots">Slots</a></strong> – alle Attribute im Überblick</li>
+<li><strong><a href="schema/#enumerations">Enumerations</a></strong> – die Katalog-/Schlüsselwerte</li>
+<li><strong><a href="schema/#types">Types</a></strong> – die verwendeten Datentypen</li>
+</ul>
+<p>Die Referenzseiten werden direkt aus dem Schema in <code>linkml/mastr.yml</code>
+generiert und sollten nicht von Hand bearbeitet werden. Details zum
+Build-Prozess finden sich in der README des Repositorys.</p>
 
 
 
