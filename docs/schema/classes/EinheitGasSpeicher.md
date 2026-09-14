@@ -34,6 +34,15 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
         
       EinheitGasSpeicher : bundesland
         
+          
+    
+        
+        
+        EinheitGasSpeicher --> "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+    
+
+        
       EinheitGasSpeicher : datumBeginnVoruebergehendeStilllegung
         
       EinheitGasSpeicher : datumDesBetreiberwechsels
@@ -50,9 +59,27 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
         
       EinheitGasSpeicher : einheitBetriebsstatus
         
+          
+    
+        
+        
+        EinheitGasSpeicher --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       EinheitGasSpeicher : einheitMastrNummer
         
       EinheitGasSpeicher : einheitSystemstatus
+        
+          
+    
+        
+        
+        EinheitGasSpeicher --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
         
       EinheitGasSpeicher : flurFlurstuecknummern
         
@@ -77,6 +104,15 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
       EinheitGasSpeicher : laengengrad
         
       EinheitGasSpeicher : land
+        
+          
+    
+        
+        
+        EinheitGasSpeicher --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
         
       EinheitGasSpeicher : landkreis
         
@@ -103,6 +139,15 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
       EinheitGasSpeicher : registrierungsdatum
         
       EinheitGasSpeicher : speicherart
+        
+          
+    
+        
+        
+        EinheitGasSpeicher --> "0..1" Gasspeicherart : speicherart
+        click Gasspeicherart href "../../enums/Gasspeicherart/"
+    
+
         
       EinheitGasSpeicher : speicherMaStRNummer
         
@@ -132,7 +177,7 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
 | ---  | --- | --- | --- |
 | [adresszusatz](../slots/adresszusatz.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Adresszusatz | direct |
 | [nameGasspeicher](../slots/nameGasspeicher.md) | 0..1 <br/> [String](../types/String.md) | Vom Betreiber frei wählbare Bezeichnung der Gasspeichereinheit | direct |
-| [speicherart](../slots/speicherart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Art der Gasspeicherung | direct |
+| [speicherart](../slots/speicherart.md) | 0..1 <br/> [Gasspeicherart](../enums/Gasspeicherart.md) | Art der Gasspeicherung | direct |
 | [maximalNutzbaresArbeitsgasvolumen](../slots/maximalNutzbaresArbeitsgasvolumen.md) | 0..1 <br/> [Float](../types/Float.md) | Maximal nutzbares Arbeitsgasvolumen | direct |
 | [maximaleEinspeicherleistung](../slots/maximaleEinspeicherleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Maximale Einspeicherleistung | direct |
 | [maximaleAusspeicherleistung](../slots/maximaleAusspeicherleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Maximale Ausspeicherleistung | direct |
@@ -147,8 +192,8 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
 | [netzbetreiberpruefungStatus](../slots/netzbetreiberpruefungStatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungDatum](../slots/netzbetreiberpruefungDatum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [anlagenbetreiberMastrNummer](../slots/anlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer des Betreibers der Einheit | [Einheit](../classes/Einheit.md) |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [BundeslaenderEinheiten](../enums/BundeslaenderEinheiten.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
 | [landkreis](../slots/landkreis.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Landkreis | [Einheit](../classes/Einheit.md) |
 | [gemeinde](../slots/gemeinde.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeinde | [Einheit](../classes/Einheit.md) |
 | [gemeindeschluessel](../slots/gemeindeschluessel.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeindeschlüssel | [Einheit](../classes/Einheit.md) |
@@ -169,8 +214,8 @@ URI: [mastr:class/EinheitGasSpeicher](https://example.org/mastr/class/EinheitGas
 | [datumBeginnVoruebergehendeStilllegung](../slots/datumBeginnVoruebergehendeStilllegung.md) | 0..1 <br/> [Date](../types/Date.md) | Beginn der vorläufigen Stilllegung der Einheit | [Einheit](../classes/Einheit.md) |
 | [datumWiederaufnahmeBetrieb](../slots/datumWiederaufnahmeBetrieb.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der Wiederaufnahme des Betriebs | [Einheit](../classes/Einheit.md) |
 | [geplantesInbetriebnahmedatum](../slots/geplantesInbetriebnahmedatum.md) | 0..1 <br/> [Date](../types/Date.md) | Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit | [Einheit](../classes/Einheit.md) |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
 | [bestandsanlageMastrNummer](../slots/bestandsanlageMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltu... | [Einheit](../classes/Einheit.md) |
 | [nichtVorhandenInMigriertenEinheiten](../slots/nichtVorhandenInMigriertenEinheiten.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe über das Nichtvorhandensein in den migrierten Einheiten | [Einheit](../classes/Einheit.md) |
 | [altAnlagenbetreiberMastrNummer](../slots/altAnlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel... | [Einheit](../classes/Einheit.md) |
@@ -268,7 +313,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitGasSpeicher
-    range: integer
+    range: Gasspeicherart
   maximalNutzbaresArbeitsgasvolumen:
     name: maximalNutzbaresArbeitsgasvolumen
     instantiates:
@@ -409,7 +454,7 @@ attributes:
     owner: EinheitGasSpeicher
     domain_of:
     - EinheitGasSpeicher
-    range: integer
+    range: Gasspeicherart
   maximalNutzbaresArbeitsgasvolumen:
     name: maximalNutzbaresArbeitsgasvolumen
     instantiates:
@@ -594,7 +639,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -607,7 +652,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -860,7 +905,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -872,7 +917,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   bestandsanlageMastrNummer:
     name: bestandsanlageMastrNummer
     instantiates:

@@ -38,7 +38,7 @@ URI: [mastr:slot/artDerWasserkraftanlage](https://example.org/mastr/slot/artDerW
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [ArtDerWasserkraftanlage](../enums/ArtDerWasserkraftanlage.md) |
 | Domain Of | [EinheitWasser](../classes/EinheitWasser.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitWasser
 domain_of:
 - EinheitWasser
-range: integer
+range: ArtDerWasserkraftanlage
 
 ```
 </details></div>

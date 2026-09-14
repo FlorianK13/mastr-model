@@ -25,6 +25,15 @@ URI: [mastr:class/GeloeschterUndDeaktivierterMarktakteur](https://example.org/ma
         
       GeloeschterUndDeaktivierterMarktakteur : marktakteurStatus
         
+          
+    
+        
+        
+        GeloeschterUndDeaktivierterMarktakteur --> "0..1" Marktakteurstatus : marktakteurStatus
+        click Marktakteurstatus href "../../enums/Marktakteurstatus/"
+    
+
+        
       
 ```
 
@@ -38,7 +47,7 @@ URI: [mastr:class/GeloeschterUndDeaktivierterMarktakteur](https://example.org/ma
 | Name | Cardinality and Range | Description | Inheritance |
 | ---  | --- | --- | --- |
 | [marktakteurMastrNummer](../slots/marktakteurMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Die MaStR-Nummer de s Marktakteurs | direct |
-| [marktakteurStatus](../slots/marktakteurStatus.md) | 0..1 <br/> [String](../types/String.md) | Der Status des Marktakteurs | direct |
+| [marktakteurStatus](../slots/marktakteurStatus.md) | 0..1 <br/> [Marktakteurstatus](../enums/Marktakteurstatus.md) | Der Status des Marktakteurs | direct |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [String](../types/String.md) | Datum der letzten Aktualisierung an diesem Objekt | direct |
 
 
@@ -112,7 +121,7 @@ attributes:
     rank: 1000
     domain_of:
     - GeloeschterUndDeaktivierterMarktakteur
-    range: string
+    range: Marktakteurstatus
   datumLetzteAktualisierung:
     name: datumLetzteAktualisierung
     instantiates:
@@ -163,7 +172,7 @@ attributes:
     owner: GeloeschterUndDeaktivierterMarktakteur
     domain_of:
     - GeloeschterUndDeaktivierterMarktakteur
-    range: string
+    range: Marktakteurstatus
   datumLetzteAktualisierung:
     name: datumLetzteAktualisierung
     instantiates:

@@ -38,7 +38,7 @@ URI: [mastr:slot/rechtsform](https://example.org/mastr/slot/rechtsform)
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Rechtsform](../enums/Rechtsform.md) |
 | Domain Of | [Marktakteur](../classes/Marktakteur.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: Marktakteur
 domain_of:
 - Marktakteur
-range: integer
+range: Rechtsform
 
 ```
 </details></div>

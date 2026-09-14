@@ -38,7 +38,7 @@ URI: [mastr:slot/seelage](https://example.org/mastr/slot/seelage)
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Seelage](../enums/Seelage.md) |
 | Domain Of | [EinheitWind](../classes/EinheitWind.md) |
 
 ### Cardinality and Requirements
@@ -100,7 +100,7 @@ rank: 1000
 owner: EinheitWind
 domain_of:
 - EinheitWind
-range: integer
+range: Seelage
 
 ```
 </details></div>

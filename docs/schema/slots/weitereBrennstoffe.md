@@ -38,7 +38,7 @@ URI: [mastr:slot/weitereBrennstoffe](https://example.org/mastr/slot/weitereBrenn
 
 | Property | Value |
 | --- | --- |
-| Range | [String](../types/String.md) |
+| Range | [Brennstoff](../enums/Brennstoff.md) |
 | Domain Of | [EinheitVerbrennung](../classes/EinheitVerbrennung.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitVerbrennung
 domain_of:
 - EinheitVerbrennung
-range: string
+range: Brennstoff
 
 ```
 </details></div>

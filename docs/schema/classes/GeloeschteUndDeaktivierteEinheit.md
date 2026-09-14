@@ -23,9 +23,27 @@ URI: [mastr:class/GeloeschteUndDeaktivierteEinheit](https://example.org/mastr/cl
         
       GeloeschteUndDeaktivierteEinheit : einheitBetriebsstatus
         
+          
+    
+        
+        
+        GeloeschteUndDeaktivierteEinheit --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       GeloeschteUndDeaktivierteEinheit : einheitMastrNummer
         
       GeloeschteUndDeaktivierteEinheit : einheitSystemstatus
+        
+          
+    
+        
+        
+        GeloeschteUndDeaktivierteEinheit --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
         
       GeloeschteUndDeaktivierteEinheit : einheittyp
         
@@ -44,8 +62,8 @@ URI: [mastr:class/GeloeschteUndDeaktivierteEinheit](https://example.org/mastr/cl
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | direct |
 | [einheitMastrNummer](../slots/einheitMastrNummer.md) | 0..1 <br/> [String](../types/String.md) |  | direct |
 | [einheittyp](../slots/einheittyp.md) | 0..1 <br/> [Integer](../types/Integer.md) | Typ der Einheit: Objekt: Einheitentyp | direct |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | direct |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | direct |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | direct |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | direct |
 
 
 
@@ -144,7 +162,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -154,7 +172,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
 
 ```
 </details>
@@ -216,7 +234,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -227,7 +245,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
 
 ```
 </details></div>

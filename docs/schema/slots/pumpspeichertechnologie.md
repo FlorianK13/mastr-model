@@ -38,7 +38,7 @@ URI: [mastr:slot/pumpspeichertechnologie](https://example.org/mastr/slot/pumpspe
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Pumpspeichertechnologie](../enums/Pumpspeichertechnologie.md) |
 | Domain Of | [EinheitStromSpeicher](../classes/EinheitStromSpeicher.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitStromSpeicher
 domain_of:
 - EinheitStromSpeicher
-range: integer
+range: Pumpspeichertechnologie
 
 ```
 </details></div>

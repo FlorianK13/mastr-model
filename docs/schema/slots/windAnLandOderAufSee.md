@@ -38,7 +38,7 @@ URI: [mastr:slot/windAnLandOderAufSee](https://example.org/mastr/slot/windAnLand
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [WindAnLandOderAufSee](../enums/WindAnLandOderAufSee.md) |
 | Domain Of | [EinheitWind](../classes/EinheitWind.md) |
 
 ### Cardinality and Requirements
@@ -100,7 +100,7 @@ rank: 1000
 owner: EinheitWind
 domain_of:
 - EinheitWind
-range: integer
+range: WindAnLandOderAufSee
 
 ```
 </details></div>

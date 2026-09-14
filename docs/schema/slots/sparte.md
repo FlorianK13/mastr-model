@@ -38,7 +38,7 @@ URI: [mastr:slot/sparte](https://example.org/mastr/slot/sparte)
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Sparte](../enums/Sparte.md) |
 | Domain Of | [Netz](../classes/Netz.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: Netz
 domain_of:
 - Netz
-range: integer
+range: Sparte
 
 ```
 </details></div>

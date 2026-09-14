@@ -38,7 +38,7 @@ URI: [mastr:slot/leistungsbegrenzung](https://example.org/mastr/slot/leistungsbe
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [SolarLeistungsbegrenzung](../enums/SolarLeistungsbegrenzung.md) |
 | Domain Of | [EinheitSolar](../classes/EinheitSolar.md) |
 
 ### Cardinality and Requirements
@@ -100,7 +100,7 @@ rank: 1000
 owner: EinheitSolar
 domain_of:
 - EinheitSolar
-range: integer
+range: SolarLeistungsbegrenzung
 
 ```
 </details></div>

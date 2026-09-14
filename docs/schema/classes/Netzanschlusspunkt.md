@@ -31,6 +31,15 @@ URI: [mastr:class/Netzanschlusspunkt](https://example.org/mastr/class/Netzanschl
         
       Netzanschlusspunkt : marktgebiet
         
+          
+    
+        
+        
+        Netzanschlusspunkt --> "0..1" Marktgebiet : marktgebiet
+        click Marktgebiet href "../../enums/Marktgebiet/"
+    
+
+        
       Netzanschlusspunkt : maximaleAusspeiseleistung
         
       Netzanschlusspunkt : maximaleEinspeiseleistung
@@ -54,6 +63,15 @@ URI: [mastr:class/Netzanschlusspunkt](https://example.org/mastr/class/Netzanschl
       Netzanschlusspunkt : nochInPlanung
         
       Netzanschlusspunkt : regelzoneNetzanschlusspunkt
+        
+          
+    
+        
+        
+        Netzanschlusspunkt --> "0..1" Regelzone : regelzoneNetzanschlusspunkt
+        click Regelzone href "../../enums/Regelzone/"
+    
+
         
       Netzanschlusspunkt : spannungsebene
         
@@ -79,12 +97,12 @@ URI: [mastr:class/Netzanschlusspunkt](https://example.org/mastr/class/Netzanschl
 | [maximaleAusspeiseleistung](../slots/maximaleAusspeiseleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Technisch maximale Ausspeiseleistung am jeweiligen Netzanschlusspunkt (nur be... | direct |
 | [gasqualitaet](../slots/gasqualitaet.md) | 0..1 <br/> [Integer](../types/Integer.md) | Gasqualität am Netzanschlusspunkt | direct |
 | [messlokation](../slots/messlokation.md) | 0..1 <br/> [String](../types/String.md) | Messlokation gemäß Metering Code, VDE-AR-N 4400 | direct |
-| [marktgebiet](../slots/marktgebiet.md) | 0..1 <br/> [Integer](../types/Integer.md) | Marktgebiet des Netzanschlusspunktes | direct |
+| [marktgebiet](../slots/marktgebiet.md) | 0..1 <br/> [Marktgebiet](../enums/Marktgebiet.md) | Marktgebiet des Netzanschlusspunktes | direct |
 | [spannungsebene](../slots/spannungsebene.md) | 0..1 <br/> [Integer](../types/Integer.md) | Spannungsebene des Netzanschlusspunktes | direct |
 | [nettoengpassleistung](../slots/nettoengpassleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Erzielbare Dauerleistung der Erzeugungseinheiten am jeweiligen Netzanschlussp... | direct |
 | [bilanzierungsgebietNetzanschlusspunktId](../slots/bilanzierungsgebietNetzanschlusspunktId.md) | 0..1 <br/> [Integer](../types/Integer.md) | Id des Bilanzierungsgebietes | direct |
 | [netzanschlusskapazitaet](../slots/netzanschlusskapazitaet.md) | 0..1 <br/> [Float](../types/Float.md) | Kapazität des Netzanschlusspunktes | direct |
-| [regelzoneNetzanschlusspunkt](../slots/regelzoneNetzanschlusspunkt.md) | 0..1 <br/> [Integer](../types/Integer.md) | Regelzone des Netzanschlusspunktes | direct |
+| [regelzoneNetzanschlusspunkt](../slots/regelzoneNetzanschlusspunkt.md) | 0..1 <br/> [Regelzone](../enums/Regelzone.md) | Regelzone des Netzanschlusspunktes | direct |
 | [netzMaStRNummer](../slots/netzMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des Netzes an dem der Netzanschlusspunkt angeschlossen ist | direct |
 | [nochInPlanung](../slots/nochInPlanung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Kennzeichen, ob der Anschluss noch in Planung ist MaStR-Nummer des | direct |
 | [netzbetreiberMaStRNummer](../slots/netzbetreiberMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | Netzbetreibers | direct |
@@ -250,7 +268,7 @@ attributes:
     domain_of:
     - Netz
     - Netzanschlusspunkt
-    range: integer
+    range: Marktgebiet
   spannungsebene:
     name: spannungsebene
     instantiates:
@@ -300,7 +318,7 @@ attributes:
     domain_of:
     - Bilanzierungsgebiet
     - Netzanschlusspunkt
-    range: integer
+    range: Regelzone
   netzMaStRNummer:
     name: netzMaStRNummer
     instantiates:
@@ -464,7 +482,7 @@ attributes:
     domain_of:
     - Netz
     - Netzanschlusspunkt
-    range: integer
+    range: Marktgebiet
   spannungsebene:
     name: spannungsebene
     instantiates:
@@ -519,7 +537,7 @@ attributes:
     domain_of:
     - Bilanzierungsgebiet
     - Netzanschlusspunkt
-    range: integer
+    range: Regelzone
   netzMaStRNummer:
     name: netzMaStRNummer
     instantiates:

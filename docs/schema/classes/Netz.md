@@ -25,6 +25,15 @@ URI: [mastr:class/Netz](https://example.org/mastr/class/Netz)
         
       Netz : bundesland
         
+          
+    
+        
+        
+        Netz --> "0..1" Bundesland : bundesland
+        click Bundesland href "../../enums/Bundesland/"
+    
+
+        
       Netz : datumLetzteAktualisierung
         
       Netz : geschlossenesVerteilnetz
@@ -33,9 +42,27 @@ URI: [mastr:class/Netz](https://example.org/mastr/class/Netz)
         
       Netz : marktgebiet
         
+          
+    
+        
+        
+        Netz --> "0..1" Marktgebiet : marktgebiet
+        click Marktgebiet href "../../enums/Marktgebiet/"
+    
+
+        
       Netz : mastrNummer
         
       Netz : sparte
+        
+          
+    
+        
+        
+        Netz --> "0..1" Sparte : sparte
+        click Sparte href "../../enums/Sparte/"
+    
+
         
       
 ```
@@ -51,12 +78,12 @@ URI: [mastr:class/Netz](https://example.org/mastr/class/Netz)
 | ---  | --- | --- | --- |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | direct |
 | [mastrNummer](../slots/mastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Die MaStR-Nummer des Netzes | direct |
-| [sparte](../slots/sparte.md) | 0..1 <br/> [Integer](../types/Integer.md) | Spartes des Netzes, Katalogkategorie: Sparte | direct |
+| [sparte](../slots/sparte.md) | 0..1 <br/> [Sparte](../enums/Sparte.md) | Spartes des Netzes, Katalogkategorie: Sparte | direct |
 | [kundenAngeschlossen](../slots/kundenAngeschlossen.md) | 0..1 <br/> [Integer](../types/Integer.md) | Sind Kunden angeschlossen | direct |
 | [geschlossenesVerteilnetz](../slots/geschlossenesVerteilnetz.md) | 0..1 <br/> [Integer](../types/Integer.md) | Handelt es sich um ein geschlossenes Verteilnetz | direct |
 | [bezeichnung](../slots/bezeichnung.md) | 0..1 <br/> [String](../types/String.md) | Die Bezeichnung des Netzes | direct |
-| [marktgebiet](../slots/marktgebiet.md) | 0..1 <br/> [Integer](../types/Integer.md) | Marktgebiet des Gasnetzes | direct |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [String](../types/String.md) | Bundesländer des Netzes | direct |
+| [marktgebiet](../slots/marktgebiet.md) | 0..1 <br/> [Marktgebiet](../enums/Marktgebiet.md) | Marktgebiet des Gasnetzes | direct |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Bundesland](../enums/Bundesland.md) | Bundesländer des Netzes | direct |
 | [bilanzierungsgebiete](../slots/bilanzierungsgebiete.md) | 0..1 <br/> [String](../types/String.md) | Stromnetzbetreibern), ggf | direct |
 
 
@@ -148,7 +175,7 @@ attributes:
     rank: 1000
     domain_of:
     - Netz
-    range: integer
+    range: Sparte
   kundenAngeschlossen:
     name: kundenAngeschlossen
     instantiates:
@@ -189,7 +216,7 @@ attributes:
     domain_of:
     - Netz
     - Netzanschlusspunkt
-    range: integer
+    range: Marktgebiet
   bundesland:
     name: bundesland
     instantiates:
@@ -201,7 +228,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: string
+    range: Bundesland
   bilanzierungsgebiete:
     name: bilanzierungsgebiete
     instantiates:
@@ -264,7 +291,7 @@ attributes:
     owner: Netz
     domain_of:
     - Netz
-    range: integer
+    range: Sparte
   kundenAngeschlossen:
     name: kundenAngeschlossen
     instantiates:
@@ -309,7 +336,7 @@ attributes:
     domain_of:
     - Netz
     - Netzanschlusspunkt
-    range: integer
+    range: Marktgebiet
   bundesland:
     name: bundesland
     instantiates:
@@ -322,7 +349,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: string
+    range: Bundesland
   bilanzierungsgebiete:
     name: bilanzierungsgebiete
     instantiates:

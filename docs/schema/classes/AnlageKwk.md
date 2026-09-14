@@ -24,6 +24,15 @@ URI: [mastr:class/AnlageKwk](https://example.org/mastr/class/AnlageKwk)
       
       AnlageKwk : anlageBetriebsstatus
         
+          
+    
+        
+        
+        AnlageKwk --> "0..1" Betriebsstatus : anlageBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       AnlageKwk : ausschreibungZuschlag
         
       AnlageKwk : datumLetzteAktualisierung
@@ -65,7 +74,7 @@ URI: [mastr:class/AnlageKwk](https://example.org/mastr/class/AnlageKwk)
 | [registrierungsdatum](../slots/registrierungsdatum.md) | 0..1 <br/> [Date](../types/Date.md) | Registrierungsdatum der KWK- Anlage | direct |
 | [thermischeNutzleistung](../slots/thermischeNutzleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Die höchste Nutzwärmeerzeugung unter Nennbedingungen, die die KWKG-Anlage abg... | direct |
 | [elektrischeKwkLeistung](../slots/elektrischeKwkLeistung.md) | 0..1 <br/> [Float](../types/Float.md) | Die höchste an den Generatorklemmen abgebbare elektrische Wirkleistung der An... | direct |
-| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
+| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | [Anlage](../classes/Anlage.md) |
 | [verknuepfteEinheitenMaStRNummern](../slots/verknuepfteEinheitenMaStRNummern.md) | 0..1 <br/> [String](../types/String.md) | Liste von MaStR Nummern mit den verknüpften Stromerzeugern | [Anlage](../classes/Anlage.md) |
 
@@ -220,7 +229,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
 
 ```
 </details>
@@ -340,7 +349,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
   datumLetzteAktualisierung:
     name: datumLetzteAktualisierung
     instantiates:

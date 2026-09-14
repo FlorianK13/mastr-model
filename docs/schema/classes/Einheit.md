@@ -61,6 +61,15 @@ URI: [mastr:class/Einheit](https://example.org/mastr/class/Einheit)
         
       Einheit : bundesland
         
+          
+    
+        
+        
+        Einheit --> "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+    
+
+        
       Einheit : datumBeginnVoruebergehendeStilllegung
         
       Einheit : datumDesBetreiberwechsels
@@ -75,9 +84,27 @@ URI: [mastr:class/Einheit](https://example.org/mastr/class/Einheit)
         
       Einheit : einheitBetriebsstatus
         
+          
+    
+        
+        
+        Einheit --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       Einheit : einheitMastrNummer
         
       Einheit : einheitSystemstatus
+        
+          
+    
+        
+        
+        Einheit --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
         
       Einheit : flurFlurstuecknummern
         
@@ -102,6 +129,15 @@ URI: [mastr:class/Einheit](https://example.org/mastr/class/Einheit)
       Einheit : laengengrad
         
       Einheit : land
+        
+          
+    
+        
+        
+        Einheit --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
         
       Einheit : landkreis
         
@@ -156,8 +192,8 @@ URI: [mastr:class/Einheit](https://example.org/mastr/class/Einheit)
 | [netzbetreiberpruefungStatus](../slots/netzbetreiberpruefungStatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | direct |
 | [netzbetreiberpruefungDatum](../slots/netzbetreiberpruefungDatum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | direct |
 | [anlagenbetreiberMastrNummer](../slots/anlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer des Betreibers der Einheit | direct |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Land: Katalogkategorie: Land | direct |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Bundesland | direct |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Standort der Einheit: Land: Katalogkategorie: Land | direct |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [BundeslaenderEinheiten](../enums/BundeslaenderEinheiten.md) | Standort der Einheit: Bundesland | direct |
 | [landkreis](../slots/landkreis.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Landkreis | direct |
 | [gemeinde](../slots/gemeinde.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeinde | direct |
 | [gemeindeschluessel](../slots/gemeindeschluessel.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeindeschlüssel | direct |
@@ -178,8 +214,8 @@ URI: [mastr:class/Einheit](https://example.org/mastr/class/Einheit)
 | [datumBeginnVoruebergehendeStilllegung](../slots/datumBeginnVoruebergehendeStilllegung.md) | 0..1 <br/> [Date](../types/Date.md) | Beginn der vorläufigen Stilllegung der Einheit | direct |
 | [datumWiederaufnahmeBetrieb](../slots/datumWiederaufnahmeBetrieb.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der Wiederaufnahme des Betriebs | direct |
 | [geplantesInbetriebnahmedatum](../slots/geplantesInbetriebnahmedatum.md) | 0..1 <br/> [Date](../types/Date.md) | Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit | direct |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | direct |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | direct |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | direct |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | direct |
 | [bestandsanlageMastrNummer](../slots/bestandsanlageMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltu... | direct |
 | [nichtVorhandenInMigriertenEinheiten](../slots/nichtVorhandenInMigriertenEinheiten.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe über das Nichtvorhandensein in den migrierten Einheiten | direct |
 | [altAnlagenbetreiberMastrNummer](../slots/altAnlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel... | direct |
@@ -323,7 +359,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -335,7 +371,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -567,7 +603,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -578,7 +614,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   bestandsanlageMastrNummer:
     name: bestandsanlageMastrNummer
     instantiates:
@@ -746,7 +782,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -759,7 +795,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -1012,7 +1048,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -1024,7 +1060,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   bestandsanlageMastrNummer:
     name: bestandsanlageMastrNummer
     instantiates:

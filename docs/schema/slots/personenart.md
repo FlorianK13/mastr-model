@@ -38,7 +38,7 @@ URI: [mastr:slot/personenart](https://example.org/mastr/slot/personenart)
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Personenart](../enums/Personenart.md) |
 | Domain Of | [Marktakteur](../classes/Marktakteur.md) |
 
 ### Cardinality and Requirements
@@ -100,7 +100,7 @@ rank: 1000
 owner: Marktakteur
 domain_of:
 - Marktakteur
-range: integer
+range: Personenart
 
 ```
 </details></div>

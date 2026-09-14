@@ -38,7 +38,7 @@ URI: [mastr:slot/artDerSolaranlage](https://example.org/mastr/slot/artDerSolaran
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [ArtDerSolaranlage](../enums/ArtDerSolaranlage.md) |
 | Domain Of | [EinheitSolar](../classes/EinheitSolar.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitSolar
 domain_of:
 - EinheitSolar
-range: integer
+range: ArtDerSolaranlage
 
 ```
 </details></div>

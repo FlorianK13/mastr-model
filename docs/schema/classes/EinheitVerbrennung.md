@@ -44,6 +44,15 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
         
       EinheitVerbrennung : bundesland
         
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+    
+
+        
       EinheitVerbrennung : datumBaubeginn
         
       EinheitVerbrennung : datumBeginnVoruebergehendeStilllegung
@@ -64,17 +73,62 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
         
       EinheitVerbrennung : einheitBetriebsstatus
         
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       EinheitVerbrennung : einheitMastrNummer
         
       EinheitVerbrennung : einheitSystemstatus
         
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
+        
       EinheitVerbrennung : einsatzort
+        
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Einsatzort : einsatzort
+        click Einsatzort href "../../enums/Einsatzort/"
+    
+
         
       EinheitVerbrennung : einsatzverantwortlicher
         
       EinheitVerbrennung : einspeisungsart
         
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Einspeisungsart : einspeisungsart
+        click Einspeisungsart href "../../enums/Einspeisungsart/"
+    
+
+        
       EinheitVerbrennung : energietraeger
+        
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Energietraeger : energietraeger
+        click Energietraeger href "../../enums/Energietraeger/"
+    
+
         
       EinheitVerbrennung : fernsteuerbarkeitDv
         
@@ -93,6 +147,15 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
       EinheitVerbrennung : geplantesInbetriebnahmedatum
         
       EinheitVerbrennung : hauptbrennstoff
+        
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Brennstoff : hauptbrennstoff
+        click Brennstoff href "../../enums/Brennstoff/"
+    
+
         
       EinheitVerbrennung : hausnummer
         
@@ -115,6 +178,15 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
       EinheitVerbrennung : laengengrad
         
       EinheitVerbrennung : land
+        
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
         
       EinheitVerbrennung : landkreis
         
@@ -166,7 +238,25 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
         
       EinheitVerbrennung : weitereBrennstoffe
         
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Brennstoff : weitereBrennstoffe
+        click Brennstoff href "../../enums/Brennstoff/"
+    
+
+        
       EinheitVerbrennung : weitererHauptbrennstoff
+        
+          
+    
+        
+        
+        EinheitVerbrennung --> "0..1" Brennstoff : weitererHauptbrennstoff
+        click Brennstoff href "../../enums/Brennstoff/"
+    
+
         
       
 ```
@@ -190,25 +280,25 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
 | [weicDisplayName](../slots/weicDisplayName.md) | 0..1 <br/> [String](../types/String.md) | Displayname des W-EIC | direct |
 | [kraftwerksnummer](../slots/kraftwerksnummer.md) | 0..1 <br/> [String](../types/String.md) | Bundesnetzagentur- Kraftwerksnummer | direct |
 | [kraftwerksnummerNv](../slots/kraftwerksnummerNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Bundesnetzagentur- Kraftwerksnummer | direct |
-| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Integer](../types/Integer.md) | Energieträger der Einheit | direct |
+| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Energietraeger](../enums/Energietraeger.md) | Energieträger der Einheit | direct |
 | [bruttoleistung](../slots/bruttoleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Bruttoleistung in kW | direct |
 | [nettonennleistung](../slots/nettonennleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Nettonennleistung in kW | direct |
 | [anschlussAnHoechstOderHochSpannung](../slots/anschlussAnHoechstOderHochSpannung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschl... | direct |
 | [einsatzverantwortlicher](../slots/einsatzverantwortlicher.md) | 0..1 <br/> [String](../types/String.md) | Marktpartner-ID des Einsatzverantwortlichen | direct |
 | [fernsteuerbarkeitNb](../slots/fernsteuerbarkeitNb.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Netzbetreiber | direct |
 | [fernsteuerbarkeitDv](../slots/fernsteuerbarkeitDv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Direktvermarkter | direct |
-| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Volleinspeisung oder Teileinspeisung | direct |
+| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Einspeisungsart](../enums/Einspeisungsart.md) | Volleinspeisung oder Teileinspeisung | direct |
 | [genMastrNummer](../slots/genMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer der zu dieser Einheit zugeordneten Genehmigung | direct |
 | [nameKraftwerk](../slots/nameKraftwerk.md) | 0..1 <br/> [String](../types/String.md) | Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die... | direct |
 | [nameKraftwerksblock](../slots/nameKraftwerksblock.md) | 0..1 <br/> [String](../types/String.md) | Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die... | direct |
 | [anlageIstImKombibetrieb](../slots/anlageIstImKombibetrieb.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe ob die Stromerzeugungseinheit im Kombibetrieb betrieben wird | direct |
-| [hauptbrennstoff](../slots/hauptbrennstoff.md) | 0..1 <br/> [Integer](../types/Integer.md) | Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt | direct |
+| [hauptbrennstoff](../slots/hauptbrennstoff.md) | 0..1 <br/> [Brennstoff](../enums/Brennstoff.md) | Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt | direct |
 | [bestandteilGrenzkraftwerk](../slots/bestandteilGrenzkraftwerk.md) | 0..1 <br/> [Integer](../types/Integer.md) | Gehört die Stromerzeugungseinheit zu einem Grenzkraftwerk | direct |
-| [weitererHauptbrennstoff](../slots/weitererHauptbrennstoff.md) | 0..1 <br/> [Integer](../types/Integer.md) | Katalogkategorie: ErweiterterWeitereBrennstoffe | direct |
-| [weitereBrennstoffe](../slots/weitereBrennstoffe.md) | 0..1 <br/> [String](../types/String.md) | Katalogkategorie: ErweiterterWeitereBrennstoffe | direct |
+| [weitererHauptbrennstoff](../slots/weitererHauptbrennstoff.md) | 0..1 <br/> [Brennstoff](../enums/Brennstoff.md) | Katalogkategorie: ErweiterterWeitereBrennstoffe | direct |
+| [weitereBrennstoffe](../slots/weitereBrennstoffe.md) | 0..1 <br/> [Brennstoff](../enums/Brennstoff.md) | Katalogkategorie: ErweiterterWeitereBrennstoffe | direct |
 | [notstromaggregat](../slots/notstromaggregat.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe ob die Stromerzeugungseinheit zur Versorgung bei Stromnetzstörungen di... | direct |
 | [kwkMaStRNummer](../slots/kwkMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der verknüpften KWK-Anlage | direct |
-| [einsatzort](../slots/einsatzort.md) | 0..1 <br/> [Integer](../types/Integer.md) | An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat be... | direct |
+| [einsatzort](../slots/einsatzort.md) | 0..1 <br/> [Einsatzort](../enums/Einsatzort.md) | An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat be... | direct |
 | [technologie](../slots/technologie.md) | 0..1 <br/> [Integer](../types/Integer.md) | Technologie der Stromerzeugung | direct |
 | [steigerungNettonennleistungKombibetrieb](../slots/steigerungNettonennleistungKombibetrieb.md) | 0..1 <br/> [Float](../types/Float.md) | Steigerung der Nettonennleistung durch Kombibetrieb | direct |
 | [adresszusatz](../slots/adresszusatz.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Adresszusatz | direct |
@@ -227,8 +317,8 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
 | [netzbetreiberpruefungStatus](../slots/netzbetreiberpruefungStatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungDatum](../slots/netzbetreiberpruefungDatum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [anlagenbetreiberMastrNummer](../slots/anlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer des Betreibers der Einheit | [Einheit](../classes/Einheit.md) |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [BundeslaenderEinheiten](../enums/BundeslaenderEinheiten.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
 | [landkreis](../slots/landkreis.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Landkreis | [Einheit](../classes/Einheit.md) |
 | [gemeinde](../slots/gemeinde.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeinde | [Einheit](../classes/Einheit.md) |
 | [gemeindeschluessel](../slots/gemeindeschluessel.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeindeschlüssel | [Einheit](../classes/Einheit.md) |
@@ -249,8 +339,8 @@ URI: [mastr:class/EinheitVerbrennung](https://example.org/mastr/class/EinheitVer
 | [datumBeginnVoruebergehendeStilllegung](../slots/datumBeginnVoruebergehendeStilllegung.md) | 0..1 <br/> [Date](../types/Date.md) | Beginn der vorläufigen Stilllegung der Einheit | [Einheit](../classes/Einheit.md) |
 | [datumWiederaufnahmeBetrieb](../slots/datumWiederaufnahmeBetrieb.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der Wiederaufnahme des Betriebs | [Einheit](../classes/Einheit.md) |
 | [geplantesInbetriebnahmedatum](../slots/geplantesInbetriebnahmedatum.md) | 0..1 <br/> [Date](../types/Date.md) | Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit | [Einheit](../classes/Einheit.md) |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
 | [bestandsanlageMastrNummer](../slots/bestandsanlageMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltu... | [Einheit](../classes/Einheit.md) |
 | [nichtVorhandenInMigriertenEinheiten](../slots/nichtVorhandenInMigriertenEinheiten.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe über das Nichtvorhandensein in den migrierten Einheiten | [Einheit](../classes/Einheit.md) |
 | [altAnlagenbetreiberMastrNummer](../slots/altAnlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel... | [Einheit](../classes/Einheit.md) |
@@ -422,7 +512,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -536,7 +626,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   genMastrNummer:
     name: genMastrNummer
     instantiates:
@@ -597,7 +687,7 @@ attributes:
     domain_of:
     - EinheitBiomasse
     - EinheitVerbrennung
-    range: integer
+    range: Brennstoff
   bestandteilGrenzkraftwerk:
     name: bestandteilGrenzkraftwerk
     instantiates:
@@ -618,7 +708,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitVerbrennung
-    range: integer
+    range: Brennstoff
   weitereBrennstoffe:
     name: weitereBrennstoffe
     instantiates:
@@ -628,7 +718,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitVerbrennung
-    range: string
+    range: Brennstoff
   notstromaggregat:
     name: notstromaggregat
     instantiates:
@@ -661,7 +751,7 @@ attributes:
     domain_of:
     - EinheitStromSpeicher
     - EinheitVerbrennung
-    range: integer
+    range: Einsatzort
   technologie:
     name: technologie
     instantiates:
@@ -948,7 +1038,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -1069,7 +1159,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   genMastrNummer:
     name: genMastrNummer
     instantiates:
@@ -1135,7 +1225,7 @@ attributes:
     domain_of:
     - EinheitBiomasse
     - EinheitVerbrennung
-    range: integer
+    range: Brennstoff
   bestandteilGrenzkraftwerk:
     name: bestandteilGrenzkraftwerk
     instantiates:
@@ -1158,7 +1248,7 @@ attributes:
     owner: EinheitVerbrennung
     domain_of:
     - EinheitVerbrennung
-    range: integer
+    range: Brennstoff
   weitereBrennstoffe:
     name: weitereBrennstoffe
     instantiates:
@@ -1169,7 +1259,7 @@ attributes:
     owner: EinheitVerbrennung
     domain_of:
     - EinheitVerbrennung
-    range: string
+    range: Brennstoff
   notstromaggregat:
     name: notstromaggregat
     instantiates:
@@ -1205,7 +1295,7 @@ attributes:
     domain_of:
     - EinheitStromSpeicher
     - EinheitVerbrennung
-    range: integer
+    range: Einsatzort
   technologie:
     name: technologie
     instantiates:
@@ -1463,7 +1553,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -1476,7 +1566,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -1729,7 +1819,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -1741,7 +1831,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   bestandsanlageMastrNummer:
     name: bestandsanlageMastrNummer
     instantiates:

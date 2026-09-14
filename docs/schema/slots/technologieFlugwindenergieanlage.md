@@ -38,7 +38,7 @@ URI: [mastr:slot/technologieFlugwindenergieanlage](https://example.org/mastr/slo
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [TechnologieFlugwind](../enums/TechnologieFlugwind.md) |
 | Domain Of | [EinheitWind](../classes/EinheitWind.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitWind
 domain_of:
 - EinheitWind
-range: integer
+range: TechnologieFlugwind
 
 ```
 </details></div>

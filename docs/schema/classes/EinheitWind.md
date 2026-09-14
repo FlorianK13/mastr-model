@@ -54,6 +54,15 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
         
       EinheitWind : bundesland
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+    
+
+        
       EinheitWind : datumBeginnVoruebergehendeStilllegung
         
       EinheitWind : datumDesBetreiberwechsels
@@ -70,15 +79,51 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
         
       EinheitWind : einheitBetriebsstatus
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       EinheitWind : einheitMastrNummer
         
       EinheitWind : einheitSystemstatus
+        
+          
+    
+        
+        
+        EinheitWind --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
         
       EinheitWind : einsatzverantwortlicher
         
       EinheitWind : einspeisungsart
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" Einspeisungsart : einspeisungsart
+        click Einspeisungsart href "../../enums/Einspeisungsart/"
+    
+
+        
       EinheitWind : energietraeger
+        
+          
+    
+        
+        
+        EinheitWind --> "0..1" Energietraeger : energietraeger
+        click Energietraeger href "../../enums/Energietraeger/"
+    
+
         
       EinheitWind : fernsteuerbarkeitDv
         
@@ -128,6 +173,15 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
         
       EinheitWind : land
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
+        
       EinheitWind : landkreis
         
       EinheitWind : lokationMaStRNummer
@@ -160,6 +214,15 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
         
       EinheitWind : seelage
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" Seelage : seelage
+        click Seelage href "../../enums/Seelage/"
+    
+
+        
       EinheitWind : strasse
         
       EinheitWind : strasseNichtGefunden
@@ -168,11 +231,38 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
         
       EinheitWind : technologieFlugwindenergieanlage
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" TechnologieFlugwind : technologieFlugwindenergieanlage
+        click TechnologieFlugwind href "../../enums/TechnologieFlugwind/"
+    
+
+        
       EinheitWind : typenbezeichnung
         
       EinheitWind : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
         
+          
+    
+        
+        
+        EinheitWind --> "0..1" VorherigeNutzungsartengruppe : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
+        click VorherigeNutzungsartengruppe href "../../enums/VorherigeNutzungsartengruppe/"
+    
+
+        
       EinheitWind : vorherigerNutzungsartenbereichDerFlaeche
+        
+          
+    
+        
+        
+        EinheitWind --> "0..1" VorherigerNutzungsartenbereichDerFlaeche : vorherigerNutzungsartenbereichDerFlaeche
+        click VorherigerNutzungsartenbereichDerFlaeche href "../../enums/VorherigerNutzungsartenbereichDerFlaeche/"
+    
+
         
       EinheitWind : wassertiefe
         
@@ -183,6 +273,15 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
       EinheitWind : weicNv
         
       EinheitWind : windAnLandOderAufSee
+        
+          
+    
+        
+        
+        EinheitWind --> "0..1" WindAnLandOderAufSee : windAnLandOderAufSee
+        click WindAnLandOderAufSee href "../../enums/WindAnLandOderAufSee/"
+    
+
         
       
 ```
@@ -211,18 +310,18 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
 | [weicDisplayName](../slots/weicDisplayName.md) | 0..1 <br/> [String](../types/String.md) | Displayname des W-EIC | direct |
 | [kraftwerksnummer](../slots/kraftwerksnummer.md) | 0..1 <br/> [String](../types/String.md) | Bundesnetzagentur-Kraftwerksnummer | direct |
 | [kraftwerksnummerNv](../slots/kraftwerksnummerNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Bundesnetzagentur-Kraftwerksnummer | direct |
-| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Integer](../types/Integer.md) | Energieträger der Einheit | direct |
+| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Energietraeger](../enums/Energietraeger.md) | Energieträger der Einheit | direct |
 | [bruttoleistung](../slots/bruttoleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Bruttoleistung in kW | direct |
 | [nettonennleistung](../slots/nettonennleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Nettonennleistung in kW | direct |
 | [anschlussAnHoechstOderHochSpannung](../slots/anschlussAnHoechstOderHochSpannung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschl... | direct |
 | [einsatzverantwortlicher](../slots/einsatzverantwortlicher.md) | 0..1 <br/> [String](../types/String.md) | Marktpartner-ID des Einsatzverantwortlichen | direct |
 | [fernsteuerbarkeitNb](../slots/fernsteuerbarkeitNb.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Netzbetreiber | direct |
 | [fernsteuerbarkeitDv](../slots/fernsteuerbarkeitDv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Direktvermarkter | direct |
-| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Volleinspeisung oder Teileinspeisung | direct |
+| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Einspeisungsart](../enums/Einspeisungsart.md) | Volleinspeisung oder Teileinspeisung | direct |
 | [genMastrNummer](../slots/genMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer der zu dieser Einheit zugeordneten Genehmigung | direct |
 | [nameWindpark](../slots/nameWindpark.md) | 0..1 <br/> [String](../types/String.md) | Vom Betreiber frei wählbare Bezeichnung des Windparks, dessen Teil die Einhei... | direct |
-| [windAnLandOderAufSee](../slots/windAnLandOderAufSee.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe, ob die Stromerzeugungseinheit an Land oder auf See errichtet wurde | direct |
-| [seelage](../slots/seelage.md) | 0..1 <br/> [Integer](../types/Integer.md) | Wird die Windenergieanlage in der Nordsee oder in der Ostsee betrieben? Katal... | direct |
+| [windAnLandOderAufSee](../slots/windAnLandOderAufSee.md) | 0..1 <br/> [WindAnLandOderAufSee](../enums/WindAnLandOderAufSee.md) | Angabe, ob die Stromerzeugungseinheit an Land oder auf See errichtet wurde | direct |
+| [seelage](../slots/seelage.md) | 0..1 <br/> [Seelage](../enums/Seelage.md) | Wird die Windenergieanlage in der Nordsee oder in der Ostsee betrieben? Katal... | direct |
 | [gebietNachDemFlaechenentwicklungsplanNordsee](../slots/gebietNachDemFlaechenentwicklungsplanNordsee.md) | 0..1 <br/> [Integer](../types/Integer.md) | Gebiet nach dem Flächenentwicklungsplan in der Ostsee | direct |
 | [gebietNachDemFlaechenentwicklungsplanOstsee](../slots/gebietNachDemFlaechenentwicklungsplanOstsee.md) | 0..1 <br/> [Integer](../types/Integer.md) | Gebiet nach dem Flächenentwicklungsplan in der Ostsee | direct |
 | [hersteller](../slots/hersteller.md) | 0..1 <br/> [Integer](../types/Integer.md) | Hersteller der Einheit | direct |
@@ -243,20 +342,20 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
 | [wassertiefe](../slots/wassertiefe.md) | 0..1 <br/> [Float](../types/Float.md) | Wassertiefe am Standort der Stromerzeugungseinheit | direct |
 | [kuestenentfernung](../slots/kuestenentfernung.md) | 0..1 <br/> [Float](../types/Float.md) | Küstenentfernung des Standort der Stromerzeugungseinheit | direct |
 | [eegMaStRNummer](../slots/eegMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der zugeordneten EEG-Anlage | direct |
-| [technologieFlugwindenergieanlage](../slots/technologieFlugwindenergieanlage.md) | 0..1 <br/> [Integer](../types/Integer.md) | Technologie der Flugwindenergieanlage Katalogkategorie: TechnologieFlugwinden... | direct |
+| [technologieFlugwindenergieanlage](../slots/technologieFlugwindenergieanlage.md) | 0..1 <br/> [TechnologieFlugwind](../enums/TechnologieFlugwind.md) | Technologie der Flugwindenergieanlage Katalogkategorie: TechnologieFlugwinden... | direct |
 | [flughoehe](../slots/flughoehe.md) | 0..1 <br/> [Float](../types/Float.md) | Flughöhe einer Flugwindenergieanlage | direct |
 | [flugradius](../slots/flugradius.md) | 0..1 <br/> [Float](../types/Float.md) | Flugradius einer Flugwindenergieanlage | direct |
 | [groesseDerInAnspruchGenommenenFlaeche](../slots/groesseDerInAnspruchGenommenenFlaeche.md) | 0..1 <br/> [Float](../types/Float.md) | Größe der in Anspruch genommenen Fläche | direct |
-| [ueberwiegendeNutzungsartDerFlaecheVorErrichtung](../slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Überwiegende Nutzungsart der Fläche vor Errichtung Katalogkategorie: Vorherig... | direct |
-| [vorherigerNutzungsartenbereichDerFlaeche](../slots/vorherigerNutzungsartenbereichDerFlaeche.md) | 0..1 <br/> [Integer](../types/Integer.md) | Vorheriger Nutzungsartenbereich der Fläche Katalogkategorie: VorherigerNutzun... | direct |
+| [ueberwiegendeNutzungsartDerFlaecheVorErrichtung](../slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung.md) | 0..1 <br/> [VorherigeNutzungsartengruppe](../enums/VorherigeNutzungsartengruppe.md) | Überwiegende Nutzungsart der Fläche vor Errichtung Katalogkategorie: Vorherig... | direct |
+| [vorherigerNutzungsartenbereichDerFlaeche](../slots/vorherigerNutzungsartenbereichDerFlaeche.md) | 0..1 <br/> [VorherigerNutzungsartenbereichDerFlaeche](../enums/VorherigerNutzungsartenbereichDerFlaeche.md) | Vorheriger Nutzungsartenbereich der Fläche Katalogkategorie: VorherigerNutzun... | direct |
 | [einheitMastrNummer](../slots/einheitMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der Einheit | [Einheit](../classes/Einheit.md) |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | [Einheit](../classes/Einheit.md) |
 | [lokationMaStRNummer](../slots/lokationMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der Lokation | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungStatus](../slots/netzbetreiberpruefungStatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungDatum](../slots/netzbetreiberpruefungDatum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [anlagenbetreiberMastrNummer](../slots/anlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer des Betreibers der Einheit | [Einheit](../classes/Einheit.md) |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [BundeslaenderEinheiten](../enums/BundeslaenderEinheiten.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
 | [landkreis](../slots/landkreis.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Landkreis | [Einheit](../classes/Einheit.md) |
 | [gemeinde](../slots/gemeinde.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeinde | [Einheit](../classes/Einheit.md) |
 | [gemeindeschluessel](../slots/gemeindeschluessel.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeindeschlüssel | [Einheit](../classes/Einheit.md) |
@@ -274,8 +373,8 @@ URI: [mastr:class/EinheitWind](https://example.org/mastr/class/EinheitWind)
 | [datumBeginnVoruebergehendeStilllegung](../slots/datumBeginnVoruebergehendeStilllegung.md) | 0..1 <br/> [Date](../types/Date.md) | Beginn der vorläufigen Stilllegung der Einheit | [Einheit](../classes/Einheit.md) |
 | [datumWiederaufnahmeBetrieb](../slots/datumWiederaufnahmeBetrieb.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der Wiederaufnahme des Betriebs | [Einheit](../classes/Einheit.md) |
 | [geplantesInbetriebnahmedatum](../slots/geplantesInbetriebnahmedatum.md) | 0..1 <br/> [Date](../types/Date.md) | Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit | [Einheit](../classes/Einheit.md) |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
 | [nichtVorhandenInMigriertenEinheiten](../slots/nichtVorhandenInMigriertenEinheiten.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe über das Nichtvorhandensein in den migrierten Einheiten | [Einheit](../classes/Einheit.md) |
 | [altAnlagenbetreiberMastrNummer](../slots/altAnlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel... | [Einheit](../classes/Einheit.md) |
 | [datumDesBetreiberwechsels](../slots/datumDesBetreiberwechsels.md) | 0..1 <br/> [Date](../types/Date.md) | Datum des realen Betreiberwechsels | [Einheit](../classes/Einheit.md) |
@@ -516,7 +615,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -630,7 +729,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   genMastrNummer:
     name: genMastrNummer
     instantiates:
@@ -669,7 +768,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitWind
-    range: integer
+    range: WindAnLandOderAufSee
   seelage:
     name: seelage
     instantiates:
@@ -680,7 +779,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitWind
-    range: integer
+    range: Seelage
   gebietNachDemFlaechenentwicklungsplanNordsee:
     name: gebietNachDemFlaechenentwicklungsplanNordsee
     instantiates:
@@ -913,7 +1012,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitWind
-    range: integer
+    range: TechnologieFlugwind
   flughoehe:
     name: flughoehe
     instantiates:
@@ -954,7 +1053,7 @@ attributes:
     domain_of:
     - EinheitSolar
     - EinheitWind
-    range: integer
+    range: VorherigeNutzungsartengruppe
   vorherigerNutzungsartenbereichDerFlaeche:
     name: vorherigerNutzungsartenbereichDerFlaeche
     instantiates:
@@ -964,7 +1063,7 @@ attributes:
     domain_of:
     - EinheitSolar
     - EinheitWind
-    range: integer
+    range: VorherigerNutzungsartenbereichDerFlaeche
 
 ```
 </details>
@@ -1171,7 +1270,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -1292,7 +1391,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   genMastrNummer:
     name: genMastrNummer
     instantiates:
@@ -1334,7 +1433,7 @@ attributes:
     owner: EinheitWind
     domain_of:
     - EinheitWind
-    range: integer
+    range: WindAnLandOderAufSee
   seelage:
     name: seelage
     instantiates:
@@ -1346,7 +1445,7 @@ attributes:
     owner: EinheitWind
     domain_of:
     - EinheitWind
-    range: integer
+    range: Seelage
   gebietNachDemFlaechenentwicklungsplanNordsee:
     name: gebietNachDemFlaechenentwicklungsplanNordsee
     instantiates:
@@ -1600,7 +1699,7 @@ attributes:
     owner: EinheitWind
     domain_of:
     - EinheitWind
-    range: integer
+    range: TechnologieFlugwind
   flughoehe:
     name: flughoehe
     instantiates:
@@ -1645,7 +1744,7 @@ attributes:
     domain_of:
     - EinheitSolar
     - EinheitWind
-    range: integer
+    range: VorherigeNutzungsartengruppe
   vorherigerNutzungsartenbereichDerFlaeche:
     name: vorherigerNutzungsartenbereichDerFlaeche
     instantiates:
@@ -1656,7 +1755,7 @@ attributes:
     domain_of:
     - EinheitSolar
     - EinheitWind
-    range: integer
+    range: VorherigerNutzungsartenbereichDerFlaeche
   einheitMastrNummer:
     name: einheitMastrNummer
     instantiates:
@@ -1747,7 +1846,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -1760,7 +1859,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -1968,7 +2067,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -1980,7 +2079,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   nichtVorhandenInMigriertenEinheiten:
     name: nichtVorhandenInMigriertenEinheiten
     instantiates:

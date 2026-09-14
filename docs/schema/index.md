@@ -366,6 +366,38 @@ Name: mastr
 
 | Enumeration | Description |
 | --- | --- |
+| [Anrede](enums/Anrede.md) |  |
+| [ArtDerSolaranlage](enums/ArtDerSolaranlage.md) |  |
+| [ArtDerWasserkraftanlage](enums/ArtDerWasserkraftanlage.md) |  |
+| [Betriebsstatus](enums/Betriebsstatus.md) |  |
+| [Brennstoff](enums/Brennstoff.md) |  |
+| [BundeslaenderEinheiten](enums/BundeslaenderEinheiten.md) |  |
+| [Bundesland](enums/Bundesland.md) |  |
+| [Einsatzort](enums/Einsatzort.md) |  |
+| [Einspeisungsart](enums/Einspeisungsart.md) |  |
+| [Energietraeger](enums/Energietraeger.md) |  |
+| [Gasspeicherart](enums/Gasspeicherart.md) |  |
+| [Genehmigungsart](enums/Genehmigungsart.md) |  |
+| [Land](enums/Land.md) |  |
+| [Marktakteurstatus](enums/Marktakteurstatus.md) |  |
+| [Marktgebiet](enums/Marktgebiet.md) |  |
+| [Personenart](enums/Personenart.md) |  |
+| [Pumpspeichertechnologie](enums/Pumpspeichertechnologie.md) |  |
+| [Rechtsform](enums/Rechtsform.md) |  |
+| [Regelzone](enums/Regelzone.md) |  |
+| [Seelage](enums/Seelage.md) |  |
+| [SolarLeistungsbegrenzung](enums/SolarLeistungsbegrenzung.md) |  |
+| [SolarNutzungsbereich](enums/SolarNutzungsbereich.md) |  |
+| [Sparte](enums/Sparte.md) |  |
+| [Systemkopplung](enums/Systemkopplung.md) |  |
+| [Systemstatus](enums/Systemstatus.md) |  |
+| [TechnologieFlugwind](enums/TechnologieFlugwind.md) |  |
+| [TechnologieKernkraft](enums/TechnologieKernkraft.md) |  |
+| [Titel](enums/Titel.md) |  |
+| [VorherigeNutzungsartengruppe](enums/VorherigeNutzungsartengruppe.md) |  |
+| [VorherigerNutzungsartenbereichDerFlaeche](enums/VorherigerNutzungsartenbereichDerFlaeche.md) |  |
+| [WindAnLandOderAufSee](enums/WindAnLandOderAufSee.md) |  |
+| [Zuflussart](enums/Zuflussart.md) |  |
 
 
 ## Types

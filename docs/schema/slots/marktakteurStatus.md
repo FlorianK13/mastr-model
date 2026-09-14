@@ -38,7 +38,7 @@ URI: [mastr:slot/marktakteurStatus](https://example.org/mastr/slot/marktakteurSt
 
 | Property | Value |
 | --- | --- |
-| Range | [String](../types/String.md) |
+| Range | [Marktakteurstatus](../enums/Marktakteurstatus.md) |
 | Domain Of | [GeloeschterUndDeaktivierterMarktakteur](../classes/GeloeschterUndDeaktivierterMarktakteur.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: GeloeschterUndDeaktivierterMarktakteur
 domain_of:
 - GeloeschterUndDeaktivierterMarktakteur
-range: string
+range: Marktakteurstatus
 
 ```
 </details></div>

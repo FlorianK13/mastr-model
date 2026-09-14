@@ -24,6 +24,15 @@ URI: [mastr:class/AnlageGasSpeicher](https://example.org/mastr/class/AnlageGasSp
       
       AnlageGasSpeicher : anlageBetriebsstatus
         
+          
+    
+        
+        
+        AnlageGasSpeicher --> "0..1" Betriebsstatus : anlageBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       AnlageGasSpeicher : datumLetzteAktualisierung
         
       AnlageGasSpeicher : maStRNummer
@@ -53,7 +62,7 @@ URI: [mastr:class/AnlageGasSpeicher](https://example.org/mastr/class/AnlageGasSp
 | [maStRNummer](../slots/maStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des Gas Speichers | direct |
 | [speichername](../slots/speichername.md) | 0..1 <br/> [String](../types/String.md) | Name des Gas Speichers | direct |
 | [registrierungsdatum](../slots/registrierungsdatum.md) | 0..1 <br/> [Date](../types/Date.md) | Registrierungsdatum des Speichers | direct |
-| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
+| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | [Anlage](../classes/Anlage.md) |
 | [verknuepfteEinheitenMaStRNummern](../slots/verknuepfteEinheitenMaStRNummern.md) | 0..1 <br/> [String](../types/String.md) | Liste von MaStR Nummern mit den verknüpften Stromerzeugern | [Anlage](../classes/Anlage.md) |
 
@@ -161,7 +170,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
 
 ```
 </details>
@@ -230,7 +239,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
   datumLetzteAktualisierung:
     name: datumLetzteAktualisierung
     instantiates:

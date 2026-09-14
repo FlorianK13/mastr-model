@@ -38,7 +38,7 @@ URI: [mastr:slot/art](https://example.org/mastr/slot/art)
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Genehmigungsart](../enums/Genehmigungsart.md) |
 | Domain Of | [EinheitGenehmigung](../classes/EinheitGenehmigung.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitGenehmigung
 domain_of:
 - EinheitGenehmigung
-range: integer
+range: Genehmigungsart
 
 ```
 </details></div>

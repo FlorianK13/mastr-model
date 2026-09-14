@@ -38,7 +38,7 @@ URI: [mastr:slot/speicherart](https://example.org/mastr/slot/speicherart)
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Gasspeicherart](../enums/Gasspeicherart.md) |
 | Domain Of | [EinheitGasSpeicher](../classes/EinheitGasSpeicher.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: EinheitGasSpeicher
 domain_of:
 - EinheitGasSpeicher
-range: integer
+range: Gasspeicherart
 
 ```
 </details></div>

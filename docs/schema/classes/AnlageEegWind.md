@@ -24,6 +24,15 @@ URI: [mastr:class/AnlageEegWind](https://example.org/mastr/class/AnlageEegWind)
       
       AnlageEegWind : anlageBetriebsstatus
         
+          
+    
+        
+        
+        AnlageEegWind --> "0..1" Betriebsstatus : anlageBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       AnlageEegWind : anlagenkennzifferAnlagenregister
         
       AnlageEegWind : anlagenkennzifferAnlagenregisterNv
@@ -100,7 +109,7 @@ URI: [mastr:class/AnlageEegWind](https://example.org/mastr/class/AnlageEegWind)
 | [verhaeltnisReferenzertragErtrag15JahreNv](../slots/verhaeltnisReferenzertragErtrag15JahreNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Verhältnis des Ertrags zum Referenzertrag nach Ablauf des Referenzzeitraums v... | direct |
 | [ausschreibungZuschlag](../slots/ausschreibungZuschlag.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe ob für die EEG-Anlage Im Rahmen des Ausschreibungsverfahren der Bundes... | direct |
 | [zuschlagsnummer](../slots/zuschlagsnummer.md) | 0..1 <br/> [String](../types/String.md) | Von der Bundesnetzagentur im Rahmen des Ausschreibungsverfahrens vergebene Nu... | direct |
-| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
+| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
 | [registrierungsdatum](../slots/registrierungsdatum.md) | 0..1 <br/> [Date](../types/Date.md) | Registrierungsdatum der EEG- Anlage | [Anlage](../classes/Anlage.md) |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | [Anlage](../classes/Anlage.md) |
 | [verknuepfteEinheitenMaStRNummern](../slots/verknuepfteEinheitenMaStRNummern.md) | 0..1 <br/> [String](../types/String.md) | Liste von MaStR Nummern mit den verknüpften Stromerzeugern | [Anlage](../classes/Anlage.md) |
@@ -394,7 +403,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
 
 ```
 </details>
@@ -663,7 +672,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
   registrierungsdatum:
     name: registrierungsdatum
     instantiates:

@@ -34,6 +34,15 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
         
       EinheitSolar : artDerSolaranlage
         
+          
+    
+        
+        
+        EinheitSolar --> "0..1" ArtDerSolaranlage : artDerSolaranlage
+        click ArtDerSolaranlage href "../../enums/ArtDerSolaranlage/"
+    
+
+        
       EinheitSolar : bestandsanlageMastrNummer
         
       EinheitSolar : breitengrad
@@ -43,6 +52,15 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
       EinheitSolar : buergerenergie
         
       EinheitSolar : bundesland
+        
+          
+    
+        
+        
+        EinheitSolar --> "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+    
+
         
       EinheitSolar : datumBeginnVoruebergehendeStilllegung
         
@@ -60,17 +78,53 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
         
       EinheitSolar : einheitBetriebsstatus
         
+          
+    
+        
+        
+        EinheitSolar --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       EinheitSolar : einheitlicheAusrichtungUndNeigungswinkel
         
       EinheitSolar : einheitMastrNummer
         
       EinheitSolar : einheitSystemstatus
         
+          
+    
+        
+        
+        EinheitSolar --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
+        
       EinheitSolar : einsatzverantwortlicher
         
       EinheitSolar : einspeisungsart
         
+          
+    
+        
+        
+        EinheitSolar --> "0..1" Einspeisungsart : einspeisungsart
+        click Einspeisungsart href "../../enums/Einspeisungsart/"
+    
+
+        
       EinheitSolar : energietraeger
+        
+          
+    
+        
+        
+        EinheitSolar --> "0..1" Energietraeger : energietraeger
+        click Energietraeger href "../../enums/Energietraeger/"
+    
+
         
       EinheitSolar : fernsteuerbarkeitDv
         
@@ -112,9 +166,27 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
         
       EinheitSolar : land
         
+          
+    
+        
+        
+        EinheitSolar --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
+        
       EinheitSolar : landkreis
         
       EinheitSolar : leistungsbegrenzung
+        
+          
+    
+        
+        
+        EinheitSolar --> "0..1" SolarLeistungsbegrenzung : leistungsbegrenzung
+        click SolarLeistungsbegrenzung href "../../enums/SolarLeistungsbegrenzung/"
+    
+
         
       EinheitSolar : lichteHoehe
         
@@ -138,6 +210,15 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
         
       EinheitSolar : nutzungsbereich
         
+          
+    
+        
+        
+        EinheitSolar --> "0..1" SolarNutzungsbereich : nutzungsbereich
+        click SolarNutzungsbereich href "../../enums/SolarNutzungsbereich/"
+    
+
+        
       EinheitSolar : ort
         
       EinheitSolar : postleitzahl
@@ -151,6 +232,15 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
       EinheitSolar : strasseNichtGefunden
         
       EinheitSolar : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
+        
+          
+    
+        
+        
+        EinheitSolar --> "0..1" VorherigeNutzungsartengruppe : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
+        click VorherigeNutzungsartengruppe href "../../enums/VorherigeNutzungsartengruppe/"
+    
+
         
       EinheitSolar : vorherigerNutzungsartenbereichDerFlaeche
         
@@ -191,27 +281,27 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
 | [weicDisplayName](../slots/weicDisplayName.md) | 0..1 <br/> [String](../types/String.md) | Displayname des W-EIC | direct |
 | [kraftwerksnummer](../slots/kraftwerksnummer.md) | 0..1 <br/> [String](../types/String.md) | Bundesnetzagentur-Kraftwerksnummer | direct |
 | [kraftwerksnummerNv](../slots/kraftwerksnummerNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Bundesnetzagentur-Kraftwerksnummer | direct |
-| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Integer](../types/Integer.md) | Energieträger der Einheit | direct |
+| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Energietraeger](../enums/Energietraeger.md) | Energieträger der Einheit | direct |
 | [bruttoleistung](../slots/bruttoleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Bruttoleistung in kW | direct |
 | [nettonennleistung](../slots/nettonennleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Nettonennleistung in kW | direct |
 | [anschlussAnHoechstOderHochSpannung](../slots/anschlussAnHoechstOderHochSpannung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschl... | direct |
 | [fernsteuerbarkeitNb](../slots/fernsteuerbarkeitNb.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Netzbetreiber | direct |
 | [fernsteuerbarkeitDv](../slots/fernsteuerbarkeitDv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Direktvermarkter | direct |
-| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Volleinspeisung oder Teileinspeisung | direct |
+| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Einspeisungsart](../enums/Einspeisungsart.md) | Volleinspeisung oder Teileinspeisung | direct |
 | [zugeordneteWirkleistungWechselrichter](../slots/zugeordneteWirkleistungWechselrichter.md) | 0..1 <br/> [Float](../types/Float.md) | Wechselrichterleistung der Stromerzeugungseinheit | direct |
 | [anzahlModule](../slots/anzahlModule.md) | 0..1 <br/> [Integer](../types/Integer.md) | Anzahl der Module dieser Stromerzeugungseinheit | direct |
-| [artDerSolaranlage](../slots/artDerSolaranlage.md) | 0..1 <br/> [Integer](../types/Integer.md) | Art der Solaranlage | direct |
-| [leistungsbegrenzung](../slots/leistungsbegrenzung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Leistung der Stromerzeugungseinheit ist auf einen bestimmten prozentualen... | direct |
+| [artDerSolaranlage](../slots/artDerSolaranlage.md) | 0..1 <br/> [ArtDerSolaranlage](../enums/ArtDerSolaranlage.md) | Art der Solaranlage | direct |
+| [leistungsbegrenzung](../slots/leistungsbegrenzung.md) | 0..1 <br/> [SolarLeistungsbegrenzung](../enums/SolarLeistungsbegrenzung.md) | Die Leistung der Stromerzeugungseinheit ist auf einen bestimmten prozentualen... | direct |
 | [einheitlicheAusrichtungUndNeigungswinkel](../slots/einheitlicheAusrichtungUndNeigungswinkel.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe, ob einheitliche Ausrichtung und Neigungswinkel bestehen | direct |
 | [hauptausrichtung](../slots/hauptausrichtung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Ausrichtung bezeichnet die Himmelsrichtung | direct |
 | [hauptausrichtungNeigungswinkel](../slots/hauptausrichtungNeigungswinkel.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Neigungswinkel bezeichnet den Winkel gegenüber der Horizontalen | direct |
 | [nebenausrichtung](../slots/nebenausrichtung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Ausrichtung bezeichnet die Himmelsrichtung | direct |
 | [nebenausrichtungNeigungswinkel](../slots/nebenausrichtungNeigungswinkel.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Neigungswinkel bezeichnet den Winkel gegenüber der Horizontalen (Nebenaus... | direct |
-| [nutzungsbereich](../slots/nutzungsbereich.md) | 0..1 <br/> [Integer](../types/Integer.md) | Vorrangige Nutzung des in Anspruch genommenen Gebäudes | direct |
+| [nutzungsbereich](../slots/nutzungsbereich.md) | 0..1 <br/> [SolarNutzungsbereich](../enums/SolarNutzungsbereich.md) | Vorrangige Nutzung des in Anspruch genommenen Gebäudes | direct |
 | [buergerenergie](../slots/buergerenergie.md) | 0..1 <br/> [Integer](../types/Integer.md) | Bürgerenergieeigenschaft der Einheit | direct |
 | [eegMaStRNummer](../slots/eegMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der zugeordneten EEG-Anlage | direct |
 | [groesseDerInAnspruchGenommenenFlaecheInHektar](../slots/groesseDerInAnspruchGenommenenFlaecheInHektar.md) | 0..1 <br/> [Float](../types/Float.md) | Größe der in Anspruch genommene Fläche | direct |
-| [ueberwiegendeNutzungsartDerFlaecheVorErrichtung](../slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Überwiegende Nutzungsart der Fläche vor Errichtung der Anlage | direct |
+| [ueberwiegendeNutzungsartDerFlaecheVorErrichtung](../slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung.md) | 0..1 <br/> [VorherigeNutzungsartengruppe](../enums/VorherigeNutzungsartengruppe.md) | Überwiegende Nutzungsart der Fläche vor Errichtung der Anlage | direct |
 | [einsatzverantwortlicher](../slots/einsatzverantwortlicher.md) | 0..1 <br/> [String](../types/String.md) | Marktpartner-ID des Einsatzverantwortlichen | direct |
 | [genMastrNummer](../slots/genMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer der zu dieser Einheit zugeordneten Genehmigung | direct |
 | [speicherAmGleichenOrt](../slots/speicherAmGleichenOrt.md) | 0..1 <br/> [Integer](../types/Integer.md) | Speicher am gleichen Ort | direct |
@@ -225,8 +315,8 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
 | [netzbetreiberpruefungStatus](../slots/netzbetreiberpruefungStatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungDatum](../slots/netzbetreiberpruefungDatum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [anlagenbetreiberMastrNummer](../slots/anlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer des Betreibers der Einheit | [Einheit](../classes/Einheit.md) |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [BundeslaenderEinheiten](../enums/BundeslaenderEinheiten.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
 | [landkreis](../slots/landkreis.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Landkreis | [Einheit](../classes/Einheit.md) |
 | [gemeinde](../slots/gemeinde.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeinde | [Einheit](../classes/Einheit.md) |
 | [gemeindeschluessel](../slots/gemeindeschluessel.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeindeschlüssel | [Einheit](../classes/Einheit.md) |
@@ -244,8 +334,8 @@ URI: [mastr:class/EinheitSolar](https://example.org/mastr/class/EinheitSolar)
 | [datumBeginnVoruebergehendeStilllegung](../slots/datumBeginnVoruebergehendeStilllegung.md) | 0..1 <br/> [Date](../types/Date.md) | Beginn der vorläufigen Stilllegung der Einheit | [Einheit](../classes/Einheit.md) |
 | [datumWiederaufnahmeBetrieb](../slots/datumWiederaufnahmeBetrieb.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der Wiederaufnahme des Betriebs | [Einheit](../classes/Einheit.md) |
 | [geplantesInbetriebnahmedatum](../slots/geplantesInbetriebnahmedatum.md) | 0..1 <br/> [Date](../types/Date.md) | Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit | [Einheit](../classes/Einheit.md) |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
 | [nichtVorhandenInMigriertenEinheiten](../slots/nichtVorhandenInMigriertenEinheiten.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe über das Nichtvorhandensein in den migrierten Einheiten | [Einheit](../classes/Einheit.md) |
 | [altAnlagenbetreiberMastrNummer](../slots/altAnlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel... | [Einheit](../classes/Einheit.md) |
 | [datumDesBetreiberwechsels](../slots/datumDesBetreiberwechsels.md) | 0..1 <br/> [Date](../types/Date.md) | Datum des realen Betreiberwechsels | [Einheit](../classes/Einheit.md) |
@@ -486,7 +576,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -583,7 +673,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   zugeordneteWirkleistungWechselrichter:
     name: zugeordneteWirkleistungWechselrichter
     instantiates:
@@ -613,7 +703,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitSolar
-    range: integer
+    range: ArtDerSolaranlage
   leistungsbegrenzung:
     name: leistungsbegrenzung
     instantiates:
@@ -624,7 +714,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitSolar
-    range: integer
+    range: SolarLeistungsbegrenzung
   einheitlicheAusrichtungUndNeigungswinkel:
     name: einheitlicheAusrichtungUndNeigungswinkel
     instantiates:
@@ -689,7 +779,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitSolar
-    range: integer
+    range: SolarNutzungsbereich
   buergerenergie:
     name: buergerenergie
     instantiates:
@@ -742,7 +832,7 @@ attributes:
     domain_of:
     - EinheitSolar
     - EinheitWind
-    range: integer
+    range: VorherigeNutzungsartengruppe
   einsatzverantwortlicher:
     name: einsatzverantwortlicher
     instantiates:
@@ -1033,7 +1123,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -1136,7 +1226,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   zugeordneteWirkleistungWechselrichter:
     name: zugeordneteWirkleistungWechselrichter
     instantiates:
@@ -1169,7 +1259,7 @@ attributes:
     owner: EinheitSolar
     domain_of:
     - EinheitSolar
-    range: integer
+    range: ArtDerSolaranlage
   leistungsbegrenzung:
     name: leistungsbegrenzung
     instantiates:
@@ -1181,7 +1271,7 @@ attributes:
     owner: EinheitSolar
     domain_of:
     - EinheitSolar
-    range: integer
+    range: SolarLeistungsbegrenzung
   einheitlicheAusrichtungUndNeigungswinkel:
     name: einheitlicheAusrichtungUndNeigungswinkel
     instantiates:
@@ -1252,7 +1342,7 @@ attributes:
     owner: EinheitSolar
     domain_of:
     - EinheitSolar
-    range: integer
+    range: SolarNutzungsbereich
   buergerenergie:
     name: buergerenergie
     instantiates:
@@ -1309,7 +1399,7 @@ attributes:
     domain_of:
     - EinheitSolar
     - EinheitWind
-    range: integer
+    range: VorherigeNutzungsartengruppe
   einsatzverantwortlicher:
     name: einsatzverantwortlicher
     instantiates:
@@ -1491,7 +1581,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -1504,7 +1594,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -1712,7 +1802,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -1724,7 +1814,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   nichtVorhandenInMigriertenEinheiten:
     name: nichtVorhandenInMigriertenEinheiten
     instantiates:

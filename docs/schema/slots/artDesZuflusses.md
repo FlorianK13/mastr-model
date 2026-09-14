@@ -38,7 +38,7 @@ URI: [mastr:slot/artDesZuflusses](https://example.org/mastr/slot/artDesZuflusses
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Zuflussart](../enums/Zuflussart.md) |
 | Domain Of | [EinheitWasser](../classes/EinheitWasser.md) |
 
 ### Cardinality and Requirements
@@ -100,7 +100,7 @@ rank: 1000
 owner: EinheitWasser
 domain_of:
 - EinheitWasser
-range: integer
+range: Zuflussart
 
 ```
 </details></div>

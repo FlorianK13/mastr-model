@@ -37,6 +37,15 @@ URI: [mastr:class/Marktakteur](https://example.org/mastr/class/Marktakteur)
         
       Marktakteur : bundesland
         
+          
+    
+        
+        
+        Marktakteur --> "0..1" Bundesland : bundesland
+        click Bundesland href "../../enums/Bundesland/"
+    
+
+        
       Marktakteur : bundesnetzagenturBetriebsnummer
         
       Marktakteur : bundesnetzagenturBetriebsnummerNv
@@ -73,13 +82,49 @@ URI: [mastr:class/Marktakteur](https://example.org/mastr/class/Marktakteur)
         
       Marktakteur : land
         
+          
+    
+        
+        
+        Marktakteur --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
+        
       Marktakteur : landAnZustelladresse
         
+          
+    
+        
+        
+        Marktakteur --> "0..1" Land : landAnZustelladresse
+        click Land href "../../enums/Land/"
+    
+
+        
       Marktakteur : marktakteurAnrede
+        
+          
+    
+        
+        
+        Marktakteur --> "0..1" Anrede : marktakteurAnrede
+        click Anrede href "../../enums/Anrede/"
+    
+
         
       Marktakteur : marktakteurNachname
         
       Marktakteur : marktakteurTitel
+        
+          
+    
+        
+        
+        Marktakteur --> "0..1" Titel : marktakteurTitel
+        click Titel href "../../enums/Titel/"
+    
+
         
       Marktakteur : marktakteurVorname
         
@@ -99,11 +144,29 @@ URI: [mastr:class/Marktakteur](https://example.org/mastr/class/Marktakteur)
         
       Marktakteur : personenart
         
+          
+    
+        
+        
+        Marktakteur --> "0..1" Personenart : personenart
+        click Personenart href "../../enums/Personenart/"
+    
+
+        
       Marktakteur : postleitzahl
         
       Marktakteur : postleitzahlAnZustelladresse
         
       Marktakteur : rechtsform
+        
+          
+    
+        
+        
+        Marktakteur --> "0..1" Rechtsform : rechtsform
+        click Rechtsform href "../../enums/Rechtsform/"
+    
+
         
       Marktakteur : region
         
@@ -157,17 +220,17 @@ URI: [mastr:class/Marktakteur](https://example.org/mastr/class/Marktakteur)
 | ---  | --- | --- | --- |
 | [mastrNummer](../slots/mastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Die MaStR-Nummer des gewünschten Marktakteurs | direct |
 | [datumLetzeAktualisierung](../slots/datumLetzeAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) |  | direct |
-| [personenart](../slots/personenart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe der Personenart des Marktakteurs: Natürliche Person oder Organisation ... | direct |
-| [marktakteurAnrede](../slots/marktakteurAnrede.md) | 0..1 <br/> [Integer](../types/Integer.md) | Details zur Personenart | direct |
-| [marktakteurTitel](../slots/marktakteurTitel.md) | 0..1 <br/> [Integer](../types/Integer.md) | Titel der natürlichen Person | direct |
+| [personenart](../slots/personenart.md) | 0..1 <br/> [Personenart](../enums/Personenart.md) | Angabe der Personenart des Marktakteurs: Natürliche Person oder Organisation ... | direct |
+| [marktakteurAnrede](../slots/marktakteurAnrede.md) | 0..1 <br/> [Anrede](../enums/Anrede.md) | Details zur Personenart | direct |
+| [marktakteurTitel](../slots/marktakteurTitel.md) | 0..1 <br/> [Titel](../enums/Titel.md) | Titel der natürlichen Person | direct |
 | [marktakteurVorname](../slots/marktakteurVorname.md) | 0..1 <br/> [String](../types/String.md) | Vorname der natürlichen Person | direct |
 | [marktakteurNachname](../slots/marktakteurNachname.md) | 0..1 <br/> [String](../types/String.md) | Nachname der natürlichen Person | direct |
 | [firmenname](../slots/firmenname.md) | 0..1 <br/> [String](../types/String.md) | Name der Firma mit dem rechtsformergänzenden Namenszusatz | direct |
 | [marktfunktion](../slots/marktfunktion.md) | 0..1 <br/> [Integer](../types/Integer.md) | Marktfunktion des Marktakteurs | direct |
-| [rechtsform](../slots/rechtsform.md) | 0..1 <br/> [Integer](../types/Integer.md) | Rechtsform der Organsiation | direct |
+| [rechtsform](../slots/rechtsform.md) | 0..1 <br/> [Rechtsform](../enums/Rechtsform.md) | Rechtsform der Organsiation | direct |
 | [sonstigeRechtsform](../slots/sonstigeRechtsform.md) | 0..1 <br/> [String](../types/String.md) | Angabe der Rechtsform, wenn Sonstige gewählt wurde | direct |
 | [marktrollen](../slots/marktrollen.md) | 0..1 <br/> [String](../types/String.md) | Auflistung der zugeordneten Marktrollen und deren Daten | direct |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Das Land, in dem der Marktakteur seinen Sitz hat | direct |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Das Land, in dem der Marktakteur seinen Sitz hat | direct |
 | [region](../slots/region.md) | 0..1 <br/> [String](../types/String.md) | Region | direct |
 | [strasse](../slots/strasse.md) | 0..1 <br/> [String](../types/String.md) | Die Straße, in der der Marktakteur seinen Sitz hat | direct |
 | [hausnummer](../slots/hausnummer.md) | 0..1 <br/> [String](../types/String.md) | Die Hausnummer, an der der Marktakteur seinen Sitz hat | direct |
@@ -175,7 +238,7 @@ URI: [mastr:class/Marktakteur](https://example.org/mastr/class/Marktakteur)
 | [adresszusatz](../slots/adresszusatz.md) | 0..1 <br/> [String](../types/String.md) | Optionaler Zusatz zur Anschrift des Marktakteurs | direct |
 | [postleitzahl](../slots/postleitzahl.md) | 0..1 <br/> [String](../types/String.md) | Die Postleitzahl, in deren Gebiet der Marktakteur seinen Sitz hat | direct |
 | [ort](../slots/ort.md) | 0..1 <br/> [String](../types/String.md) | Der Ort, in dem der Marktakteur seinen Sitz hat | direct |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Das Bundesland, in dem der Marktakteur seinen Sitz hat | direct |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Bundesland](../enums/Bundesland.md) | Das Bundesland, in dem der Marktakteur seinen Sitz hat | direct |
 | [netz](../slots/netz.md) | 0..1 <br/> [String](../types/String.md) | Netz des Netzbetreibers (nur bei Netzbetreibern) | direct |
 | [nuts2](../slots/nuts2.md) | 0..1 <br/> [String](../types/String.md) | NUTS-II-Region | direct |
 | [email](../slots/email.md) | 0..1 <br/> [String](../types/String.md) | E-Mail des Marktakteurs | direct |
@@ -197,7 +260,7 @@ URI: [mastr:class/Marktakteur](https://example.org/mastr/class/Marktakteur)
 | [taetigkeitsende](../slots/taetigkeitsende.md) | 0..1 <br/> [Date](../types/Date.md) | Das Tätigkeitsende des Marktakteurs | direct |
 | [bundesnetzagenturBetriebsnummer](../slots/bundesnetzagenturBetriebsnummer.md) | 0..1 <br/> [String](../types/String.md) | BNetzA-Betriebsnummer des Netzbetreibers (nur bei Stromnetzbetreiber, Gasnetz... | direct |
 | [bundesnetzagenturBetriebsnummerNv](../slots/bundesnetzagenturBetriebsnummerNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | BNetzA-Betriebsnummer des Netzbetreibers (nur bei Stromnetzbetreiber, Gasnetz... | direct |
-| [landAnZustelladresse](../slots/landAnZustelladresse.md) | 0..1 <br/> [Integer](../types/Integer.md) | Land - Zustelladresse | direct |
+| [landAnZustelladresse](../slots/landAnZustelladresse.md) | 0..1 <br/> [Land](../enums/Land.md) | Land - Zustelladresse | direct |
 | [postleitzahlAnZustelladresse](../slots/postleitzahlAnZustelladresse.md) | 0..1 <br/> [String](../types/String.md) | Postleitzahl - Zustelladresse | direct |
 | [ortAnZustelladresse](../slots/ortAnZustelladresse.md) | 0..1 <br/> [String](../types/String.md) | Ort - Zustelladresse | direct |
 | [strasseAnZustelladresse](../slots/strasseAnZustelladresse.md) | 0..1 <br/> [String](../types/String.md) | Straße - Zustelladresse | direct |
@@ -300,7 +363,7 @@ attributes:
     rank: 1000
     domain_of:
     - Marktakteur
-    range: integer
+    range: Personenart
   marktakteurAnrede:
     name: marktakteurAnrede
     instantiates:
@@ -310,7 +373,7 @@ attributes:
     rank: 1000
     domain_of:
     - Marktakteur
-    range: integer
+    range: Anrede
   marktakteurTitel:
     name: marktakteurTitel
     instantiates:
@@ -320,7 +383,7 @@ attributes:
     rank: 1000
     domain_of:
     - Marktakteur
-    range: integer
+    range: Titel
   marktakteurVorname:
     name: marktakteurVorname
     instantiates:
@@ -370,7 +433,7 @@ attributes:
     rank: 1000
     domain_of:
     - Marktakteur
-    range: integer
+    range: Rechtsform
   sonstigeRechtsform:
     name: sonstigeRechtsform
     instantiates:
@@ -402,7 +465,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   region:
     name: region
     instantiates:
@@ -498,7 +561,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: Bundesland
   netz:
     name: netz
     instantiates:
@@ -724,7 +787,7 @@ attributes:
     rank: 1000
     domain_of:
     - Marktakteur
-    range: integer
+    range: Land
   postleitzahlAnZustelladresse:
     name: postleitzahlAnZustelladresse
     instantiates:
@@ -957,7 +1020,7 @@ attributes:
     owner: Marktakteur
     domain_of:
     - Marktakteur
-    range: integer
+    range: Personenart
   marktakteurAnrede:
     name: marktakteurAnrede
     instantiates:
@@ -968,7 +1031,7 @@ attributes:
     owner: Marktakteur
     domain_of:
     - Marktakteur
-    range: integer
+    range: Anrede
   marktakteurTitel:
     name: marktakteurTitel
     instantiates:
@@ -979,7 +1042,7 @@ attributes:
     owner: Marktakteur
     domain_of:
     - Marktakteur
-    range: integer
+    range: Titel
   marktakteurVorname:
     name: marktakteurVorname
     instantiates:
@@ -1034,7 +1097,7 @@ attributes:
     owner: Marktakteur
     domain_of:
     - Marktakteur
-    range: integer
+    range: Rechtsform
   sonstigeRechtsform:
     name: sonstigeRechtsform
     instantiates:
@@ -1069,7 +1132,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   region:
     name: region
     instantiates:
@@ -1173,7 +1236,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: Bundesland
   netz:
     name: netz
     instantiates:
@@ -1421,7 +1484,7 @@ attributes:
     owner: Marktakteur
     domain_of:
     - Marktakteur
-    range: integer
+    range: Land
   postleitzahlAnZustelladresse:
     name: postleitzahlAnZustelladresse
     instantiates:

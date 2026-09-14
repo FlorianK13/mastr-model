@@ -23,6 +23,15 @@ URI: [mastr:class/EinheitGenehmigung](https://example.org/mastr/class/EinheitGen
         
       EinheitGenehmigung : art
         
+          
+    
+        
+        
+        EinheitGenehmigung --> "0..1" Genehmigungsart : art
+        click Genehmigungsart href "../../enums/Genehmigungsart/"
+    
+
+        
       EinheitGenehmigung : behoerde
         
       EinheitGenehmigung : datum
@@ -61,7 +70,7 @@ URI: [mastr:class/EinheitGenehmigung](https://example.org/mastr/class/EinheitGen
 | ---  | --- | --- | --- |
 | [genMastrNummer](../slots/genMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der Genehmigung | direct |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | direct |
-| [art](../slots/art.md) | 0..1 <br/> [Integer](../types/Integer.md) | Art der Genehmigung | direct |
+| [art](../slots/art.md) | 0..1 <br/> [Genehmigungsart](../enums/Genehmigungsart.md) | Art der Genehmigung | direct |
 | [datum](../slots/datum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum, ab dem die Genehmigung für Bau oder Betrieb der Stromerzeugungseinheit... | direct |
 | [behoerde](../slots/behoerde.md) | 0..1 <br/> [String](../types/String.md) | Behörde, die Genehmigung ausgestellt hat | direct |
 | [aktenzeichen](../slots/aktenzeichen.md) | 0..1 <br/> [String](../types/String.md) | Aktenzeichen der Genehmigung, welche die Genehmigungsbehörde vergeben hat | direct |
@@ -168,7 +177,7 @@ attributes:
     rank: 1000
     domain_of:
     - EinheitGenehmigung
-    range: integer
+    range: Genehmigungsart
   datum:
     name: datum
     instantiates:
@@ -348,7 +357,7 @@ attributes:
     owner: EinheitGenehmigung
     domain_of:
     - EinheitGenehmigung
-    range: integer
+    range: Genehmigungsart
   datum:
     name: datum
     instantiates:

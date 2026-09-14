@@ -40,6 +40,15 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
         
       EinheitBiomasse : bundesland
         
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+    
+
+        
       EinheitBiomasse : datumBeginnVoruebergehendeStilllegung
         
       EinheitBiomasse : datumDesBetreiberwechsels
@@ -60,15 +69,51 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
         
       EinheitBiomasse : einheitBetriebsstatus
         
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       EinheitBiomasse : einheitMastrNummer
         
       EinheitBiomasse : einheitSystemstatus
+        
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+    
+
         
       EinheitBiomasse : einsatzverantwortlicher
         
       EinheitBiomasse : einspeisungsart
         
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" Einspeisungsart : einspeisungsart
+        click Einspeisungsart href "../../enums/Einspeisungsart/"
+    
+
+        
       EinheitBiomasse : energietraeger
+        
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" Energietraeger : energietraeger
+        click Energietraeger href "../../enums/Energietraeger/"
+    
+
         
       EinheitBiomasse : fernsteuerbarkeitDv
         
@@ -87,6 +132,15 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
       EinheitBiomasse : geplantesInbetriebnahmedatum
         
       EinheitBiomasse : hauptbrennstoff
+        
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" Brennstoff : hauptbrennstoff
+        click Brennstoff href "../../enums/Brennstoff/"
+    
+
         
       EinheitBiomasse : hausnummer
         
@@ -109,6 +163,15 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
       EinheitBiomasse : laengengrad
         
       EinheitBiomasse : land
+        
+          
+    
+        
+        
+        EinheitBiomasse --> "0..1" Land : land
+        click Land href "../../enums/Land/"
+    
+
         
       EinheitBiomasse : landkreis
         
@@ -168,16 +231,16 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
 | [weicDisplayName](../slots/weicDisplayName.md) | 0..1 <br/> [String](../types/String.md) | Displayname des W-EIC | direct |
 | [kraftwerksnummer](../slots/kraftwerksnummer.md) | 0..1 <br/> [String](../types/String.md) | Bundesnetzagentur- Kraftwerksnummer | direct |
 | [kraftwerksnummerNv](../slots/kraftwerksnummerNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Bundesnetzagentur- Kraftwerksnummer | direct |
-| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Integer](../types/Integer.md) | Energieträger der Einheit | direct |
+| [energietraeger](../slots/energietraeger.md) | 0..1 <br/> [Energietraeger](../enums/Energietraeger.md) | Energieträger der Einheit | direct |
 | [bruttoleistung](../slots/bruttoleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Bruttoleistung in kW | direct |
 | [nettonennleistung](../slots/nettonennleistung.md) | 0..1 <br/> [Float](../types/Float.md) | Nettonennleistung in kW | direct |
 | [anschlussAnHoechstOderHochSpannung](../slots/anschlussAnHoechstOderHochSpannung.md) | 0..1 <br/> [Integer](../types/Integer.md) | Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschl... | direct |
 | [einsatzverantwortlicher](../slots/einsatzverantwortlicher.md) | 0..1 <br/> [String](../types/String.md) | Marktpartner-ID des Einsatzverantwortlichen | direct |
 | [fernsteuerbarkeitNb](../slots/fernsteuerbarkeitNb.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Netzbetreiber | direct |
 | [fernsteuerbarkeitDv](../slots/fernsteuerbarkeitDv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Fernsteuerbarkeit der Einheit durch einen Direktvermarkter | direct |
-| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Volleinspeisung oder Teileinspeisung | direct |
+| [einspeisungsart](../slots/einspeisungsart.md) | 0..1 <br/> [Einspeisungsart](../enums/Einspeisungsart.md) | Volleinspeisung oder Teileinspeisung | direct |
 | [genMastrNummer](../slots/genMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der zu dieser Einheit zugeordneten Genehmigung | direct |
-| [hauptbrennstoff](../slots/hauptbrennstoff.md) | 0..1 <br/> [Integer](../types/Integer.md) | Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt | direct |
+| [hauptbrennstoff](../slots/hauptbrennstoff.md) | 0..1 <br/> [Brennstoff](../enums/Brennstoff.md) | Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt | direct |
 | [biomasseart](../slots/biomasseart.md) | 0..1 <br/> [Integer](../types/Integer.md) | Art der Biomasse | direct |
 | [technologie](../slots/technologie.md) | 0..1 <br/> [Integer](../types/Integer.md) | Technologie der Stromerzeugung | direct |
 | [eegMaStRNummer](../slots/eegMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStRNummer der zugeordneten EEG-Anlage | direct |
@@ -191,8 +254,8 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
 | [lokationMaStRNummer](../slots/lokationMaStRNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer der Lokation | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungStatus](../slots/netzbetreiberpruefungStatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
 | [netzbetreiberpruefungDatum](../slots/netzbetreiberpruefungDatum.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde | [Einheit](../classes/Einheit.md) |
-| [land](../slots/land.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
-| [bundesland](../slots/bundesland.md) | 0..1 <br/> [Integer](../types/Integer.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
+| [land](../slots/land.md) | 0..1 <br/> [Land](../enums/Land.md) | Standort der Einheit: Land: Katalogkategorie: Land | [Einheit](../classes/Einheit.md) |
+| [bundesland](../slots/bundesland.md) | 0..1 <br/> [BundeslaenderEinheiten](../enums/BundeslaenderEinheiten.md) | Standort der Einheit: Bundesland | [Einheit](../classes/Einheit.md) |
 | [landkreis](../slots/landkreis.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Landkreis | [Einheit](../classes/Einheit.md) |
 | [gemeinde](../slots/gemeinde.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeinde | [Einheit](../classes/Einheit.md) |
 | [gemeindeschluessel](../slots/gemeindeschluessel.md) | 0..1 <br/> [String](../types/String.md) | Standort der Einheit: Gemeindeschlüssel | [Einheit](../classes/Einheit.md) |
@@ -213,8 +276,8 @@ URI: [mastr:class/EinheitBiomasse](https://example.org/mastr/class/EinheitBiomas
 | [datumBeginnVoruebergehendeStilllegung](../slots/datumBeginnVoruebergehendeStilllegung.md) | 0..1 <br/> [Date](../types/Date.md) | Beginn der vorläufigen Stilllegung der Einheit | [Einheit](../classes/Einheit.md) |
 | [datumWiederaufnahmeBetrieb](../slots/datumWiederaufnahmeBetrieb.md) | 0..1 <br/> [Date](../types/Date.md) | Datum der Wiederaufnahme des Betriebs | [Einheit](../classes/Einheit.md) |
 | [geplantesInbetriebnahmedatum](../slots/geplantesInbetriebnahmedatum.md) | 0..1 <br/> [Date](../types/Date.md) | Geplantes Inbetriebnahmedatum der Stromerzeugungsseinheit | [Einheit](../classes/Einheit.md) |
-| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
-| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitSystemstatus](../slots/einheitSystemstatus.md) | 0..1 <br/> [Systemstatus](../enums/Systemstatus.md) | Systemstatus der Einheit | [Einheit](../classes/Einheit.md) |
+| [einheitBetriebsstatus](../slots/einheitBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Einheit | [Einheit](../classes/Einheit.md) |
 | [bestandsanlageMastrNummer](../slots/bestandsanlageMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltu... | [Einheit](../classes/Einheit.md) |
 | [nichtVorhandenInMigriertenEinheiten](../slots/nichtVorhandenInMigriertenEinheiten.md) | 0..1 <br/> [Integer](../types/Integer.md) | Angabe über das Nichtvorhandensein in den migrierten Einheiten | [Einheit](../classes/Einheit.md) |
 | [altAnlagenbetreiberMastrNummer](../slots/altAnlagenbetreiberMastrNummer.md) | 0..1 <br/> [String](../types/String.md) | MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel... | [Einheit](../classes/Einheit.md) |
@@ -424,7 +487,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -545,7 +608,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   genMastrNummer:
     name: genMastrNummer
     instantiates:
@@ -575,7 +638,7 @@ attributes:
     domain_of:
     - EinheitBiomasse
     - EinheitVerbrennung
-    range: integer
+    range: Brennstoff
   biomasseart:
     name: biomasseart
     instantiates:
@@ -869,7 +932,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Energietraeger
   bruttoleistung:
     name: bruttoleistung
     instantiates:
@@ -997,7 +1060,7 @@ attributes:
     - EinheitVerbrennung
     - EinheitWasser
     - EinheitWind
-    range: integer
+    range: Einspeisungsart
   genMastrNummer:
     name: genMastrNummer
     instantiates:
@@ -1029,7 +1092,7 @@ attributes:
     domain_of:
     - EinheitBiomasse
     - EinheitVerbrennung
-    range: integer
+    range: Brennstoff
   biomasseart:
     name: biomasseart
     instantiates:
@@ -1238,7 +1301,7 @@ attributes:
     domain_of:
     - Einheit
     - Marktakteur
-    range: integer
+    range: Land
   bundesland:
     name: bundesland
     instantiates:
@@ -1251,7 +1314,7 @@ attributes:
     - Einheit
     - Marktakteur
     - Netz
-    range: integer
+    range: BundeslaenderEinheiten
   landkreis:
     name: landkreis
     instantiates:
@@ -1504,7 +1567,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Systemstatus
   einheitBetriebsstatus:
     name: einheitBetriebsstatus
     instantiates:
@@ -1516,7 +1579,7 @@ attributes:
     domain_of:
     - Einheit
     - GeloeschteUndDeaktivierteEinheit
-    range: integer
+    range: Betriebsstatus
   bestandsanlageMastrNummer:
     name: bestandsanlageMastrNummer
     instantiates:

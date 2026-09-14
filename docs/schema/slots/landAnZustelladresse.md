@@ -38,7 +38,7 @@ URI: [mastr:slot/landAnZustelladresse](https://example.org/mastr/slot/landAnZust
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](../types/Integer.md) |
+| Range | [Land](../enums/Land.md) |
 | Domain Of | [Marktakteur](../classes/Marktakteur.md) |
 
 ### Cardinality and Requirements
@@ -99,7 +99,7 @@ rank: 1000
 owner: Marktakteur
 domain_of:
 - Marktakteur
-range: integer
+range: Land
 
 ```
 </details></div>

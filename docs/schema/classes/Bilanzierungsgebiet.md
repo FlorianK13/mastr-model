@@ -25,6 +25,15 @@ URI: [mastr:class/Bilanzierungsgebiet](https://example.org/mastr/class/Bilanzier
         
       Bilanzierungsgebiet : regelzoneNetzanschlusspunkt
         
+          
+    
+        
+        
+        Bilanzierungsgebiet --> "0..1" Regelzone : regelzoneNetzanschlusspunkt
+        click Regelzone href "../../enums/Regelzone/"
+    
+
+        
       Bilanzierungsgebiet : yeic
         
       
@@ -42,7 +51,7 @@ URI: [mastr:class/Bilanzierungsgebiet](https://example.org/mastr/class/Bilanzier
 | [id](../slots/id.md) | 0..1 <br/> [Integer](../types/Integer.md) | Id des Bilanzierungsgebietes | direct |
 | [yeic](../slots/yeic.md) | 0..1 <br/> [String](../types/String.md) | Y-Code des Bilanzierungsgebietes | direct |
 | [bilanzierungsgebietNetzanschlusspunkt](../slots/bilanzierungsgebietNetzanschlusspunkt.md) | 0..1 <br/> [String](../types/String.md) | Bezeichnung des Bilanzierungsgebietes | direct |
-| [regelzoneNetzanschlusspunkt](../slots/regelzoneNetzanschlusspunkt.md) | 0..1 <br/> [Integer](../types/Integer.md) | Regelzone des Netzanschlusspunktes | direct |
+| [regelzoneNetzanschlusspunkt](../slots/regelzoneNetzanschlusspunkt.md) | 0..1 <br/> [Regelzone](../enums/Regelzone.md) | Regelzone des Netzanschlusspunktes | direct |
 
 
 
@@ -142,7 +151,7 @@ attributes:
     domain_of:
     - Bilanzierungsgebiet
     - Netzanschlusspunkt
-    range: integer
+    range: Regelzone
 
 ```
 </details>
@@ -205,7 +214,7 @@ attributes:
     domain_of:
     - Bilanzierungsgebiet
     - Netzanschlusspunkt
-    range: integer
+    range: Regelzone
 
 ```
 </details></div>

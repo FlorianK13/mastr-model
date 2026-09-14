@@ -24,6 +24,15 @@ URI: [mastr:class/AnlageEegWasser](https://example.org/mastr/class/AnlageEegWass
       
       AnlageEegWasser : anlageBetriebsstatus
         
+          
+    
+        
+        
+        AnlageEegWasser --> "0..1" Betriebsstatus : anlageBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+    
+
+        
       AnlageEegWasser : anlagenkennzifferAnlagenregister
         
       AnlageEegWasser : anlagenkennzifferAnlagenregisterNv
@@ -66,7 +75,7 @@ URI: [mastr:class/AnlageEegWasser](https://example.org/mastr/class/AnlageEegWass
 | [anlagenkennzifferAnlagenregister](../slots/anlagenkennzifferAnlagenregister.md) | 0..1 <br/> [String](../types/String.md) | Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister | direct |
 | [anlagenkennzifferAnlagenregisterNv](../slots/anlagenkennzifferAnlagenregisterNv.md) | 0..1 <br/> [Integer](../types/Integer.md) | Anlagenkennziffer aus der Registrierungsbestätigung des Anlagenregister | direct |
 | [installierteLeistung](../slots/installierteLeistung.md) | 0..1 <br/> [Float](../types/Float.md) | Installierte Nettonennleistung der EEG-Anlage | direct |
-| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Integer](../types/Integer.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
+| [anlageBetriebsstatus](../slots/anlageBetriebsstatus.md) | 0..1 <br/> [Betriebsstatus](../enums/Betriebsstatus.md) | Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt | direct |
 | [ertuechtigungIds](../slots/ertuechtigungIds.md) | 0..1 <br/> [String](../types/String.md) | Ertüchtigungen | direct |
 | [registrierungsdatum](../slots/registrierungsdatum.md) | 0..1 <br/> [Date](../types/Date.md) | Registrierungsdatum der EEG- Anlage | [Anlage](../classes/Anlage.md) |
 | [datumLetzteAktualisierung](../slots/datumLetzteAktualisierung.md) | 0..1 <br/> [Datetime](../types/Datetime.md) | Datum der letzten Aktualisierung an diesem Objekt | [Anlage](../classes/Anlage.md) |
@@ -228,7 +237,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
   ertuechtigungIds:
     name: ertuechtigungIds
     instantiates:
@@ -362,7 +371,7 @@ attributes:
     - AnlageGasSpeicher
     - AnlageKwk
     - AnlageStromSpeicher
-    range: integer
+    range: Betriebsstatus
   ertuechtigungIds:
     name: ertuechtigungIds
     instantiates:

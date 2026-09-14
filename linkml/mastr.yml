@@ -9,6 +9,2111 @@ prefixes:
   xsd: http://www.w3.org/2001/XMLSchema
 default_prefix: mastr
 default_range: string
+enums:
+  Anrede:
+    permissible_values:
+      Familie:
+        annotations:
+          catalog_id:
+            value: '280'
+      Eheleute:
+        annotations:
+          catalog_id:
+            value: '2966'
+      Erbengemeinschaft:
+        annotations:
+          catalog_id:
+            value: '2983'
+      Andere Organisation mit Personenbezug:
+        annotations:
+          catalog_id:
+            value: '2984'
+      Natürliche Person:
+        annotations:
+          catalog_id:
+            value: '3251'
+      Lebensgemeinschaft:
+        annotations:
+          catalog_id:
+            value: '3252'
+  ArtDerSolaranlage:
+    permissible_values:
+      Freiflächensolaranlage:
+        annotations:
+          catalog_id:
+            value: '852'
+      Gebäudesolaranlage:
+        annotations:
+          catalog_id:
+            value: '853'
+      Sonstige Solaranlage:
+        annotations:
+          catalog_id:
+            value: '2484'
+      Steckerfertige Solaranlage (sog. Balkonkraftwerk):
+        annotations:
+          catalog_id:
+            value: '2961'
+  ArtDerWasserkraftanlage:
+    permissible_values:
+      Laufwasseranlage:
+        annotations:
+          catalog_id:
+            value: '890'
+      Speicherwasseranlage:
+        annotations:
+          catalog_id:
+            value: '891'
+      Wasserkraftanlage in Trinkwassersystem:
+        annotations:
+          catalog_id:
+            value: '894'
+      Wasserkraftanlage in Brauchwassersystem:
+        annotations:
+          catalog_id:
+            value: '895'
+      Abwasserkraftanlage:
+        annotations:
+          catalog_id:
+            value: '896'
+      Meeresenergie:
+        annotations:
+          catalog_id:
+            value: '897'
+  Betriebsstatus:
+    permissible_values:
+      In Planung:
+        annotations:
+          catalog_id:
+            value: '31'
+      In Betrieb:
+        annotations:
+          catalog_id:
+            value: '35'
+      Vorübergehend stillgelegt:
+        annotations:
+          catalog_id:
+            value: '37'
+      Endgültig stillgelegt:
+        annotations:
+          catalog_id:
+            value: '38'
+  Brennstoff:
+    permissible_values:
+      Nicht biogener Müll:
+        annotations:
+          catalog_id:
+            value: '548'
+      Biogener Müll:
+        annotations:
+          catalog_id:
+            value: '549'
+      Braunkohle:
+        annotations:
+          catalog_id:
+            value: '550'
+      Deponiegas:
+        annotations:
+          catalog_id:
+            value: '551'
+      Erdgas:
+        annotations:
+          catalog_id:
+            value: '552'
+      Geothermie:
+        annotations:
+          catalog_id:
+            value: '553'
+      Grubengas:
+        annotations:
+          catalog_id:
+            value: '554'
+      Klärgas:
+        annotations:
+          catalog_id:
+            value: '555'
+      Mehrere Energieträger (nicht erneuerbar):
+        annotations:
+          catalog_id:
+            value: '556'
+      Mineralölprodukte:
+        annotations:
+          catalog_id:
+            value: '557'
+      Solare Strahlungsenergie:
+        annotations:
+          catalog_id:
+            value: '558'
+      Sonstige:
+        annotations:
+          catalog_id:
+            value: '559'
+      Steinkohle:
+        annotations:
+          catalog_id:
+            value: '560'
+      Wasserstoff:
+        annotations:
+          catalog_id:
+            value: '561'
+      Raffineriegas:
+        annotations:
+          catalog_id:
+            value: '841'
+      Hochofen-/ und Kokereigas:
+        annotations:
+          catalog_id:
+            value: '842'
+      Keiner:
+        annotations:
+          catalog_id:
+            value: '843'
+      Kernenergie:
+        annotations:
+          catalog_id:
+            value: '844'
+  BundeslaenderEinheiten:
+    permissible_values:
+      Brandenburg:
+        annotations:
+          catalog_id:
+            value: '1400'
+      Berlin:
+        annotations:
+          catalog_id:
+            value: '1401'
+      Baden-Württemberg:
+        annotations:
+          catalog_id:
+            value: '1402'
+      Bayern:
+        annotations:
+          catalog_id:
+            value: '1403'
+      Bremen:
+        annotations:
+          catalog_id:
+            value: '1404'
+      Hessen:
+        annotations:
+          catalog_id:
+            value: '1405'
+      Hamburg:
+        annotations:
+          catalog_id:
+            value: '1406'
+      Mecklenburg-Vorpommern:
+        annotations:
+          catalog_id:
+            value: '1407'
+      Niedersachsen:
+        annotations:
+          catalog_id:
+            value: '1408'
+      Nordrhein-Westfalen:
+        annotations:
+          catalog_id:
+            value: '1409'
+      Rheinland-Pfalz:
+        annotations:
+          catalog_id:
+            value: '1410'
+      Schleswig-Holstein:
+        annotations:
+          catalog_id:
+            value: '1411'
+      Saarland:
+        annotations:
+          catalog_id:
+            value: '1412'
+      Sachsen:
+        annotations:
+          catalog_id:
+            value: '1413'
+      Sachsen-Anhalt:
+        annotations:
+          catalog_id:
+            value: '1414'
+      Thüringen:
+        annotations:
+          catalog_id:
+            value: '1415'
+      Ausschließliche Wirtschaftszone:
+        annotations:
+          catalog_id:
+            value: '1416'
+  Bundesland:
+    permissible_values:
+      Brandenburg:
+        annotations:
+          catalog_id:
+            value: '332'
+      Berlin:
+        annotations:
+          catalog_id:
+            value: '333'
+      Baden-Württemberg:
+        annotations:
+          catalog_id:
+            value: '334'
+      Bayern:
+        annotations:
+          catalog_id:
+            value: '335'
+      Bremen:
+        annotations:
+          catalog_id:
+            value: '336'
+      Hessen:
+        annotations:
+          catalog_id:
+            value: '337'
+      Hamburg:
+        annotations:
+          catalog_id:
+            value: '338'
+      Mecklenburg-Vorpommern:
+        annotations:
+          catalog_id:
+            value: '339'
+      Niedersachsen:
+        annotations:
+          catalog_id:
+            value: '340'
+      Nordrhein-Westfalen:
+        annotations:
+          catalog_id:
+            value: '341'
+      Rheinland-Pfalz:
+        annotations:
+          catalog_id:
+            value: '342'
+      Schleswig-Holstein:
+        annotations:
+          catalog_id:
+            value: '343'
+      Saarland:
+        annotations:
+          catalog_id:
+            value: '344'
+      Sachsen:
+        annotations:
+          catalog_id:
+            value: '345'
+      Sachsen-Anhalt:
+        annotations:
+          catalog_id:
+            value: '346'
+      Thüringen:
+        annotations:
+          catalog_id:
+            value: '347'
+  Einsatzort:
+    permissible_values:
+      Flughafen:
+        annotations:
+          catalog_id:
+            value: '733'
+      Krankenhaus:
+        annotations:
+          catalog_id:
+            value: '734'
+      Veranstaltungsgebäude:
+        annotations:
+          catalog_id:
+            value: '735'
+      Rechenzentrum:
+        annotations:
+          catalog_id:
+            value: '736'
+      Industrie:
+        annotations:
+          catalog_id:
+            value: '737'
+      Bahn:
+        annotations:
+          catalog_id:
+            value: '738'
+      Bank:
+        annotations:
+          catalog_id:
+            value: '739'
+      Hotel:
+        annotations:
+          catalog_id:
+            value: '740'
+      Hochhaus:
+        annotations:
+          catalog_id:
+            value: '741'
+      Kaufhaus:
+        annotations:
+          catalog_id:
+            value: '742'
+      Kraftwerk:
+        annotations:
+          catalog_id:
+            value: '743'
+      Kultur und Messe:
+        annotations:
+          catalog_id:
+            value: '744'
+      Mastbetrieb:
+        annotations:
+          catalog_id:
+            value: '745'
+      Militär, Polizei und Justiz:
+        annotations:
+          catalog_id:
+            value: '746'
+      Regierungsgebäude:
+        annotations:
+          catalog_id:
+            value: '747'
+      Wasser- und Klärwerk:
+        annotations:
+          catalog_id:
+            value: '748'
+      Wohngebäude:
+        annotations:
+          catalog_id:
+            value: '749'
+      Versicherung:
+        annotations:
+          catalog_id:
+            value: '750'
+      Verlagshaus:
+        annotations:
+          catalog_id:
+            value: '751'
+      Tunnel und Straßen:
+        annotations:
+          catalog_id:
+            value: '752'
+      Telekommunikationsbranche:
+        annotations:
+          catalog_id:
+            value: '753'
+      Sportstätte:
+        annotations:
+          catalog_id:
+            value: '754'
+      Sendeanstalt:
+        annotations:
+          catalog_id:
+            value: '755'
+      Alten-/Pflegeheim:
+        annotations:
+          catalog_id:
+            value: '1531'
+      Bergbau:
+        annotations:
+          catalog_id:
+            value: '1532'
+      Logistikzentrum (z.B. Kühlhaus):
+        annotations:
+          catalog_id:
+            value: '1533'
+      Haushalt:
+        annotations:
+          catalog_id:
+            value: '2399'
+      Sonstige:
+        annotations:
+          catalog_id:
+            value: '2400'
+  Einspeisungsart:
+    permissible_values:
+      Volleinspeisung:
+        annotations:
+          catalog_id:
+            value: '688'
+      Teileinspeisung (einschließlich Eigenverbrauch):
+        annotations:
+          catalog_id:
+            value: '689'
+  Energietraeger:
+    permissible_values:
+      andere Gase:
+        annotations:
+          catalog_id:
+            value: '1'
+      Biomasse:
+        annotations:
+          catalog_id:
+            value: '2'
+      Braunkohle:
+        annotations:
+          catalog_id:
+            value: '3'
+      Erdgas:
+        annotations:
+          catalog_id:
+            value: '5'
+      Geothermie:
+        annotations:
+          catalog_id:
+            value: '6'
+      Grubengas:
+        annotations:
+          catalog_id:
+            value: '7'
+      Kernenergie:
+        annotations:
+          catalog_id:
+            value: '8'
+      Klärschlamm:
+        annotations:
+          catalog_id:
+            value: '9'
+      Mineralölprodukte:
+        annotations:
+          catalog_id:
+            value: '12'
+      nicht biogener Abfall:
+        annotations:
+          catalog_id:
+            value: '13'
+      Solare Strahlungsenergie:
+        annotations:
+          catalog_id:
+            value: '14'
+      Solarthermie:
+        annotations:
+          catalog_id:
+            value: '15'
+      Speicher:
+        annotations:
+          catalog_id:
+            value: '16'
+      Steinkohle:
+        annotations:
+          catalog_id:
+            value: '17'
+      Wärme:
+        annotations:
+          catalog_id:
+            value: '18'
+      Wind:
+        annotations:
+          catalog_id:
+            value: '19'
+      Wasser:
+        annotations:
+          catalog_id:
+            value: '1539'
+      Druck aus Gasleitungen:
+        annotations:
+          catalog_id:
+            value: '2959'
+      Druck aus Wasserleitungen:
+        annotations:
+          catalog_id:
+            value: '2960'
+  Gasspeicherart:
+    permissible_values:
+      Kavernenspeicher:
+        annotations:
+          catalog_id:
+            value: '658'
+      Porenspeicher:
+        annotations:
+          catalog_id:
+            value: '659'
+      Aquiferspeicher:
+        annotations:
+          catalog_id:
+            value: '660'
+  Genehmigungsart:
+    permissible_values:
+      nach BImSchG i.V.m 17. BImSchV:
+        annotations:
+          catalog_id:
+            value: '39'
+      Sonstige:
+        annotations:
+          catalog_id:
+            value: '40'
+      nach Baurecht:
+        annotations:
+          catalog_id:
+            value: '41'
+      nach BImSchG andere:
+        annotations:
+          catalog_id:
+            value: '845'
+      nach BImSchG i.V.m 4. BImSchV:
+        annotations:
+          catalog_id:
+            value: '846'
+      nach BImSchG i.V.m 1. BImSchV:
+        annotations:
+          catalog_id:
+            value: '847'
+      nach BImSchG i.V.m 13. BImSchV:
+        annotations:
+          catalog_id:
+            value: '848'
+      nach Wasserhaushaltsgesetz:
+        annotations:
+          catalog_id:
+            value: '2555'
+      nach Windenergie-auf-See-Gesetz:
+        annotations:
+          catalog_id:
+            value: '2556'
+  Land:
+    permissible_values:
+      Afghanistan:
+        annotations:
+          catalog_id:
+            value: '42'
+      Ägypten:
+        annotations:
+          catalog_id:
+            value: '43'
+      Albanien:
+        annotations:
+          catalog_id:
+            value: '45'
+      Algerien:
+        annotations:
+          catalog_id:
+            value: '46'
+      Amerikanisch-Samoa:
+        annotations:
+          catalog_id:
+            value: '48'
+      Andorra:
+        annotations:
+          catalog_id:
+            value: '49'
+      Angola:
+        annotations:
+          catalog_id:
+            value: '50'
+      Anguilla:
+        annotations:
+          catalog_id:
+            value: '51'
+      Antigua und Barbuda:
+        annotations:
+          catalog_id:
+            value: '53'
+      Äquatorialguinea:
+        annotations:
+          catalog_id:
+            value: '54'
+      Argentinien:
+        annotations:
+          catalog_id:
+            value: '55'
+      Armenien:
+        annotations:
+          catalog_id:
+            value: '56'
+      Aruba:
+        annotations:
+          catalog_id:
+            value: '57'
+      Aserbaidschan:
+        annotations:
+          catalog_id:
+            value: '58'
+      Äthiopien:
+        annotations:
+          catalog_id:
+            value: '59'
+      Australien:
+        annotations:
+          catalog_id:
+            value: '60'
+      Bahamas:
+        annotations:
+          catalog_id:
+            value: '61'
+      Bahrain:
+        annotations:
+          catalog_id:
+            value: '62'
+      Bangladesch:
+        annotations:
+          catalog_id:
+            value: '63'
+      Barbados:
+        annotations:
+          catalog_id:
+            value: '64'
+      Belarus:
+        annotations:
+          catalog_id:
+            value: '65'
+      Belgien:
+        annotations:
+          catalog_id:
+            value: '66'
+      Belize:
+        annotations:
+          catalog_id:
+            value: '67'
+      Benin:
+        annotations:
+          catalog_id:
+            value: '68'
+      Bermuda:
+        annotations:
+          catalog_id:
+            value: '69'
+      Bhutan:
+        annotations:
+          catalog_id:
+            value: '70'
+      Bolivien:
+        annotations:
+          catalog_id:
+            value: '71'
+      Bonaire, Saba und St. Eustatius:
+        annotations:
+          catalog_id:
+            value: '72'
+      Bosnien und Herzegowina:
+        annotations:
+          catalog_id:
+            value: '73'
+      Botsuana:
+        annotations:
+          catalog_id:
+            value: '74'
+      Brasilien:
+        annotations:
+          catalog_id:
+            value: '76'
+      Britische Jungferninseln:
+        annotations:
+          catalog_id:
+            value: '77'
+      Brunei Darussalam:
+        annotations:
+          catalog_id:
+            value: '79'
+      Bulgarien:
+        annotations:
+          catalog_id:
+            value: '80'
+      Burkina Faso:
+        annotations:
+          catalog_id:
+            value: '81'
+      Burundi:
+        annotations:
+          catalog_id:
+            value: '82'
+      Cabo Verde:
+        annotations:
+          catalog_id:
+            value: '83'
+      Deutschland:
+        annotations:
+          catalog_id:
+            value: '84'
+      China:
+        annotations:
+          catalog_id:
+            value: '85'
+      Cookinseln:
+        annotations:
+          catalog_id:
+            value: '86'
+      Costa Rica:
+        annotations:
+          catalog_id:
+            value: '87'
+      Côte D'Ivoire:
+        annotations:
+          catalog_id:
+            value: '88'
+      Curacao:
+        annotations:
+          catalog_id:
+            value: '89'
+      Dänemark:
+        annotations:
+          catalog_id:
+            value: '90'
+      Nepal:
+        annotations:
+          catalog_id:
+            value: '91'
+      Demokratische Republik Kongo:
+        annotations:
+          catalog_id:
+            value: '92'
+      Demokratische Volksrepublik Korea:
+        annotations:
+          catalog_id:
+            value: '93'
+      Chile:
+        annotations:
+          catalog_id:
+            value: '94'
+      Dominica:
+        annotations:
+          catalog_id:
+            value: '95'
+      Dominikanische Republik:
+        annotations:
+          catalog_id:
+            value: '96'
+      Dschibuti:
+        annotations:
+          catalog_id:
+            value: '97'
+      Ecuador:
+        annotations:
+          catalog_id:
+            value: '98'
+      El Salvador:
+        annotations:
+          catalog_id:
+            value: '99'
+      Eritrea:
+        annotations:
+          catalog_id:
+            value: '100'
+      Estland:
+        annotations:
+          catalog_id:
+            value: '101'
+      Falklandinseln:
+        annotations:
+          catalog_id:
+            value: '102'
+      Fidschi:
+        annotations:
+          catalog_id:
+            value: '104'
+      Finnland:
+        annotations:
+          catalog_id:
+            value: '105'
+      Frankreich:
+        annotations:
+          catalog_id:
+            value: '106'
+      Französisch-Guayana:
+        annotations:
+          catalog_id:
+            value: '108'
+      Französisch-Polynesien:
+        annotations:
+          catalog_id:
+            value: '109'
+      Gabun:
+        annotations:
+          catalog_id:
+            value: '110'
+      Gambia:
+        annotations:
+          catalog_id:
+            value: '111'
+      Georgien:
+        annotations:
+          catalog_id:
+            value: '112'
+      Ghana:
+        annotations:
+          catalog_id:
+            value: '113'
+      Gibraltar:
+        annotations:
+          catalog_id:
+            value: '114'
+      Grenada:
+        annotations:
+          catalog_id:
+            value: '115'
+      Griechenland:
+        annotations:
+          catalog_id:
+            value: '116'
+      Guadeloupe:
+        annotations:
+          catalog_id:
+            value: '118'
+      Guatemala:
+        annotations:
+          catalog_id:
+            value: '120'
+      Guyana:
+        annotations:
+          catalog_id:
+            value: '121'
+      Guinea:
+        annotations:
+          catalog_id:
+            value: '123'
+      Guinea-Bissau:
+        annotations:
+          catalog_id:
+            value: '124'
+      Haiti:
+        annotations:
+          catalog_id:
+            value: '125'
+      Honduras:
+        annotations:
+          catalog_id:
+            value: '128'
+      Hongkong:
+        annotations:
+          catalog_id:
+            value: '129'
+      Indien:
+        annotations:
+          catalog_id:
+            value: '130'
+      Indonesien:
+        annotations:
+          catalog_id:
+            value: '131'
+      Irak:
+        annotations:
+          catalog_id:
+            value: '133'
+      Iran:
+        annotations:
+          catalog_id:
+            value: '134'
+      Irland:
+        annotations:
+          catalog_id:
+            value: '135'
+      Island:
+        annotations:
+          catalog_id:
+            value: '136'
+      Israel:
+        annotations:
+          catalog_id:
+            value: '137'
+      Italien:
+        annotations:
+          catalog_id:
+            value: '138'
+      Jamaika:
+        annotations:
+          catalog_id:
+            value: '139'
+      Japan:
+        annotations:
+          catalog_id:
+            value: '140'
+      Jemen:
+        annotations:
+          catalog_id:
+            value: '141'
+      Jordanien:
+        annotations:
+          catalog_id:
+            value: '143'
+      Kaimaninseln:
+        annotations:
+          catalog_id:
+            value: '144'
+      Kambodscha:
+        annotations:
+          catalog_id:
+            value: '145'
+      Kamerun:
+        annotations:
+          catalog_id:
+            value: '146'
+      Kanada:
+        annotations:
+          catalog_id:
+            value: '147'
+      Kasachstan:
+        annotations:
+          catalog_id:
+            value: '148'
+      Katar:
+        annotations:
+          catalog_id:
+            value: '149'
+      Kenia:
+        annotations:
+          catalog_id:
+            value: '150'
+      Kirgisistan:
+        annotations:
+          catalog_id:
+            value: '151'
+      Kiribati:
+        annotations:
+          catalog_id:
+            value: '152'
+      Kolumbien:
+        annotations:
+          catalog_id:
+            value: '155'
+      Komoren:
+        annotations:
+          catalog_id:
+            value: '156'
+      Kosovo:
+        annotations:
+          catalog_id:
+            value: '157'
+      Kroatien:
+        annotations:
+          catalog_id:
+            value: '158'
+      Kuba:
+        annotations:
+          catalog_id:
+            value: '159'
+      Kuwait:
+        annotations:
+          catalog_id:
+            value: '160'
+      Laos:
+        annotations:
+          catalog_id:
+            value: '161'
+      Lesotho:
+        annotations:
+          catalog_id:
+            value: '162'
+      Lettland:
+        annotations:
+          catalog_id:
+            value: '163'
+      Libanon:
+        annotations:
+          catalog_id:
+            value: '164'
+      Liberia:
+        annotations:
+          catalog_id:
+            value: '165'
+      Libyen:
+        annotations:
+          catalog_id:
+            value: '166'
+      Liechtenstein:
+        annotations:
+          catalog_id:
+            value: '167'
+      Litauen:
+        annotations:
+          catalog_id:
+            value: '168'
+      Luxemburg:
+        annotations:
+          catalog_id:
+            value: '169'
+      Macau:
+        annotations:
+          catalog_id:
+            value: '170'
+      Madagaskar:
+        annotations:
+          catalog_id:
+            value: '171'
+      Malawi:
+        annotations:
+          catalog_id:
+            value: '172'
+      Malaysia:
+        annotations:
+          catalog_id:
+            value: '173'
+      Malediven:
+        annotations:
+          catalog_id:
+            value: '174'
+      Mali:
+        annotations:
+          catalog_id:
+            value: '175'
+      Malta:
+        annotations:
+          catalog_id:
+            value: '176'
+      Marokko:
+        annotations:
+          catalog_id:
+            value: '177'
+      Marshallinseln:
+        annotations:
+          catalog_id:
+            value: '178'
+      Martinique:
+        annotations:
+          catalog_id:
+            value: '179'
+      Mauretanien:
+        annotations:
+          catalog_id:
+            value: '180'
+      Mauritius:
+        annotations:
+          catalog_id:
+            value: '181'
+      Mayotte:
+        annotations:
+          catalog_id:
+            value: '182'
+      Nordmazedonien:
+        annotations:
+          catalog_id:
+            value: '183'
+      Mexiko:
+        annotations:
+          catalog_id:
+            value: '184'
+      Mikronesien:
+        annotations:
+          catalog_id:
+            value: '185'
+      Moldau:
+        annotations:
+          catalog_id:
+            value: '186'
+      Monaco:
+        annotations:
+          catalog_id:
+            value: '187'
+      Mongolei:
+        annotations:
+          catalog_id:
+            value: '188'
+      Montenegro:
+        annotations:
+          catalog_id:
+            value: '189'
+      Montserrat:
+        annotations:
+          catalog_id:
+            value: '190'
+      Mosambik:
+        annotations:
+          catalog_id:
+            value: '191'
+      Myanmar:
+        annotations:
+          catalog_id:
+            value: '192'
+      Namibia:
+        annotations:
+          catalog_id:
+            value: '193'
+      Nauru:
+        annotations:
+          catalog_id:
+            value: '194'
+      Neukaledonien:
+        annotations:
+          catalog_id:
+            value: '195'
+      Neuseeland:
+        annotations:
+          catalog_id:
+            value: '196'
+      Nicaragua:
+        annotations:
+          catalog_id:
+            value: '197'
+      Niederlande:
+        annotations:
+          catalog_id:
+            value: '198'
+      Niger:
+        annotations:
+          catalog_id:
+            value: '199'
+      Nigeria:
+        annotations:
+          catalog_id:
+            value: '200'
+      Norfolkinsel:
+        annotations:
+          catalog_id:
+            value: '203'
+      Norwegen:
+        annotations:
+          catalog_id:
+            value: '204'
+      Oman:
+        annotations:
+          catalog_id:
+            value: '205'
+      Österreich:
+        annotations:
+          catalog_id:
+            value: '206'
+      Pakistan:
+        annotations:
+          catalog_id:
+            value: '207'
+      Palau:
+        annotations:
+          catalog_id:
+            value: '208'
+      Panama:
+        annotations:
+          catalog_id:
+            value: '209'
+      Papua-Neuguinea:
+        annotations:
+          catalog_id:
+            value: '210'
+      Paraguay:
+        annotations:
+          catalog_id:
+            value: '211'
+      Peru:
+        annotations:
+          catalog_id:
+            value: '212'
+      Philippinen:
+        annotations:
+          catalog_id:
+            value: '213'
+      Pitcairninseln:
+        annotations:
+          catalog_id:
+            value: '214'
+      Polen:
+        annotations:
+          catalog_id:
+            value: '215'
+      Portugal:
+        annotations:
+          catalog_id:
+            value: '216'
+      Republik Kongo:
+        annotations:
+          catalog_id:
+            value: '218'
+      Republik Korea:
+        annotations:
+          catalog_id:
+            value: '219'
+      Réunion:
+        annotations:
+          catalog_id:
+            value: '220'
+      Ruanda:
+        annotations:
+          catalog_id:
+            value: '221'
+      Rumänien:
+        annotations:
+          catalog_id:
+            value: '222'
+      Russische Föderation:
+        annotations:
+          catalog_id:
+            value: '223'
+      Salomonen:
+        annotations:
+          catalog_id:
+            value: '224'
+      Sambia:
+        annotations:
+          catalog_id:
+            value: '225'
+      Samoa:
+        annotations:
+          catalog_id:
+            value: '226'
+      San Marino:
+        annotations:
+          catalog_id:
+            value: '227'
+      São Tomè und Principe:
+        annotations:
+          catalog_id:
+            value: '228'
+      Saudi-Arabien:
+        annotations:
+          catalog_id:
+            value: '229'
+      Schweden:
+        annotations:
+          catalog_id:
+            value: '230'
+      Schweiz:
+        annotations:
+          catalog_id:
+            value: '231'
+      Senegal:
+        annotations:
+          catalog_id:
+            value: '232'
+      Serbien:
+        annotations:
+          catalog_id:
+            value: '233'
+      Seychellen:
+        annotations:
+          catalog_id:
+            value: '234'
+      Sierra Leone:
+        annotations:
+          catalog_id:
+            value: '235'
+      Simbabwe:
+        annotations:
+          catalog_id:
+            value: '236'
+      Singapur:
+        annotations:
+          catalog_id:
+            value: '237'
+      Slowakei:
+        annotations:
+          catalog_id:
+            value: '238'
+      Slowenien:
+        annotations:
+          catalog_id:
+            value: '239'
+      Somalia:
+        annotations:
+          catalog_id:
+            value: '240'
+      Spanien:
+        annotations:
+          catalog_id:
+            value: '241'
+      Sri Lanka:
+        annotations:
+          catalog_id:
+            value: '242'
+      St. Barthélemy:
+        annotations:
+          catalog_id:
+            value: '243'
+      St. Helena, Ascension und Tristan da Cunha:
+        annotations:
+          catalog_id:
+            value: '244'
+      St. Kitts Und Nevis:
+        annotations:
+          catalog_id:
+            value: '245'
+      St. Lucia:
+        annotations:
+          catalog_id:
+            value: '246'
+      Saint-Martin:
+        annotations:
+          catalog_id:
+            value: '247'
+      Sint Maarten:
+        annotations:
+          catalog_id:
+            value: '248'
+      St. Pierre und Miquelon:
+        annotations:
+          catalog_id:
+            value: '249'
+      St. Vincent und die Grenadinen:
+        annotations:
+          catalog_id:
+            value: '250'
+      Südafrika:
+        annotations:
+          catalog_id:
+            value: '251'
+      Sudan:
+        annotations:
+          catalog_id:
+            value: '252'
+      Südgeorgien+Südl. Sandwichinseln:
+        annotations:
+          catalog_id:
+            value: '253'
+      Südsudan:
+        annotations:
+          catalog_id:
+            value: '254'
+      Suriname:
+        annotations:
+          catalog_id:
+            value: '255'
+      Eswatini:
+        annotations:
+          catalog_id:
+            value: '257'
+      Syrien:
+        annotations:
+          catalog_id:
+            value: '258'
+      Tadschikistan:
+        annotations:
+          catalog_id:
+            value: '259'
+      Tansania:
+        annotations:
+          catalog_id:
+            value: '261'
+      Thailand:
+        annotations:
+          catalog_id:
+            value: '262'
+      Timor-Leste:
+        annotations:
+          catalog_id:
+            value: '263'
+      Togo:
+        annotations:
+          catalog_id:
+            value: '264'
+      Tonga:
+        annotations:
+          catalog_id:
+            value: '266'
+      Trinidad und Tobago:
+        annotations:
+          catalog_id:
+            value: '267'
+      Tschad:
+        annotations:
+          catalog_id:
+            value: '268'
+      Tschechische Republik:
+        annotations:
+          catalog_id:
+            value: '269'
+      Tunesien:
+        annotations:
+          catalog_id:
+            value: '270'
+      Türkei:
+        annotations:
+          catalog_id:
+            value: '271'
+      Turkmenistan:
+        annotations:
+          catalog_id:
+            value: '272'
+      Turks- und Caicosinseln:
+        annotations:
+          catalog_id:
+            value: '273'
+      Tuvalu:
+        annotations:
+          catalog_id:
+            value: '274'
+      Uganda:
+        annotations:
+          catalog_id:
+            value: '275'
+      Ukraine:
+        annotations:
+          catalog_id:
+            value: '276'
+      Ungarn:
+        annotations:
+          catalog_id:
+            value: '277'
+      Uruguay:
+        annotations:
+          catalog_id:
+            value: '278'
+      Usbekistan:
+        annotations:
+          catalog_id:
+            value: '279'
+      Vanuatu:
+        annotations:
+          catalog_id:
+            value: '1273'
+      Vatikanstadt:
+        annotations:
+          catalog_id:
+            value: '1274'
+      Venezuela:
+        annotations:
+          catalog_id:
+            value: '1275'
+      Vereinigte Arabische Emirate:
+        annotations:
+          catalog_id:
+            value: '1276'
+      Vereinigte Staaten von Amerika:
+        annotations:
+          catalog_id:
+            value: '1277'
+      Vereinigtes Königreich:
+        annotations:
+          catalog_id:
+            value: '1278'
+      Vietnam:
+        annotations:
+          catalog_id:
+            value: '1279'
+      Wallis und Futuna:
+        annotations:
+          catalog_id:
+            value: '1280'
+      Zentralafrikanische Republik:
+        annotations:
+          catalog_id:
+            value: '1283'
+      Zypern:
+        annotations:
+          catalog_id:
+            value: '1284'
+  Marktakteurstatus:
+    permissible_values:
+      unvollständig:
+        annotations:
+          catalog_id:
+            value: '485'
+      ungeprüft:
+        annotations:
+          catalog_id:
+            value: '486'
+      aktiviert:
+        annotations:
+          catalog_id:
+            value: '487'
+      deaktiviert:
+        annotations:
+          catalog_id:
+            value: '488'
+      gelöscht:
+        annotations:
+          catalog_id:
+            value: '489'
+      erfasst:
+        annotations:
+          catalog_id:
+            value: '1676'
+      irreversibel gelöscht:
+        annotations:
+          catalog_id:
+            value: '2980'
+  Marktgebiet:
+    permissible_values:
+      Beide:
+        annotations:
+          catalog_id:
+            value: '1536'
+      NetConnect Germany:
+        annotations:
+          catalog_id:
+            value: '1001666'
+      Trading Hub Europe:
+        annotations:
+          catalog_id:
+            value: '1001667'
+  Personenart:
+    permissible_values:
+      Organisation (Unternehmen, Personengesellschaft, juristische Person, Behörde, Verband):
+        annotations:
+          catalog_id:
+            value: '517'
+      Natürliche Person oder Organisation mit Personenbezug (z. B. Eheleute, Erbengemeinschaft, GbR mit Personenbezug):
+        annotations:
+          catalog_id:
+            value: '518'
+  Pumpspeichertechnologie:
+    permissible_values:
+      Pumpspeicheranlage ohne natürlichen Zufluss:
+        annotations:
+          catalog_id:
+            value: '2920'
+      Pumpspeicheranlage mit natürlichem Zufluss:
+        annotations:
+          catalog_id:
+            value: '2921'
+  Rechtsform:
+    permissible_values:
+      a.s.:
+        annotations:
+          catalog_id:
+            value: '407'
+      AB:
+        annotations:
+          catalog_id:
+            value: '408'
+      AG:
+        annotations:
+          catalog_id:
+            value: '409'
+      AG & Co. KGaA:
+        annotations:
+          catalog_id:
+            value: '410'
+      Anstalt des öffentlichen Rechts:
+        annotations:
+          catalog_id:
+            value: '411'
+      ApS:
+        annotations:
+          catalog_id:
+            value: '412'
+      AS:
+        annotations:
+          catalog_id:
+            value: '413'
+      BV:
+        annotations:
+          catalog_id:
+            value: '414'
+      BVBA:
+        annotations:
+          catalog_id:
+            value: '415'
+      d.n.o.:
+        annotations:
+          catalog_id:
+            value: '416'
+      eG:
+        annotations:
+          catalog_id:
+            value: '423'
+      e.K.:
+        annotations:
+          catalog_id:
+            value: '424'
+      e.V.:
+        annotations:
+          catalog_id:
+            value: '425'
+      Eigenbetrieb:
+        annotations:
+          catalog_id:
+            value: '426'
+      Einzelunternehmen:
+        annotations:
+          catalog_id:
+            value: '427'
+      GbR:
+        annotations:
+          catalog_id:
+            value: '428'
+      GmbH:
+        annotations:
+          catalog_id:
+            value: '429'
+      GmbH & Co. KG:
+        annotations:
+          catalog_id:
+            value: '430'
+      GmbH & Co. KGaA:
+        annotations:
+          catalog_id:
+            value: '431'
+      GmbH & Co. oHG:
+        annotations:
+          catalog_id:
+            value: '432'
+      HB:
+        annotations:
+          catalog_id:
+            value: '433'
+      I/S:
+        annotations:
+          catalog_id:
+            value: '434'
+      InvAG:
+        annotations:
+          catalog_id:
+            value: '435'
+      k.s.:
+        annotations:
+          catalog_id:
+            value: '436'
+      KB:
+        annotations:
+          catalog_id:
+            value: '437'
+      KG:
+        annotations:
+          catalog_id:
+            value: '438'
+      KGaA:
+        annotations:
+          catalog_id:
+            value: '439'
+      Körperschaft des öffentlichen Rechts:
+        annotations:
+          catalog_id:
+            value: '440'
+      Ltd.:
+        annotations:
+          catalog_id:
+            value: '441'
+      N.V.:
+        annotations:
+          catalog_id:
+            value: '442'
+      oHG:
+        annotations:
+          catalog_id:
+            value: '443'
+      OY:
+        annotations:
+          catalog_id:
+            value: '444'
+      Partnergesellschaft:
+        annotations:
+          catalog_id:
+            value: '445'
+      plc:
+        annotations:
+          catalog_id:
+            value: '446'
+      S.A.:
+        annotations:
+          catalog_id:
+            value: '447'
+      S.p.A.:
+        annotations:
+          catalog_id:
+            value: '448'
+      s.r.l.:
+        annotations:
+          catalog_id:
+            value: '449'
+      s.r.o.:
+        annotations:
+          catalog_id:
+            value: '450'
+      SARL:
+        annotations:
+          catalog_id:
+            value: '451'
+      SE:
+        annotations:
+          catalog_id:
+            value: '452'
+      SLNE:
+        annotations:
+          catalog_id:
+            value: '453'
+      sp. z.o.o.:
+        annotations:
+          catalog_id:
+            value: '454'
+      Sp.k.:
+        annotations:
+          catalog_id:
+            value: '455'
+      SPRL:
+        annotations:
+          catalog_id:
+            value: '456'
+      Stiftung  des öffentlichen Rechts:
+        annotations:
+          catalog_id:
+            value: '457'
+      Stiftung des Privatrechts:
+        annotations:
+          catalog_id:
+            value: '458'
+      Teo:
+        annotations:
+          catalog_id:
+            value: '459'
+      UG (haftungsbeschränkt):
+        annotations:
+          catalog_id:
+            value: '460'
+      UG (haftungsbeschränkt) & Co. KG:
+        annotations:
+          catalog_id:
+            value: '461'
+      UG (haftungsbeschränkt) & Co. oHG:
+        annotations:
+          catalog_id:
+            value: '462'
+      VOF:
+        annotations:
+          catalog_id:
+            value: '463'
+      VVaG:
+        annotations:
+          catalog_id:
+            value: '464'
+      Sonstige:
+        annotations:
+          catalog_id:
+            value: '465'
+      gGmbH:
+        annotations:
+          catalog_id:
+            value: '466'
+      SE ＆ Co. KG:
+        annotations:
+          catalog_id:
+            value: '1001674'
+      B.V.:
+        annotations:
+          catalog_id:
+            value: '1001685'
+      eGbR:
+        annotations:
+          catalog_id:
+            value: '1001686'
+  Regelzone:
+    permissible_values:
+      50Hertz:
+        annotations:
+          catalog_id:
+            value: '1000001'
+      Amprion:
+        annotations:
+          catalog_id:
+            value: '1000010'
+      TenneT:
+        annotations:
+          catalog_id:
+            value: '1001564'
+      TransnetBW:
+        annotations:
+          catalog_id:
+            value: '1001572'
+  Seelage:
+    permissible_values:
+      Ostsee:
+        annotations:
+          catalog_id:
+            value: '639'
+      Nordsee:
+        annotations:
+          catalog_id:
+            value: '640'
+  SolarLeistungsbegrenzung:
+    permissible_values:
+      Nein:
+        annotations:
+          catalog_id:
+            value: '802'
+      Ja, auf 70%:
+        annotations:
+          catalog_id:
+            value: '803'
+      Ja, auf 60%:
+        annotations:
+          catalog_id:
+            value: '804'
+      Ja, auf 50%:
+        annotations:
+          catalog_id:
+            value: '805'
+      Ja, sonstige:
+        annotations:
+          catalog_id:
+            value: '1535'
+  SolarNutzungsbereich:
+    permissible_values:
+      Haushalt:
+        annotations:
+          catalog_id:
+            value: '713'
+      Gewerbe, Handel und Dienstleistungen:
+        annotations:
+          catalog_id:
+            value: '714'
+      Industrie:
+        annotations:
+          catalog_id:
+            value: '715'
+      Landwirtschaft:
+        annotations:
+          catalog_id:
+            value: '716'
+      Öffentliches Gebäude:
+        annotations:
+          catalog_id:
+            value: '717'
+      Sonstige:
+        annotations:
+          catalog_id:
+            value: '718'
+  Sparte:
+    permissible_values:
+      Strom:
+        annotations:
+          catalog_id:
+            value: '20'
+      Gas:
+        annotations:
+          catalog_id:
+            value: '21'
+  Systemkopplung:
+    permissible_values:
+      AC gekoppeltes System:
+        annotations:
+          catalog_id:
+            value: '693'
+      DC gekoppeltes System:
+        annotations:
+          catalog_id:
+            value: '694'
+  Systemstatus:
+    permissible_values:
+      Aktiviert:
+        annotations:
+          catalog_id:
+            value: '472'
+      Deaktiviert:
+        annotations:
+          catalog_id:
+            value: '473'
+      Ungeprüft:
+        annotations:
+          catalog_id:
+            value: '484'
+      Unvollständig:
+        annotations:
+          catalog_id:
+            value: '490'
+      Gelöscht:
+        annotations:
+          catalog_id:
+            value: '572'
+  TechnologieFlugwind:
+    permissible_values:
+      Flexibler Drachen (Softkite):
+        annotations:
+          catalog_id:
+            value: '3163'
+      Starrflügler (Fixed Wing):
+        annotations:
+          catalog_id:
+            value: '3164'
+      Hybrid:
+        annotations:
+          catalog_id:
+            value: '3165'
+      Sonstige:
+        annotations:
+          catalog_id:
+            value: '3166'
+  TechnologieKernkraft:
+    permissible_values:
+      Druckwasserreaktor:
+        annotations:
+          catalog_id:
+            value: '1444'
+      Siedewasserreaktor:
+        annotations:
+          catalog_id:
+            value: '1445'
+  Titel:
+    permissible_values:
+      Dr.:
+        annotations:
+          catalog_id:
+            value: '1000'
+      Prof.:
+        annotations:
+          catalog_id:
+            value: '1001'
+      Prof. Dr.:
+        annotations:
+          catalog_id:
+            value: '1002'
+  VorherigeNutzungsartengruppe:
+    permissible_values:
+      Landwirtschaft - Ackerland:
+        annotations:
+          catalog_id:
+            value: '3187'
+      Landwirtschaft - Grünland:
+        annotations:
+          catalog_id:
+            value: '3188'
+      Landwirtschaft - Gartenbauland:
+        annotations:
+          catalog_id:
+            value: '3189'
+      Landwirtschaft - Rebfläche:
+        annotations:
+          catalog_id:
+            value: '3190'
+      Landwirtschaft - Obst- und Nussplantage:
+        annotations:
+          catalog_id:
+            value: '3191'
+      Landwirtschaft - Weihnachtsbaumkultur:
+        annotations:
+          catalog_id:
+            value: '3192'
+      Landwirtschaft - Kurzumtriebsplantage:
+        annotations:
+          catalog_id:
+            value: '3193'
+      Landwirtschaft - Brachland:
+        annotations:
+          catalog_id:
+            value: '3194'
+      Gehölz:
+        annotations:
+          catalog_id:
+            value: '3196'
+      Heide:
+        annotations:
+          catalog_id:
+            value: '3197'
+      Moor:
+        annotations:
+          catalog_id:
+            value: '3198'
+      Sumpf:
+        annotations:
+          catalog_id:
+            value: '3199'
+      Unland / Vegetationslose Fläche:
+        annotations:
+          catalog_id:
+            value: '3200'
+      Wohnbaufläche:
+        annotations:
+          catalog_id:
+            value: '3201'
+      Industrie- und Gewerbefläche:
+        annotations:
+          catalog_id:
+            value: '3202'
+      Halde:
+        annotations:
+          catalog_id:
+            value: '3203'
+      Bergbaubetrieb:
+        annotations:
+          catalog_id:
+            value: '3204'
+      Tagebau, Grube, Steinbruch:
+        annotations:
+          catalog_id:
+            value: '3205'
+      Fläche gemischter Nutzung:
+        annotations:
+          catalog_id:
+            value: '3206'
+      Fläche besonderer funktionaler Prägung:
+        annotations:
+          catalog_id:
+            value: '3207'
+      Sport-, Freizeit- und Erholungsfläche:
+        annotations:
+          catalog_id:
+            value: '3208'
+      Friedhof:
+        annotations:
+          catalog_id:
+            value: '3209'
+      Straßenverkehr:
+        annotations:
+          catalog_id:
+            value: '3210'
+      Weg:
+        annotations:
+          catalog_id:
+            value: '3211'
+      Platz:
+        annotations:
+          catalog_id:
+            value: '3212'
+      Bahnverkehr:
+        annotations:
+          catalog_id:
+            value: '3213'
+      Flugverkehr:
+        annotations:
+          catalog_id:
+            value: '3214'
+      Schiffsverkehr:
+        annotations:
+          catalog_id:
+            value: '3215'
+      Fließgewässer:
+        annotations:
+          catalog_id:
+            value: '3216'
+      Hafenbecken:
+        annotations:
+          catalog_id:
+            value: '3217'
+      Stehendes Gewässer:
+        annotations:
+          catalog_id:
+            value: '3218'
+      Meer:
+        annotations:
+          catalog_id:
+            value: '3219'
+      Wald - Laubholz:
+        annotations:
+          catalog_id:
+            value: '3245'
+      Wald - Nadelholz:
+        annotations:
+          catalog_id:
+            value: '3246'
+      Wald - Laub- und Nadelholz:
+        annotations:
+          catalog_id:
+            value: '3247'
+      Wald - Dauerhaft unbestockt:
+        annotations:
+          catalog_id:
+            value: '3248'
+      Landwirtschaft - Baumschule:
+        annotations:
+          catalog_id:
+            value: '3249'
+  VorherigerNutzungsartenbereichDerFlaeche:
+    permissible_values:
+      Vegetation:
+        annotations:
+          catalog_id:
+            value: '3220'
+      Siedlung:
+        annotations:
+          catalog_id:
+            value: '3221'
+      Verkehr:
+        annotations:
+          catalog_id:
+            value: '3222'
+      Gewässer:
+        annotations:
+          catalog_id:
+            value: '3223'
+  WindAnLandOderAufSee:
+    permissible_values:
+      Windkraft an Land:
+        annotations:
+          catalog_id:
+            value: '888'
+      Windkraft auf See:
+        annotations:
+          catalog_id:
+            value: '889'
+  Zuflussart:
+    permissible_values:
+      Flusskraftwerk:
+        annotations:
+          catalog_id:
+            value: '724'
+      Restwasserkraftwerk:
+        annotations:
+          catalog_id:
+            value: '725'
+      Ausleitungskraftwerk:
+        annotations:
+          catalog_id:
+            value: '726'
 classes:
   Anlage:
     abstract: true
@@ -142,7 +2247,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
   AnlageEegGeothermieGrubengasDruckentspannung:
@@ -183,7 +2288,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
   AnlageEegSolar:
@@ -275,7 +2380,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
   AnlageEegSpeicher:
@@ -352,7 +2457,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
       ertuechtigungIds:
@@ -466,7 +2571,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
   AnlageGasSpeicher:
@@ -490,7 +2595,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
   AnlageKwk:
@@ -538,7 +2643,7 @@ classes:
       anlageBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Anlage, welche sich aus den zugeordneten
           Einheiten ergibt. Katalogkategorie: Anlagenbetriebsstatus'
   AnlageStromSpeicher:
@@ -585,7 +2690,7 @@ classes:
       regelzoneNetzanschlusspunkt:
         instantiates:
         - xsd:element
-        range: integer
+        range: Regelzone
         description: 'Regelzone des Netzanschlusspunktes. Katalogkategorie: Regelzone'
   Einheit:
     abstract: true
@@ -626,12 +2731,12 @@ classes:
       land:
         instantiates:
         - xsd:element
-        range: integer
+        range: Land
         description: 'Standort der Einheit: Land: Katalogkategorie: Land'
       bundesland:
         instantiates:
         - xsd:element
-        range: integer
+        range: BundeslaenderEinheiten
         description: 'Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit'
       landkreis:
         instantiates:
@@ -738,12 +2843,12 @@ classes:
       einheitSystemstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Systemstatus
         description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
       einheitBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
       bestandsanlageMastrNummer:
         instantiates:
@@ -822,7 +2927,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -858,7 +2963,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -868,7 +2973,7 @@ classes:
       hauptbrennstoff:
         instantiates:
         - xsd:element
-        range: integer
+        range: Brennstoff
         description: 'Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt.
           Katalogkategorie: BiomasseBrennstoff'
       biomasseart:
@@ -959,7 +3064,7 @@ classes:
       speicherart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Gasspeicherart
         description: 'Art der Gasspeicherung. Katalogkategorie: GasSpeicherart'
       maximalNutzbaresArbeitsgasvolumen:
         instantiates:
@@ -1042,7 +3147,7 @@ classes:
       art:
         instantiates:
         - xsd:element
-        range: integer
+        range: Genehmigungsart
         description: 'Art der Genehmigung. Katalogkategorie: GenehmigungsArt'
       datum:
         instantiates:
@@ -1145,7 +3250,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -1181,7 +3286,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -1261,7 +3366,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -1297,7 +3402,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -1319,7 +3424,7 @@ classes:
       technologie:
         instantiates:
         - xsd:element
-        range: integer
+        range: TechnologieKernkraft
         description: 'Technologie der Stromerzeugung. Katalogkategorie: TechnologieKernkraft'
       netzreserveZugeordnet:
         instantiates:
@@ -1406,7 +3511,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -1437,7 +3542,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       zugeordneteWirkleistungWechselrichter:
         instantiates:
@@ -1452,12 +3557,12 @@ classes:
       artDerSolaranlage:
         instantiates:
         - xsd:element
-        range: integer
+        range: ArtDerSolaranlage
         description: 'Art der Solaranlage. Katalogkategorie: ArtDerSolaranlage'
       leistungsbegrenzung:
         instantiates:
         - xsd:element
-        range: integer
+        range: SolarLeistungsbegrenzung
         description: 'Die Leistung der Stromerzeugungseinheit ist auf einen bestimmten
           prozentualen Leistungsanteil begrenzt. Katalogkategorie: SolarLeistungsbegrenzung'
       einheitlicheAusrichtungUndNeigungswinkel:
@@ -1492,7 +3597,7 @@ classes:
       nutzungsbereich:
         instantiates:
         - xsd:element
-        range: integer
+        range: SolarNutzungsbereich
         description: 'Vorrangige Nutzung des in Anspruch genommenen Gebäudes. Katalogkategorie:
           Nutzungsbereich'
       buergerenergie:
@@ -1513,7 +3618,7 @@ classes:
       ueberwiegendeNutzungsartDerFlaecheVorErrichtung:
         instantiates:
         - xsd:element
-        range: integer
+        range: VorherigeNutzungsartengruppe
         description: 'Überwiegende Nutzungsart der Fläche vor Errichtung der Anlage.
           Katalogkategorie: VorherigeNutzungsartengruppe'
       einsatzverantwortlicher:
@@ -1591,7 +3696,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -1627,7 +3732,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -1637,13 +3742,13 @@ classes:
       einsatzort:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einsatzort
         description: 'An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat
           betrieben. Katalogkategorie: Einsatzort'
       acDcKoppelung:
         instantiates:
         - xsd:element
-        range: integer
+        range: Systemkopplung
         description: 'AC oder DC gekoppeltes System. Katalogkategorie: Systemkopplung'
       batterietechnologie:
         instantiates:
@@ -1664,7 +3769,7 @@ classes:
       pumpspeichertechnologie:
         instantiates:
         - xsd:element
-        range: integer
+        range: Pumpspeichertechnologie
         description: 'Technologie des Pumpspeichers. Katalogkategorie: Pumpspeichertechnologie'
       notstromaggregat:
         instantiates:
@@ -1800,7 +3905,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -1836,7 +3941,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -1864,7 +3969,7 @@ classes:
       hauptbrennstoff:
         instantiates:
         - xsd:element
-        range: integer
+        range: Brennstoff
         description: 'Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt.
           Katalogkategorie: VerbrennungBrennstoff'
       bestandteilGrenzkraftwerk:
@@ -1875,12 +3980,12 @@ classes:
       weitererHauptbrennstoff:
         instantiates:
         - xsd:element
-        range: integer
+        range: Brennstoff
         description: 'Katalogkategorie: ErweiterterWeitereBrennstoffe'
       weitereBrennstoffe:
         instantiates:
         - xsd:element
-        range: string
+        range: Brennstoff
         description: 'Katalogkategorie: ErweiterterWeitereBrennstoffe'
       notstromaggregat:
         instantiates:
@@ -1896,7 +4001,7 @@ classes:
       einsatzort:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einsatzort
         description: 'An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat
           betrieben. Katalogkategorie: Einsatzort'
       technologie:
@@ -2015,7 +4120,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -2051,7 +4156,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -2066,7 +4171,7 @@ classes:
       artDerWasserkraftanlage:
         instantiates:
         - xsd:element
-        range: integer
+        range: ArtDerWasserkraftanlage
         description: 'Art der Stromerzeugung aus Wasserkraft. Katalogkategorie: ArtDerWasserkraftanlage'
       minderungStromerzeugung:
         instantiates:
@@ -2088,7 +4193,7 @@ classes:
       artDesZuflusses:
         instantiates:
         - xsd:element
-        range: integer
+        range: Zuflussart
         description: 'Welche Art von Zufluss wird zur Stromerzeugung verwendet. Katalogkategorie:
           Zuflussart'
       eegMaStRNummer:
@@ -2181,7 +4286,7 @@ classes:
       energietraeger:
         instantiates:
         - xsd:element
-        range: integer
+        range: Energietraeger
         description: 'Energieträger der Einheit. Katalogkategorie: Energieträger'
       bruttoleistung:
         instantiates:
@@ -2217,7 +4322,7 @@ classes:
       einspeisungsart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Einspeisungsart
         description: 'Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart'
       genMastrNummer:
         instantiates:
@@ -2233,13 +4338,13 @@ classes:
       windAnLandOderAufSee:
         instantiates:
         - xsd:element
-        range: integer
+        range: WindAnLandOderAufSee
         description: 'Angabe, ob die Stromerzeugungseinheit an Land oder auf See errichtet
           wurde. Katalogkategorie: WindAnLandOderAufSee'
       seelage:
         instantiates:
         - xsd:element
-        range: integer
+        range: Seelage
         description: 'Wird die Windenergieanlage in der Nordsee oder in der Ostsee
           betrieben? Katalogkategorie: Seelage'
       gebietNachDemFlaechenentwicklungsplanNordsee:
@@ -2355,7 +4460,7 @@ classes:
       technologieFlugwindenergieanlage:
         instantiates:
         - xsd:element
-        range: integer
+        range: TechnologieFlugwind
         description: 'Technologie der Flugwindenergieanlage Katalogkategorie: TechnologieFlugwindenergieanlage'
       flughoehe:
         instantiates:
@@ -2375,13 +4480,13 @@ classes:
       ueberwiegendeNutzungsartDerFlaecheVorErrichtung:
         instantiates:
         - xsd:element
-        range: integer
+        range: VorherigeNutzungsartengruppe
         description: 'Überwiegende Nutzungsart der Fläche vor Errichtung Katalogkategorie:
           VorherigeNutzungsartengruppe'
       vorherigerNutzungsartenbereichDerFlaeche:
         instantiates:
         - xsd:element
-        range: integer
+        range: VorherigerNutzungsartenbereichDerFlaeche
         description: 'Vorheriger Nutzungsartenbereich der Fläche Katalogkategorie:
           VorherigerNutzungsartenbereichDerFlaeche'
   EinheitenAenderungNetzbetreiberzuordnung:
@@ -2492,12 +4597,12 @@ classes:
       einheitSystemstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Systemstatus
         description: 'Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus'
       einheitBetriebsstatus:
         instantiates:
         - xsd:element
-        range: integer
+        range: Betriebsstatus
         description: 'Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus'
   GeloeschterUndDeaktivierterMarktakteur:
     attributes:
@@ -2509,7 +4614,7 @@ classes:
       marktakteurStatus:
         instantiates:
         - xsd:element
-        range: string
+        range: Marktakteurstatus
         description: 'Der Status des Marktakteurs. Katalogkategorie: MarktakteurStatusKatalog'
       datumLetzteAktualisierung:
         instantiates:
@@ -2602,18 +4707,18 @@ classes:
       personenart:
         instantiates:
         - xsd:element
-        range: integer
+        range: Personenart
         description: 'Angabe der Personenart des Marktakteurs: Natürliche Person oder
           Organisation mit Personenbezug oder Organisation. Katalogkategorie: Personenart'
       marktakteurAnrede:
         instantiates:
         - xsd:element
-        range: integer
+        range: Anrede
         description: 'Details zur Personenart. Katalogkategorie: Anrede'
       marktakteurTitel:
         instantiates:
         - xsd:element
-        range: integer
+        range: Titel
         description: 'Titel der natürlichen Person. Katalogkategorie: Titel'
       marktakteurVorname:
         instantiates:
@@ -2638,7 +4743,7 @@ classes:
       rechtsform:
         instantiates:
         - xsd:element
-        range: integer
+        range: Rechtsform
         description: 'Rechtsform der Organsiation. Katalogkategorie: Rechtsform'
       sonstigeRechtsform:
         instantiates:
@@ -2654,7 +4759,7 @@ classes:
       land:
         instantiates:
         - xsd:element
-        range: integer
+        range: Land
         description: 'Das Land, in dem der Marktakteur seinen Sitz hat. Katalogkategorie:
           Land'
       region:
@@ -2697,7 +4802,7 @@ classes:
       bundesland:
         instantiates:
         - xsd:element
-        range: integer
+        range: Bundesland
         description: 'Das Bundesland, in dem der Marktakteur seinen Sitz hat. Katalogkategorie:
           Bundesland'
       netz:
@@ -2812,7 +4917,7 @@ classes:
       landAnZustelladresse:
         instantiates:
         - xsd:element
-        range: integer
+        range: Land
         description: 'Land - Zustelladresse. Katalogkategorie: Land'
       postleitzahlAnZustelladresse:
         instantiates:
@@ -2996,7 +5101,7 @@ classes:
       sparte:
         instantiates:
         - xsd:element
-        range: integer
+        range: Sparte
         description: 'Spartes des Netzes, Katalogkategorie: Sparte'
       kundenAngeschlossen:
         instantiates:
@@ -3016,12 +5121,12 @@ classes:
       marktgebiet:
         instantiates:
         - xsd:element
-        range: integer
+        range: Marktgebiet
         description: 'Marktgebiet des Gasnetzes. Katalogkategorie: Marktgebiet'
       bundesland:
         instantiates:
         - xsd:element
-        range: string
+        range: Bundesland
         description: 'Bundesländer des Netzes. Katalogkategorie: Bundesland Bilanzierungsgebiete
           des Netzgebietes (bei'
       bilanzierungsgebiete:
@@ -3085,7 +5190,7 @@ classes:
       marktgebiet:
         instantiates:
         - xsd:element
-        range: integer
+        range: Marktgebiet
         description: 'Marktgebiet des Netzanschlusspunktes. Katalogkategorie: Marktgebiet'
       spannungsebene:
         instantiates:
@@ -3111,7 +5216,7 @@ classes:
       regelzoneNetzanschlusspunkt:
         instantiates:
         - xsd:element
-        range: integer
+        range: Regelzone
         description: 'Regelzone des Netzanschlusspunktes. Katalogkategorie: Regelzone'
       netzMaStRNummer:
         instantiates:
