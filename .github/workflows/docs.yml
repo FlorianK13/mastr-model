@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - name: Generate schema docs
+        run: ./gen-docs.sh
+
       - name: Build docs
         run: uv run mkdocs build --strict
 
