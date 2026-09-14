@@ -464,6 +464,15 @@
 
       EinheitSolar : artDerSolaranlage
 
+
+
+
+
+        EinheitSolar --&gt; "0..1" ArtDerSolaranlage : artDerSolaranlage
+        click ArtDerSolaranlage href "../../enums/ArtDerSolaranlage/"
+
+
+
       EinheitSolar : bestandsanlageMastrNummer
 
       EinheitSolar : breitengrad
@@ -473,6 +482,15 @@
       EinheitSolar : buergerenergie
 
       EinheitSolar : bundesland
+
+
+
+
+
+        EinheitSolar --&gt; "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+
+
 
       EinheitSolar : datumBeginnVoruebergehendeStilllegung
 
@@ -490,17 +508,53 @@
 
       EinheitSolar : einheitBetriebsstatus
 
+
+
+
+
+        EinheitSolar --&gt; "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+
+
+
       EinheitSolar : einheitlicheAusrichtungUndNeigungswinkel
 
       EinheitSolar : einheitMastrNummer
 
       EinheitSolar : einheitSystemstatus
 
+
+
+
+
+        EinheitSolar --&gt; "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+
+
+
       EinheitSolar : einsatzverantwortlicher
 
       EinheitSolar : einspeisungsart
 
+
+
+
+
+        EinheitSolar --&gt; "0..1" Einspeisungsart : einspeisungsart
+        click Einspeisungsart href "../../enums/Einspeisungsart/"
+
+
+
       EinheitSolar : energietraeger
+
+
+
+
+
+        EinheitSolar --&gt; "0..1" Energietraeger : energietraeger
+        click Energietraeger href "../../enums/Energietraeger/"
+
+
 
       EinheitSolar : fernsteuerbarkeitDv
 
@@ -542,9 +596,27 @@
 
       EinheitSolar : land
 
+
+
+
+
+        EinheitSolar --&gt; "0..1" Land : land
+        click Land href "../../enums/Land/"
+
+
+
       EinheitSolar : landkreis
 
       EinheitSolar : leistungsbegrenzung
+
+
+
+
+
+        EinheitSolar --&gt; "0..1" SolarLeistungsbegrenzung : leistungsbegrenzung
+        click SolarLeistungsbegrenzung href "../../enums/SolarLeistungsbegrenzung/"
+
+
 
       EinheitSolar : lichteHoehe
 
@@ -568,6 +640,15 @@
 
       EinheitSolar : nutzungsbereich
 
+
+
+
+
+        EinheitSolar --&gt; "0..1" SolarNutzungsbereich : nutzungsbereich
+        click SolarNutzungsbereich href "../../enums/SolarNutzungsbereich/"
+
+
+
       EinheitSolar : ort
 
       EinheitSolar : postleitzahl
@@ -581,6 +662,15 @@
       EinheitSolar : strasseNichtGefunden
 
       EinheitSolar : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
+
+
+
+
+
+        EinheitSolar --&gt; "0..1" VorherigeNutzungsartengruppe : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
+        click VorherigeNutzungsartengruppe href "../../enums/VorherigeNutzungsartengruppe/"
+
+
 
       EinheitSolar : vorherigerNutzungsartenbereichDerFlaeche
 
@@ -681,7 +771,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/energietraeger/">energietraeger</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Energietraeger/">Energietraeger</a></td>
 <td>Energieträger der Einheit</td>
 <td>direct</td>
 </tr>
@@ -717,7 +807,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/einspeisungsart/">einspeisungsart</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Einspeisungsart/">Einspeisungsart</a></td>
 <td>Volleinspeisung oder Teileinspeisung</td>
 <td>direct</td>
 </tr>
@@ -735,13 +825,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/artDerSolaranlage/">artDerSolaranlage</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/ArtDerSolaranlage/">ArtDerSolaranlage</a></td>
 <td>Art der Solaranlage</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/leistungsbegrenzung/">leistungsbegrenzung</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/SolarLeistungsbegrenzung/">SolarLeistungsbegrenzung</a></td>
 <td>Die Leistung der Stromerzeugungseinheit ist auf einen bestimmten prozentualen...</td>
 <td>direct</td>
 </tr>
@@ -777,7 +867,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/nutzungsbereich/">nutzungsbereich</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/SolarNutzungsbereich/">SolarNutzungsbereich</a></td>
 <td>Vorrangige Nutzung des in Anspruch genommenen Gebäudes</td>
 <td>direct</td>
 </tr>
@@ -801,7 +891,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung/">ueberwiegendeNutzungsartDerFlaecheVorErrichtung</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/VorherigeNutzungsartengruppe/">VorherigeNutzungsartengruppe</a></td>
 <td>Überwiegende Nutzungsart der Fläche vor Errichtung der Anlage</td>
 <td>direct</td>
 </tr>
@@ -885,13 +975,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/land/">land</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Land/">Land</a></td>
 <td>Standort der Einheit: Land: Katalogkategorie: Land</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/bundesland/">bundesland</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/BundeslaenderEinheiten/">BundeslaenderEinheiten</a></td>
 <td>Standort der Einheit: Bundesland</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
@@ -999,13 +1089,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/einheitSystemstatus/">einheitSystemstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Systemstatus/">Systemstatus</a></td>
 <td>Systemstatus der Einheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/einheitBetriebsstatus/">einheitBetriebsstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Betriebsstatus/">Betriebsstatus</a></td>
 <td>Betriebsstatus der Einheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
@@ -1255,7 +1345,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Energietraeger</span>
 <span class="w">  </span><span class="nt">bruttoleistung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bruttoleistung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1352,7 +1442,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einspeisungsart</span>
 <span class="w">  </span><span class="nt">zugeordneteWirkleistungWechselrichter</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zugeordneteWirkleistungWechselrichter</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1382,7 +1472,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ArtDerSolaranlage</span>
 <span class="w">  </span><span class="nt">leistungsbegrenzung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">leistungsbegrenzung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1393,7 +1483,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SolarLeistungsbegrenzung</span>
 <span class="w">  </span><span class="nt">einheitlicheAusrichtungUndNeigungswinkel</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitlicheAusrichtungUndNeigungswinkel</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1458,7 +1548,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SolarNutzungsbereich</span>
 <span class="w">  </span><span class="nt">buergerenergie</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buergerenergie</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1511,7 +1601,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VorherigeNutzungsartengruppe</span>
 <span class="w">  </span><span class="nt">einsatzverantwortlicher</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einsatzverantwortlicher</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1798,7 +1888,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Energietraeger</span>
 <span class="w">  </span><span class="nt">bruttoleistung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bruttoleistung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1901,7 +1991,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einspeisungsart</span>
 <span class="w">  </span><span class="nt">zugeordneteWirkleistungWechselrichter</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zugeordneteWirkleistungWechselrichter</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1934,7 +2024,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ArtDerSolaranlage</span>
 <span class="w">  </span><span class="nt">leistungsbegrenzung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">leistungsbegrenzung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1946,7 +2036,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SolarLeistungsbegrenzung</span>
 <span class="w">  </span><span class="nt">einheitlicheAusrichtungUndNeigungswinkel</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitlicheAusrichtungUndNeigungswinkel</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2017,7 +2107,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SolarNutzungsbereich</span>
 <span class="w">  </span><span class="nt">buergerenergie</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">buergerenergie</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2074,7 +2164,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VorherigeNutzungsartengruppe</span>
 <span class="w">  </span><span class="nt">einsatzverantwortlicher</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einsatzverantwortlicher</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2256,7 +2346,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">bundesland</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bundesland</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2269,7 +2359,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BundeslaenderEinheiten</span>
 <span class="w">  </span><span class="nt">landkreis</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">landkreis</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2477,7 +2567,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Systemstatus</span>
 <span class="w">  </span><span class="nt">einheitBetriebsstatus</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitBetriebsstatus</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2489,7 +2579,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 <span class="w">  </span><span class="nt">nichtVorhandenInMigriertenEinheiten</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nichtVorhandenInMigriertenEinheiten</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

@@ -484,6 +484,15 @@
 
       EinheitWind : bundesland
 
+
+
+
+
+        EinheitWind --&gt; "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+
+
+
       EinheitWind : datumBeginnVoruebergehendeStilllegung
 
       EinheitWind : datumDesBetreiberwechsels
@@ -500,15 +509,51 @@
 
       EinheitWind : einheitBetriebsstatus
 
+
+
+
+
+        EinheitWind --&gt; "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+
+
+
       EinheitWind : einheitMastrNummer
 
       EinheitWind : einheitSystemstatus
+
+
+
+
+
+        EinheitWind --&gt; "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+
+
 
       EinheitWind : einsatzverantwortlicher
 
       EinheitWind : einspeisungsart
 
+
+
+
+
+        EinheitWind --&gt; "0..1" Einspeisungsart : einspeisungsart
+        click Einspeisungsart href "../../enums/Einspeisungsart/"
+
+
+
       EinheitWind : energietraeger
+
+
+
+
+
+        EinheitWind --&gt; "0..1" Energietraeger : energietraeger
+        click Energietraeger href "../../enums/Energietraeger/"
+
+
 
       EinheitWind : fernsteuerbarkeitDv
 
@@ -558,6 +603,15 @@
 
       EinheitWind : land
 
+
+
+
+
+        EinheitWind --&gt; "0..1" Land : land
+        click Land href "../../enums/Land/"
+
+
+
       EinheitWind : landkreis
 
       EinheitWind : lokationMaStRNummer
@@ -590,6 +644,15 @@
 
       EinheitWind : seelage
 
+
+
+
+
+        EinheitWind --&gt; "0..1" Seelage : seelage
+        click Seelage href "../../enums/Seelage/"
+
+
+
       EinheitWind : strasse
 
       EinheitWind : strasseNichtGefunden
@@ -598,11 +661,38 @@
 
       EinheitWind : technologieFlugwindenergieanlage
 
+
+
+
+
+        EinheitWind --&gt; "0..1" TechnologieFlugwind : technologieFlugwindenergieanlage
+        click TechnologieFlugwind href "../../enums/TechnologieFlugwind/"
+
+
+
       EinheitWind : typenbezeichnung
 
       EinheitWind : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
 
+
+
+
+
+        EinheitWind --&gt; "0..1" VorherigeNutzungsartengruppe : ueberwiegendeNutzungsartDerFlaecheVorErrichtung
+        click VorherigeNutzungsartengruppe href "../../enums/VorherigeNutzungsartengruppe/"
+
+
+
       EinheitWind : vorherigerNutzungsartenbereichDerFlaeche
+
+
+
+
+
+        EinheitWind --&gt; "0..1" VorherigerNutzungsartenbereichDerFlaeche : vorherigerNutzungsartenbereichDerFlaeche
+        click VorherigerNutzungsartenbereichDerFlaeche href "../../enums/VorherigerNutzungsartenbereichDerFlaeche/"
+
+
 
       EinheitWind : wassertiefe
 
@@ -613,6 +703,15 @@
       EinheitWind : weicNv
 
       EinheitWind : windAnLandOderAufSee
+
+
+
+
+
+        EinheitWind --&gt; "0..1" WindAnLandOderAufSee : windAnLandOderAufSee
+        click WindAnLandOderAufSee href "../../enums/WindAnLandOderAufSee/"
+
+
 
 </code></pre>
 <h2 id="inheritance">Inheritance</h2>
@@ -701,7 +800,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/energietraeger/">energietraeger</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Energietraeger/">Energietraeger</a></td>
 <td>Energieträger der Einheit</td>
 <td>direct</td>
 </tr>
@@ -743,7 +842,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/einspeisungsart/">einspeisungsart</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Einspeisungsart/">Einspeisungsart</a></td>
 <td>Volleinspeisung oder Teileinspeisung</td>
 <td>direct</td>
 </tr>
@@ -761,13 +860,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/windAnLandOderAufSee/">windAnLandOderAufSee</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/WindAnLandOderAufSee/">WindAnLandOderAufSee</a></td>
 <td>Angabe, ob die Stromerzeugungseinheit an Land oder auf See errichtet wurde</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/seelage/">seelage</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Seelage/">Seelage</a></td>
 <td>Wird die Windenergieanlage in der Nordsee oder in der Ostsee betrieben? Katal...</td>
 <td>direct</td>
 </tr>
@@ -893,7 +992,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/technologieFlugwindenergieanlage/">technologieFlugwindenergieanlage</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/TechnologieFlugwind/">TechnologieFlugwind</a></td>
 <td>Technologie der Flugwindenergieanlage Katalogkategorie: TechnologieFlugwinden...</td>
 <td>direct</td>
 </tr>
@@ -917,13 +1016,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/ueberwiegendeNutzungsartDerFlaecheVorErrichtung/">ueberwiegendeNutzungsartDerFlaecheVorErrichtung</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/VorherigeNutzungsartengruppe/">VorherigeNutzungsartengruppe</a></td>
 <td>Überwiegende Nutzungsart der Fläche vor Errichtung Katalogkategorie: Vorherig...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/vorherigerNutzungsartenbereichDerFlaeche/">vorherigerNutzungsartenbereichDerFlaeche</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/VorherigerNutzungsartenbereichDerFlaeche/">VorherigerNutzungsartenbereichDerFlaeche</a></td>
 <td>Vorheriger Nutzungsartenbereich der Fläche Katalogkategorie: VorherigerNutzun...</td>
 <td>direct</td>
 </tr>
@@ -965,13 +1064,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/land/">land</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Land/">Land</a></td>
 <td>Standort der Einheit: Land: Katalogkategorie: Land</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/bundesland/">bundesland</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/BundeslaenderEinheiten/">BundeslaenderEinheiten</a></td>
 <td>Standort der Einheit: Bundesland</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
@@ -1079,13 +1178,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/einheitSystemstatus/">einheitSystemstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Systemstatus/">Systemstatus</a></td>
 <td>Systemstatus der Einheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/einheitBetriebsstatus/">einheitBetriebsstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Betriebsstatus/">Betriebsstatus</a></td>
 <td>Betriebsstatus der Einheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
@@ -1335,7 +1434,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Energietraeger</span>
 <span class="w">  </span><span class="nt">bruttoleistung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bruttoleistung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1449,7 +1548,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einspeisungsart</span>
 <span class="w">  </span><span class="nt">genMastrNummer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">genMastrNummer</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1488,7 +1587,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WindAnLandOderAufSee</span>
 <span class="w">  </span><span class="nt">seelage</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seelage</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1499,7 +1598,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Seelage</span>
 <span class="w">  </span><span class="nt">gebietNachDemFlaechenentwicklungsplanNordsee</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gebietNachDemFlaechenentwicklungsplanNordsee</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1732,7 +1831,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TechnologieFlugwind</span>
 <span class="w">  </span><span class="nt">flughoehe</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flughoehe</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1773,7 +1872,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VorherigeNutzungsartengruppe</span>
 <span class="w">  </span><span class="nt">vorherigerNutzungsartenbereichDerFlaeche</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vorherigerNutzungsartenbereichDerFlaeche</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1783,7 +1882,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VorherigerNutzungsartenbereichDerFlaeche</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -1986,7 +2085,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Energietraeger</span>
 <span class="w">  </span><span class="nt">bruttoleistung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bruttoleistung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2107,7 +2206,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitVerbrennung</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWasser</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einspeisungsart</span>
 <span class="w">  </span><span class="nt">genMastrNummer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">genMastrNummer</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2149,7 +2248,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WindAnLandOderAufSee</span>
 <span class="w">  </span><span class="nt">seelage</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seelage</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2161,7 +2260,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Seelage</span>
 <span class="w">  </span><span class="nt">gebietNachDemFlaechenentwicklungsplanNordsee</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gebietNachDemFlaechenentwicklungsplanNordsee</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2415,7 +2514,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TechnologieFlugwind</span>
 <span class="w">  </span><span class="nt">flughoehe</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flughoehe</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2460,7 +2559,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VorherigeNutzungsartengruppe</span>
 <span class="w">  </span><span class="nt">vorherigerNutzungsartenbereichDerFlaeche</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vorherigerNutzungsartenbereichDerFlaeche</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2471,7 +2570,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitSolar</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitWind</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VorherigerNutzungsartenbereichDerFlaeche</span>
 <span class="w">  </span><span class="nt">einheitMastrNummer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitMastrNummer</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2562,7 +2661,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">bundesland</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bundesland</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2575,7 +2674,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BundeslaenderEinheiten</span>
 <span class="w">  </span><span class="nt">landkreis</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">landkreis</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2783,7 +2882,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Systemstatus</span>
 <span class="w">  </span><span class="nt">einheitBetriebsstatus</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitBetriebsstatus</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2795,7 +2894,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 <span class="w">  </span><span class="nt">nichtVorhandenInMigriertenEinheiten</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nichtVorhandenInMigriertenEinheiten</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

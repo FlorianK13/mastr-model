@@ -444,6 +444,15 @@
 
       Netz : bundesland
 
+
+
+
+
+        Netz --&gt; "0..1" Bundesland : bundesland
+        click Bundesland href "../../enums/Bundesland/"
+
+
+
       Netz : datumLetzteAktualisierung
 
       Netz : geschlossenesVerteilnetz
@@ -452,9 +461,27 @@
 
       Netz : marktgebiet
 
+
+
+
+
+        Netz --&gt; "0..1" Marktgebiet : marktgebiet
+        click Marktgebiet href "../../enums/Marktgebiet/"
+
+
+
       Netz : mastrNummer
 
       Netz : sparte
+
+
+
+
+
+        Netz --&gt; "0..1" Sparte : sparte
+        click Sparte href "../../enums/Sparte/"
+
+
 
 </code></pre>
 <!-- no inheritance hierarchy -->
@@ -483,7 +510,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/sparte/">sparte</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Sparte/">Sparte</a></td>
 <td>Spartes des Netzes, Katalogkategorie: Sparte</td>
 <td>direct</td>
 </tr>
@@ -507,13 +534,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/marktgebiet/">marktgebiet</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Marktgebiet/">Marktgebiet</a></td>
 <td>Marktgebiet des Gasnetzes</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/bundesland/">bundesland</a></td>
-<td>0..1 <br/> <a href="../../types/String/">String</a></td>
+<td>0..1 <br/> <a href="../../enums/Bundesland/">Bundesland</a></td>
 <td>Bundesländer des Netzes</td>
 <td>direct</td>
 </tr>
@@ -594,7 +621,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sparte</span>
 <span class="w">  </span><span class="nt">kundenAngeschlossen</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kundenAngeschlossen</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -635,7 +662,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netzanschlusspunkt</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktgebiet</span>
 <span class="w">  </span><span class="nt">bundesland</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bundesland</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -647,7 +674,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bundesland</span>
 <span class="w">  </span><span class="nt">bilanzierungsgebiete</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bilanzierungsgebiete</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -706,7 +733,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Sparte</span>
 <span class="w">  </span><span class="nt">kundenAngeschlossen</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kundenAngeschlossen</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -751,7 +778,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netzanschlusspunkt</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktgebiet</span>
 <span class="w">  </span><span class="nt">bundesland</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bundesland</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -764,7 +791,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bundesland</span>
 <span class="w">  </span><span class="nt">bilanzierungsgebiete</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bilanzierungsgebiete</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

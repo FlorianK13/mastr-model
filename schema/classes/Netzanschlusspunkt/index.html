@@ -450,6 +450,15 @@
 
       Netzanschlusspunkt : marktgebiet
 
+
+
+
+
+        Netzanschlusspunkt --&gt; "0..1" Marktgebiet : marktgebiet
+        click Marktgebiet href "../../enums/Marktgebiet/"
+
+
+
       Netzanschlusspunkt : maximaleAusspeiseleistung
 
       Netzanschlusspunkt : maximaleEinspeiseleistung
@@ -473,6 +482,15 @@
       Netzanschlusspunkt : nochInPlanung
 
       Netzanschlusspunkt : regelzoneNetzanschlusspunkt
+
+
+
+
+
+        Netzanschlusspunkt --&gt; "0..1" Regelzone : regelzoneNetzanschlusspunkt
+        click Regelzone href "../../enums/Regelzone/"
+
+
 
       Netzanschlusspunkt : spannungsebene
 
@@ -551,7 +569,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/marktgebiet/">marktgebiet</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Marktgebiet/">Marktgebiet</a></td>
 <td>Marktgebiet des Netzanschlusspunktes</td>
 <td>direct</td>
 </tr>
@@ -581,7 +599,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/regelzoneNetzanschlusspunkt/">regelzoneNetzanschlusspunkt</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Regelzone/">Regelzone</a></td>
 <td>Regelzone des Netzanschlusspunktes</td>
 <td>direct</td>
 </tr>
@@ -746,7 +764,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netzanschlusspunkt</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktgebiet</span>
 <span class="w">  </span><span class="nt">spannungsebene</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spannungsebene</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -796,7 +814,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilanzierungsgebiet</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netzanschlusspunkt</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Regelzone</span>
 <span class="w">  </span><span class="nt">netzMaStRNummer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">netzMaStRNummer</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -956,7 +974,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netzanschlusspunkt</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktgebiet</span>
 <span class="w">  </span><span class="nt">spannungsebene</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">spannungsebene</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1011,7 +1029,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bilanzierungsgebiet</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netzanschlusspunkt</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Regelzone</span>
 <span class="w">  </span><span class="nt">netzMaStRNummer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">netzMaStRNummer</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

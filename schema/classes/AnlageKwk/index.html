@@ -454,6 +454,15 @@
 
       AnlageKwk : anlageBetriebsstatus
 
+
+
+
+
+        AnlageKwk --&gt; "0..1" Betriebsstatus : anlageBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+
+
+
       AnlageKwk : ausschreibungZuschlag
 
       AnlageKwk : datumLetzteAktualisierung
@@ -535,7 +544,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/anlageBetriebsstatus/">anlageBetriebsstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Betriebsstatus/">Betriebsstatus</a></td>
 <td>Betriebsstatus der Anlage, welche sich aus den zugeordneten Einheiten ergibt</td>
 <td>direct</td>
 </tr>
@@ -684,7 +693,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnlageGasSpeicher</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnlageKwk</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnlageStromSpeicher</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -800,7 +809,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnlageGasSpeicher</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnlageKwk</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AnlageStromSpeicher</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 <span class="w">  </span><span class="nt">datumLetzteAktualisierung</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datumLetzteAktualisierung</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

@@ -442,9 +442,27 @@
 
       GeloeschteUndDeaktivierteEinheit : einheitBetriebsstatus
 
+
+
+
+
+        GeloeschteUndDeaktivierteEinheit --&gt; "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+
+
+
       GeloeschteUndDeaktivierteEinheit : einheitMastrNummer
 
       GeloeschteUndDeaktivierteEinheit : einheitSystemstatus
+
+
+
+
+
+        GeloeschteUndDeaktivierteEinheit --&gt; "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+
+
 
       GeloeschteUndDeaktivierteEinheit : einheittyp
 
@@ -481,13 +499,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/einheitSystemstatus/">einheitSystemstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Systemstatus/">Systemstatus</a></td>
 <td>Systemstatus der Einheit</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/einheitBetriebsstatus/">einheitBetriebsstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Betriebsstatus/">Betriebsstatus</a></td>
 <td>Betriebsstatus der Einheit</td>
 <td>direct</td>
 </tr>
@@ -570,7 +588,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Systemstatus</span>
 <span class="w">  </span><span class="nt">einheitBetriebsstatus</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitBetriebsstatus</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -580,7 +598,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 </code></pre></div>
 </details>
 <h3 id="induced">Induced</h3>
@@ -638,7 +656,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Systemstatus</span>
 <span class="w">  </span><span class="nt">einheitBetriebsstatus</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitBetriebsstatus</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -649,7 +667,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 </code></pre></div>
 </details>
 </div>

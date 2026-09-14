@@ -442,6 +442,15 @@
 
       EinheitGenehmigung : art
 
+
+
+
+
+        EinheitGenehmigung --&gt; "0..1" Genehmigungsart : art
+        click Genehmigungsart href "../../enums/Genehmigungsart/"
+
+
+
       EinheitGenehmigung : behoerde
 
       EinheitGenehmigung : datum
@@ -493,7 +502,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/art/">art</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Genehmigungsart/">Genehmigungsart</a></td>
 <td>Art der Genehmigung</td>
 <td>direct</td>
 </tr>
@@ -639,7 +648,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitGenehmigung</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Genehmigungsart</span>
 <span class="w">  </span><span class="nt">datum</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datum</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -815,7 +824,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitGenehmigung</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EinheitGenehmigung</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Genehmigungsart</span>
 <span class="w">  </span><span class="nt">datum</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datum</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

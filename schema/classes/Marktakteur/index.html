@@ -456,6 +456,15 @@
 
       Marktakteur : bundesland
 
+
+
+
+
+        Marktakteur --&gt; "0..1" Bundesland : bundesland
+        click Bundesland href "../../enums/Bundesland/"
+
+
+
       Marktakteur : bundesnetzagenturBetriebsnummer
 
       Marktakteur : bundesnetzagenturBetriebsnummerNv
@@ -492,13 +501,49 @@
 
       Marktakteur : land
 
+
+
+
+
+        Marktakteur --&gt; "0..1" Land : land
+        click Land href "../../enums/Land/"
+
+
+
       Marktakteur : landAnZustelladresse
 
+
+
+
+
+        Marktakteur --&gt; "0..1" Land : landAnZustelladresse
+        click Land href "../../enums/Land/"
+
+
+
       Marktakteur : marktakteurAnrede
+
+
+
+
+
+        Marktakteur --&gt; "0..1" Anrede : marktakteurAnrede
+        click Anrede href "../../enums/Anrede/"
+
+
 
       Marktakteur : marktakteurNachname
 
       Marktakteur : marktakteurTitel
+
+
+
+
+
+        Marktakteur --&gt; "0..1" Titel : marktakteurTitel
+        click Titel href "../../enums/Titel/"
+
+
 
       Marktakteur : marktakteurVorname
 
@@ -518,11 +563,29 @@
 
       Marktakteur : personenart
 
+
+
+
+
+        Marktakteur --&gt; "0..1" Personenart : personenart
+        click Personenart href "../../enums/Personenart/"
+
+
+
       Marktakteur : postleitzahl
 
       Marktakteur : postleitzahlAnZustelladresse
 
       Marktakteur : rechtsform
+
+
+
+
+
+        Marktakteur --&gt; "0..1" Rechtsform : rechtsform
+        click Rechtsform href "../../enums/Rechtsform/"
+
+
 
       Marktakteur : region
 
@@ -589,19 +652,19 @@
 </tr>
 <tr>
 <td><a href="../../slots/personenart/">personenart</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Personenart/">Personenart</a></td>
 <td>Angabe der Personenart des Marktakteurs: Natürliche Person oder Organisation ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/marktakteurAnrede/">marktakteurAnrede</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Anrede/">Anrede</a></td>
 <td>Details zur Personenart</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/marktakteurTitel/">marktakteurTitel</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Titel/">Titel</a></td>
 <td>Titel der natürlichen Person</td>
 <td>direct</td>
 </tr>
@@ -631,7 +694,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/rechtsform/">rechtsform</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Rechtsform/">Rechtsform</a></td>
 <td>Rechtsform der Organsiation</td>
 <td>direct</td>
 </tr>
@@ -649,7 +712,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/land/">land</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Land/">Land</a></td>
 <td>Das Land, in dem der Marktakteur seinen Sitz hat</td>
 <td>direct</td>
 </tr>
@@ -697,7 +760,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/bundesland/">bundesland</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Bundesland/">Bundesland</a></td>
 <td>Das Bundesland, in dem der Marktakteur seinen Sitz hat</td>
 <td>direct</td>
 </tr>
@@ -829,7 +892,7 @@
 </tr>
 <tr>
 <td><a href="../../slots/landAnZustelladresse/">landAnZustelladresse</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Land/">Land</a></td>
 <td>Land - Zustelladresse</td>
 <td>direct</td>
 </tr>
@@ -1011,7 +1074,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Personenart</span>
 <span class="w">  </span><span class="nt">marktakteurAnrede</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marktakteurAnrede</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1021,7 +1084,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Anrede</span>
 <span class="w">  </span><span class="nt">marktakteurTitel</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marktakteurTitel</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1031,7 +1094,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Titel</span>
 <span class="w">  </span><span class="nt">marktakteurVorname</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marktakteurVorname</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1081,7 +1144,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rechtsform</span>
 <span class="w">  </span><span class="nt">sonstigeRechtsform</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonstigeRechtsform</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1113,7 +1176,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1209,7 +1272,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bundesland</span>
 <span class="w">  </span><span class="nt">netz</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">netz</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1435,7 +1498,7 @@
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">postleitzahlAnZustelladresse</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postleitzahlAnZustelladresse</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1664,7 +1727,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Personenart</span>
 <span class="w">  </span><span class="nt">marktakteurAnrede</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marktakteurAnrede</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1675,7 +1738,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Anrede</span>
 <span class="w">  </span><span class="nt">marktakteurTitel</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marktakteurTitel</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1686,7 +1749,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Titel</span>
 <span class="w">  </span><span class="nt">marktakteurVorname</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">marktakteurVorname</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1741,7 +1804,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rechtsform</span>
 <span class="w">  </span><span class="nt">sonstigeRechtsform</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonstigeRechtsform</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1776,7 +1839,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">region</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">region</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1880,7 +1943,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bundesland</span>
 <span class="w">  </span><span class="nt">netz</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">netz</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -2128,7 +2191,7 @@
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">postleitzahlAnZustelladresse</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postleitzahlAnZustelladresse</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>

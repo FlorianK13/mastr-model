@@ -466,6 +466,15 @@
 
       EinheitStromVerbraucher : bundesland
 
+
+
+
+
+        EinheitStromVerbraucher --&gt; "0..1" BundeslaenderEinheiten : bundesland
+        click BundeslaenderEinheiten href "../../enums/BundeslaenderEinheiten/"
+
+
+
       EinheitStromVerbraucher : datumBeginnVoruebergehendeStilllegung
 
       EinheitStromVerbraucher : datumDesBetreiberwechsels
@@ -480,9 +489,27 @@
 
       EinheitStromVerbraucher : einheitBetriebsstatus
 
+
+
+
+
+        EinheitStromVerbraucher --&gt; "0..1" Betriebsstatus : einheitBetriebsstatus
+        click Betriebsstatus href "../../enums/Betriebsstatus/"
+
+
+
       EinheitStromVerbraucher : einheitMastrNummer
 
       EinheitStromVerbraucher : einheitSystemstatus
+
+
+
+
+
+        EinheitStromVerbraucher --&gt; "0..1" Systemstatus : einheitSystemstatus
+        click Systemstatus href "../../enums/Systemstatus/"
+
+
 
       EinheitStromVerbraucher : einsatzverantwortlicher
 
@@ -509,6 +536,15 @@
       EinheitStromVerbraucher : laengengrad
 
       EinheitStromVerbraucher : land
+
+
+
+
+
+        EinheitStromVerbraucher --&gt; "0..1" Land : land
+        click Land href "../../enums/Land/"
+
+
 
       EinheitStromVerbraucher : landkreis
 
@@ -619,13 +655,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/land/">land</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Land/">Land</a></td>
 <td>Standort der Einheit: Land: Katalogkategorie: Land</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/bundesland/">bundesland</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/BundeslaenderEinheiten/">BundeslaenderEinheiten</a></td>
 <td>Standort der Einheit: Bundesland</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
@@ -745,13 +781,13 @@
 </tr>
 <tr>
 <td><a href="../../slots/einheitSystemstatus/">einheitSystemstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Systemstatus/">Systemstatus</a></td>
 <td>Systemstatus der Einheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/einheitBetriebsstatus/">einheitBetriebsstatus</a></td>
-<td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
+<td>0..1 <br/> <a href="../../enums/Betriebsstatus/">Betriebsstatus</a></td>
 <td>Betriebsstatus der Einheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
@@ -1070,7 +1106,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Land</span>
 <span class="w">  </span><span class="nt">bundesland</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bundesland</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1083,7 +1119,7 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Marktakteur</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Netz</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BundeslaenderEinheiten</span>
 <span class="w">  </span><span class="nt">landkreis</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">landkreis</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1320,7 +1356,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Systemstatus</span>
 <span class="w">  </span><span class="nt">einheitBetriebsstatus</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">einheitBetriebsstatus</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
@@ -1332,7 +1368,7 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Einheit</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeloeschteUndDeaktivierteEinheit</span>
-<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Betriebsstatus</span>
 <span class="w">  </span><span class="nt">bestandsanlageMastrNummer</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bestandsanlageMastrNummer</span>
 <span class="w">    </span><span class="nt">instantiates</span><span class="p">:</span>
