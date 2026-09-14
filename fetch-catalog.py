@@ -29,7 +29,6 @@ How the files are obtained
 
 from __future__ import annotations
 
-import sys
 import time
 from pathlib import Path
 
@@ -84,24 +83,16 @@ def main() -> int:
     try:
         run_open_mastr_download()
     except Exception as exc:  # pragma: no cover - failure path
-        print(
-            f"[fetch-catalog] open-mastr download failed: {exc}",
-            file=sys.stderr,
-        )
         raise SystemExit(
-            "[fetch-catalog] FATAL: unable to populate the MaStR catalog cache via "
-            "open-mastr. Install/configure open-mastr and retry, or place "
-            "Katalogkategorien.xml and Katalogwerte.xml somewhere under "
-            f"{(Path.home() / '.open-MaStR')} and re-run."
+            f"[fetch-catalog] FATAL: open-mastr download failed: {exc}\n"
+            "Run open-mastr manually or place Katalogkategorien.xml and "
+            "Katalogwerte.xml under ~/.open-MaStR, then re-run."
         ) from exc
 
     catalog_dir = find_catalog_dir()
-    if catalog_dir is None:
-        raise SystemExit(
-            "[fetch-catalog] FATAL: open-mastr download finished but no directory "
-            "contains both Katalogkategorien.xml and Katalogwerte.xml. This is "
-            "unexpected - please inspect the open-mastr data directory."
-        )
+    if catalog_dir is None:  # pragma: no cover - unexpected
+        raise SystemExit("[fetch-catalog] FATAL: download finished but no catalog "
+                         "directory was found; inspect the open-mastr data dir.")
 
     ensure_katalogkategorien_available(catalog_dir)
     print(f"[fetch-catalog] Ready: catalog files in {catalog_dir}")
