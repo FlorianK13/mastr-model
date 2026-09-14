@@ -29,51 +29,13 @@ How the files are obtained
 
 from __future__ import annotations
 
-import os
 import sys
 import time
 from pathlib import Path
 
-KATALOGKATEGORIEN = "Katalogkategorien.xml"
-KATALOGWERTE = "Katalogwerte.xml"
-REQUIRED = {KATALOGKATEGORIEN, KATALOGWERTE}
+from catalog_dirs import KATALOGKATEGORIEN, KATALOGWERTE, find_catalog_dir
 
 LIGHT_TABLE = "nuclear"  # smallest single-table bulk download
-
-
-def _open_mastr_candidate_dirs() -> list[Path]:
-    """Candidate directories that may hold the catalog XML files."""
-    candidates: list[Path] = []
-
-    try:
-        from open_mastr.utils.config import get_output_dir, get_project_home_dir
-    except Exception:  # pragma: no cover - open-mastr not importable
-        candidates = []
-    else:
-        data = Path(get_output_dir()) / "data"
-        # The bulk download extracts straight into .../data/xml_download/; the
-        # dataversion-* subdir is used by newer open-mastr dir layouts. Search
-        # both for robustness.
-        candidates.append(data / "xml_download")
-        candidates.append(data)
-
-    # Fallback: any ~/.open-MaStR directory, in case the layout drifts.
-    candidates.append(Path.home() / ".open-MaStR")
-    candidates.append(Path.home() / ".open-mastr")
-    return candidates
-
-
-def find_catalog_dir() -> Path | None:
-    """Return the directory containing *both* catalog files, if any."""
-    for base in _open_mastr_candidate_dirs():
-        if not base.is_dir():
-            continue
-        # A shallow (2-level) walk is enough: xml files sit directly in the
-        # download dir or its dataversion-* parent.
-        for root in [base, *sorted(base.glob("data-*"), key=lambda p: p.name)]:
-            if root.is_dir() and all((root / name).is_file() for name in REQUIRED):
-                return root
-    return None
 
 
 def run_open_mastr_download() -> None:
@@ -142,8 +104,6 @@ def main() -> int:
         )
 
     ensure_katalogkategorien_available(catalog_dir)
-    if not (catalog_dir / KATALOGWERTE).is_file():
-        raise SystemExit(f"[fetch-catalog] FATAL: {KATALOGWERTE} missing after download")
     print(f"[fetch-catalog] Ready: catalog files in {catalog_dir}")
     return 0
 

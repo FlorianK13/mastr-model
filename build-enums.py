@@ -68,12 +68,13 @@ from xml.etree import ElementTree as ET
 
 import yaml
 
+from catalog_dirs import KATALOGKATEGORIEN, KATALOGWERTE, find_catalog_dir
+
 SCHEMA = Path("linkml/mastr.yml")
 MARKER = "Katalogkategorie:"
 
 # Marker categories are matched against Katalogkategorie.Name with this much
 # effort. Names that still cannot be resolved are reported and left untouched.
-CATALOG_FILE_NAMES = ("Katalogkategorien.xml", "Katalogwerte.xml")
 
 
 # --------------------------------------------------------------------------- #
@@ -108,45 +109,21 @@ def _iter_records(path: Path, collection: str, record: str):
         yield {_local_tag(ch.tag): (ch.text or "").strip() for ch in el}
 
 
-def _find_catalog_files() -> tuple[Path, Path] | None:
-    """Locate (katalogkategorien, katalogwerte) under the open-mastr dir."""
-    roots = []
-    try:
-        from open_mastr.utils.config import get_output_dir
-    except Exception:
-        roots = []
-    else:
-        roots.append(Path(get_output_dir()))
-    roots += [Path.home() / ".open-MaStR", Path.home() / ".open-mastr"]
-
-    for root in roots:
-        if not root.is_dir():
-            continue
-        files = {n: root / n for n in CATALOG_FILE_NAMES if (root / n).is_file()}
-        if len(files) == 2:
-            return files["Katalogkategorien.xml"], files["Katalogwerte.xml"]
-        # Shallow search (data/xml_download, data/dataversion-*, ...).
-        for child in root.rglob("*.xml"):
-            files[child.name] = child
-            if len(files) == 2:
-                return files["Katalogkategorien.xml"], files["Katalogwerte.xml"]
-    return None
-
-
 def load_catalog() -> tuple[dict[int, str], dict[int, list[tuple[str, str]]]]:
     """Return (category_id -> name, category_id -> [(wert, id), ...]).
 
     The value table groups ``Katalogwerte`` by ``KatalogKategorieId``, keeping
     the Id of each value alongside its label.
     """
-    found = _find_catalog_files()
-    if found is None:
+    catalog_dir = find_catalog_dir()
+    if catalog_dir is None:
         raise SystemExit(
             "build-enums.py: could not find Katalogkategorien.xml and "
             "Katalogwerte.xml under the open-mastr data directory.\n"
             "Run `python fetch-catalog.py` first to populate them."
         )
-    kategorien_path, werte_path = found
+    kategorien_path = catalog_dir / KATALOGKATEGORIEN
+    werte_path = catalog_dir / KATALOGWERTE
 
     categories: dict[int, str] = {}
     for rec in _iter_records(kategorien_path, "Katalogkategorien", "Katalogkategorie"):
