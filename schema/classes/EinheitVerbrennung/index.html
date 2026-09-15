@@ -710,7 +710,7 @@
 <tr>
 <td><a href="../../slots/nameStromerzeugungseinheit/">nameStromerzeugungseinheit</a></td>
 <td>0..1 <br/> <a href="../../types/String/">String</a></td>
-<td>Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit</td>
+<td>Vom Betreiber frei wählbare Bezeichnung der Stromerzeugungseinheit.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -722,7 +722,7 @@
 <tr>
 <td><a href="../../slots/weicNv/">weicNv</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>W-Code der Stromerzeugungseinheit</td>
+<td>W-Code der Stromerzeugungseinheit. Nicht- vorhanden Flag</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -740,13 +740,13 @@
 <tr>
 <td><a href="../../slots/kraftwerksnummerNv/">kraftwerksnummerNv</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Bundesnetzagentur- Kraftwerksnummer</td>
+<td>Bundesnetzagentur- Kraftwerksnummer. Nicht- vorhanden Flag</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/energietraeger/">energietraeger</a></td>
 <td>0..1 <br/> <a href="../../enums/Energietraeger/">Energietraeger</a></td>
-<td>Energieträger der Einheit</td>
+<td>Energieträger der Einheit. Katalogkategorie: Energieträger</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -764,7 +764,7 @@
 <tr>
 <td><a href="../../slots/anschlussAnHoechstOderHochSpannung/">anschlussAnHoechstOderHochSpannung</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschl...</td>
+<td>Die Stromerzeugungseinheit ist an ein Höchst- oder Hochspannungsnetz angeschlossen</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -788,7 +788,7 @@
 <tr>
 <td><a href="../../slots/einspeisungsart/">einspeisungsart</a></td>
 <td>0..1 <br/> <a href="../../enums/Einspeisungsart/">Einspeisungsart</a></td>
-<td>Volleinspeisung oder Teileinspeisung</td>
+<td>Volleinspeisung oder Teileinspeisung. Katalogkategorie: Einspeisungsart</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -800,13 +800,13 @@
 <tr>
 <td><a href="../../slots/nameKraftwerk/">nameKraftwerk</a></td>
 <td>0..1 <br/> <a href="../../types/String/">String</a></td>
-<td>Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die...</td>
+<td>Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die Stromerzeugungseinheit ist.</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/nameKraftwerksblock/">nameKraftwerksblock</a></td>
 <td>0..1 <br/> <a href="../../types/String/">String</a></td>
-<td>Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die...</td>
+<td>Vom Betreiber frei wählbare Bezeichnung des Kraftwerksblocks, dessen Teil die Stromerzeugungseinheit ist.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -818,7 +818,7 @@
 <tr>
 <td><a href="../../slots/hauptbrennstoff/">hauptbrennstoff</a></td>
 <td>0..1 <br/> <a href="../../enums/Brennstoff/">Brennstoff</a></td>
-<td>Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt</td>
+<td>Welcher Einsatzstoff oder Brennstoff wird hauptsächlich benutzt. Katalogkategorie: VerbrennungBrennstoff</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -842,7 +842,7 @@
 <tr>
 <td><a href="../../slots/notstromaggregat/">notstromaggregat</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Angabe ob die Stromerzeugungseinheit zur Versorgung bei Stromnetzstörungen di...</td>
+<td>Angabe ob die Stromerzeugungseinheit zur Versorgung bei Stromnetzstörungen dient (Notstromaggregat)</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -854,13 +854,13 @@
 <tr>
 <td><a href="../../slots/einsatzort/">einsatzort</a></td>
 <td>0..1 <br/> <a href="../../enums/Einsatzort/">Einsatzort</a></td>
-<td>An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat be...</td>
+<td>An welchem Einsatzort wird die Stromerzeugungseinheit als Notstromaggregat betrieben. Katalogkategorie: Einsatzort</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../../slots/technologie/">technologie</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Technologie der Stromerzeugung</td>
+<td>Technologie der Stromerzeugung. Katalogkategorie: TechnologieVerbrennungsanlage</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -884,7 +884,7 @@
 <tr>
 <td><a href="../../slots/datumBaubeginn/">datumBaubeginn</a></td>
 <td>0..1 <br/> <a href="../../types/Date/">Date</a></td>
-<td>Tatsächlicher bzw</td>
+<td>Tatsächlicher bzw. geplanter Spatenstich auf der Baustelle</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -896,7 +896,7 @@
 <tr>
 <td><a href="../../slots/nettonennleistungDeutschland/">nettonennleistungDeutschland</a></td>
 <td>0..1 <br/> <a href="../../types/Float/">Float</a></td>
-<td>Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeu...</td>
+<td>Die höchste elektrische Dauerleistung unter Nennbedingungen dieser Stromerzeugungseinheit, die in ein deutsches Stromnetz eingespeist werden kann.</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -908,7 +908,7 @@
 <tr>
 <td><a href="../../slots/netzreserveZugeordnet/">netzreserveZugeordnet</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve n...</td>
+<td>Ist die Einheit - unter Beteiligung der Bundesnetzagentur - der Netzreserve nach EnWG zugeordnet</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -920,7 +920,7 @@
 <tr>
 <td><a href="../../slots/kapazitaetsreserveZugeordnet/">kapazitaetsreserveZugeordnet</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapa...</td>
+<td>Ist die Einheit - unter Beteiligung des Übertragungsnetzbetreibers - der Kapazitätsreserve nach dem KapResV zugeordnet?</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -950,7 +950,7 @@
 <tr>
 <td><a href="../../slots/netzbetreiberpruefungStatus/">netzbetreiberpruefungStatus</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde</td>
+<td>Der Status der letzten Netzbetreiberprüfung, insofern eine durchgeführt wurde. Systemkatalog: Status der Netzbetreiberprüfung</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
@@ -974,7 +974,7 @@
 <tr>
 <td><a href="../../slots/bundesland/">bundesland</a></td>
 <td>0..1 <br/> <a href="../../enums/BundeslaenderEinheiten/">BundeslaenderEinheiten</a></td>
-<td>Standort der Einheit: Bundesland</td>
+<td>Standort der Einheit: Bundesland. Katalogkategorie: BundesländerEinheit</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
@@ -1022,7 +1022,7 @@
 <tr>
 <td><a href="../../slots/strasseNichtGefunden/">strasseNichtGefunden</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stam...</td>
+<td>Angabe, dass die angegebene Straße nicht aus dem BKG- Adressdatenbestand stammt</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
@@ -1034,13 +1034,13 @@
 <tr>
 <td><a href="../../slots/hausnummerNv/">hausnummerNv</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Standort der Einheit: Hausnummer</td>
+<td>Standort der Einheit: Hausnummer. Nicht-vorhanden Flag</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/hausnummerNichtGefunden/">hausnummerNichtGefunden</a></td>
 <td>0..1 <br/> <a href="../../types/Integer/">Integer</a></td>
-<td>Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand ...</td>
+<td>Angabe, dass die angegebene Hausnummer nicht aus dem BKG- Adressdatenbestand stammt</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
@@ -1100,19 +1100,19 @@
 <tr>
 <td><a href="../../slots/einheitSystemstatus/">einheitSystemstatus</a></td>
 <td>0..1 <br/> <a href="../../enums/Systemstatus/">Systemstatus</a></td>
-<td>Systemstatus der Einheit</td>
+<td>Systemstatus der Einheit. Katalogkategorie: AnlagenSystemStatus</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/einheitBetriebsstatus/">einheitBetriebsstatus</a></td>
 <td>0..1 <br/> <a href="../../enums/Betriebsstatus/">Betriebsstatus</a></td>
-<td>Betriebsstatus der Einheit</td>
+<td>Betriebsstatus der Einheit. Katalogkategorie: Anlagenbetriebsstatus</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
 <td><a href="../../slots/bestandsanlageMastrNummer/">bestandsanlageMastrNummer</a></td>
 <td>0..1 <br/> <a href="../../types/String/">String</a></td>
-<td>Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltu...</td>
+<td>Angaben über optional vorhandene MaStR-Nummer aus der Bestandsanlagenverwaltung</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
@@ -1124,7 +1124,7 @@
 <tr>
 <td><a href="../../slots/altAnlagenbetreiberMastrNummer/">altAnlagenbetreiberMastrNummer</a></td>
 <td>0..1 <br/> <a href="../../types/String/">String</a></td>
-<td>MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel...</td>
+<td>MaStR-Nummer des ehemaligen Betreibers der Einheit, wenn ein Betreiberwechsel durchgeführt wurde</td>
 <td><a href="../Einheit/">Einheit</a></td>
 </tr>
 <tr>
