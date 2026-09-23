@@ -1,13 +1,8 @@
 site_name: Marktstammdatenregister (MaStR) Datenmodell
-site_description: LinkML-Datenmodell des Marktstammdatenregister (MaStR) Gesamtdatenexports
+site_description: Dokumentation des Marktstammdatenregister Datenmodells
 docs_dir: docs
-repo_name: mastr-model
+repo_name: mastr-docs
 repo_url: https://github.com/OpenEnergyPlatform/mastr-docs
-
-
-nav:
-  - Home: index.md
-  - Schema: schema/index.md
 
 
 theme:
@@ -34,13 +29,14 @@ theme:
     - search.suggest
     - search.highlight
     - content.code.copy
+    - toc.integrate
 
 markdown_extensions:
-  - admonition
   - tables
   - attr_list
   - md_in_html
-  - pymdownx.details
+  - toc:
+      toc_depth: 2-3
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
