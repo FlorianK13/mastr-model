@@ -21,6 +21,10 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+  logo: images/OpenEnergyFamily_Logo_OpenMaStR_no_name_grey.png
+  favicon: images/OpenEnergyFamily_Logo_OpenMaStR_no_name_grey.png
   features:
     - navigation.instant
     - navigation.tracking
@@ -45,3 +49,6 @@ markdown_extensions:
 
 plugins:
   - search
+
+copyright: |
+  &copy; <a href="https://reiner-lemoine-institut.de/"  target="_blank" rel="noopener">RLI</a> and <a href="https://www.offis.de/"  target="_blank" rel="noopener">OFFIS e.V.</a>
