@@ -1,8 +1,9 @@
 #!/bin/bash
 set -e
+cd "$(dirname "$0")"
 
 echo "=== Step 1: XSD preprocessing ==="
-python xsd-preprocessing.py
+python scripts/01-xsd-preprocessing.py
 
 echo "=== Step 2: Import XSD files to LinkML parts ==="
 mkdir -p linkml/parts
@@ -14,21 +15,21 @@ for xsd in xsd/*.xsd; do
 done
 
 echo "=== Step 3: Merge LinkML parts ==="
-python merge-linkml.py
+python scripts/02-merge-linkml.py
 
 echo "=== Step 4: Extract descriptions from PDF ==="
-python pdf-description-extraction.py
+python scripts/03-pdf-description-extraction.py
 
 echo "=== Step 5: Fetch MaStR catalog files (open-mastr) ==="
-python fetch-catalog.py
+python scripts/04-fetch-catalog.py
 
 echo "=== Step 6: Build Katalogkategorie enums ==="
-python build-enums.py
+python scripts/05-build-enums.py
 
 echo "=== Step 7: Extract base classes ==="
-python extract-base-classes.py
+python scripts/06-extract-base-classes.py
 
 echo "=== Step 8: Generate documentation ==="
-./gen-docs.sh
+scripts/gen-docs.sh
 
 echo "=== Done ==="

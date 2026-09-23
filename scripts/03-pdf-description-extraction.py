@@ -26,7 +26,7 @@ forms that do not exactly equal the schema's class names.
 
 Usage
 -----
-    python pdf-description-extraction.py \\
+    python scripts/03-pdf-description-extraction.py \\
         --pdf "Dokumentation MaStR Gesamtdatenexport.pdf" \\
         --yml linkml/mastr.yml
 """
@@ -42,7 +42,13 @@ import pdfplumber
 from ruamel.yaml import YAML
 
 ELEMENT_HEADING_RE = re.compile(r"Element:\s*(\S+)")
-BOILERPLATE_PREFIXES = ("MaStR Gesamtdatenexport", "Element:", "Dateiname:", "Revision", "Datum:")
+BOILERPLATE_PREFIXES = (
+    "MaStR Gesamtdatenexport",
+    "Element:",
+    "Dateiname:",
+    "Revision",
+    "Datum:",
+)
 ROW_TOLERANCE = 3  # px tolerance for clustering words onto the same visual line
 COLUMN_PAD = 2  # px slack on column boundaries: a column's content shares its
 # header word's left edge only up to sub-pixel float noise, so the first
@@ -133,8 +139,16 @@ def build_description_index(pdf_path: Path) -> dict[str, dict[str, str]]:
                     continue
 
                 name_x0, desc_x0, typ_x0 = cols
-                name_text = " ".join(w["text"] for w in line if name_x0 - COLUMN_PAD <= w["x0"] < desc_x0 - COLUMN_PAD).strip()
-                desc_text = " ".join(w["text"] for w in line if desc_x0 - COLUMN_PAD <= w["x0"] < typ_x0 - COLUMN_PAD).strip()
+                name_text = " ".join(
+                    w["text"]
+                    for w in line
+                    if name_x0 - COLUMN_PAD <= w["x0"] < desc_x0 - COLUMN_PAD
+                ).strip()
+                desc_text = " ".join(
+                    w["text"]
+                    for w in line
+                    if desc_x0 - COLUMN_PAD <= w["x0"] < typ_x0 - COLUMN_PAD
+                ).strip()
 
                 if name_text and name_text[0].isupper():
                     flush()
@@ -168,7 +182,9 @@ def normalize(name: str) -> str:
 CLASS_FUZZY_CUTOFF = 0.85  # difflib ratio needed to accept a fuzzy class match
 
 
-def match_class(class_name: str, index: dict[str, dict[str, str]]) -> dict[str, str] | None:
+def match_class(
+    class_name: str, index: dict[str, dict[str, str]]
+) -> dict[str, str] | None:
     """Find the PDF element block for a schema class name.
 
     Tries an exact normalized match first, then a fuzzy fallback to absorb
@@ -180,11 +196,15 @@ def match_class(class_name: str, index: dict[str, dict[str, str]]) -> dict[str, 
     target = normalize(class_name)
     if target in by_normalized:
         return by_normalized[target]
-    close = difflib.get_close_matches(target, list(by_normalized), n=1, cutoff=CLASS_FUZZY_CUTOFF)
+    close = difflib.get_close_matches(
+        target, list(by_normalized), n=1, cutoff=CLASS_FUZZY_CUTOFF
+    )
     return by_normalized[close[0]] if close else None
 
 
-def apply_descriptions(yml_path: Path, index: dict[str, dict[str, str]]) -> tuple[int, int]:
+def apply_descriptions(
+    yml_path: Path, index: dict[str, dict[str, str]]
+) -> tuple[int, int]:
     """Insert descriptions into the schema's classes/attributes in place.
 
     Returns (attributes_updated, classes_matched).
@@ -215,6 +235,7 @@ def apply_descriptions(yml_path: Path, index: dict[str, dict[str, str]]) -> tupl
 
 
 def main() -> None:
+    # TODO: Are argument parsers really necessary here? Instead default should just be the thing it looks for and if it is not there it fails
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--pdf",
@@ -232,7 +253,9 @@ def main() -> None:
 
     index = build_description_index(args.pdf)
     updated, classes_matched = apply_descriptions(args.yml, index)
-    print(f"Matched {classes_matched} class(es); updated {updated} attribute description(s) in {args.yml}")
+    print(
+        f"Matched {classes_matched} class(es); updated {updated} attribute description(s) in {args.yml}"
+    )
 
 
 if __name__ == "__main__":

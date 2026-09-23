@@ -27,8 +27,8 @@ succeeds.
 
 Usage
 -----
-    python xsd-preprocessing.py            # process all *.xsd in ./xsd
-    python xsd-preprocessing.py path/to.xsd path/to/other.xsd
+    python scripts/01-xsd-preprocessing.py            # process all *.xsd in ./xsd
+    python scripts/01-xsd-preprocessing.py path/to.xsd path/to/other.xsd
 """
 
 from __future__ import annotations
@@ -41,7 +41,7 @@ from pathlib import Path
 REPLACEMENT = "xs:integer"
 UNSUPPORTED_TYPES = ("xs:byte", "xs:short", "xs:long")
 
-XSD_DIR = Path(__file__).parent / "xsd"
+XSD_DIR = Path("xsd")
 
 
 def preprocess(path: Path) -> int:
@@ -59,6 +59,7 @@ def preprocess(path: Path) -> int:
 
 
 def main(argv: list[str]) -> None:
+    # TODO: is it really necessary to have argv for this here?
     if argv:
         paths = [Path(a) for a in argv]
     else:

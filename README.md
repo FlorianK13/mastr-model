@@ -11,17 +11,17 @@ The source data is the XSD schema files and the PDF documentation
 
 The build pipeline is:
 
-1. `xsd-preprocessing.py` patches the XSD files so schema-automator can import
-   them (replacing unsupported bounded integer types with `xs:integer`).
-2. `merge-linkml.py` merges the per-XSD LinkML schemas from `linkml/parts/` into
-   `linkml/mastr.yml`.
-3. `pdf-description-extraction.py` parses the PDF automatically and injects
-   attribute descriptions from the "Beschreibung" column into the matching
-   schema classes.
-4. `extract-base-classes.py` induces inheritance: it creates abstract `Einheit`
-   and `Anlage` base classes that hold attributes shared across the concrete
-   `Einheit*` and `Anlage*` classes, determined by identifying slots that appear
-   in multiple of these classes with identical definitions.
+1. `scripts/01-xsd-preprocessing.py` patches the XSD files so schema-automator can
+   import them (replacing unsupported bounded integer types with `xs:integer`).
+2. `scripts/02-merge-linkml.py` merges the per-XSD LinkML schemas from
+   `linkml/parts/` into `linkml/mastr.yml`.
+3. `scripts/03-pdf-description-extraction.py` parses the PDF automatically and
+   injects attribute descriptions from the "Beschreibung" column into the
+   matching schema classes.
+4. `scripts/06-extract-base-classes.py` induces inheritance: it creates abstract
+   `Einheit` and `Anlage` base classes that hold attributes shared across the
+   concrete `Einheit*` and `Anlage*` classes, determined by identifying slots
+   that appear in multiple of these classes with identical definitions.
 
 The schema is defined in `linkml/mastr.yml` as a LinkML schema. The reference
 pages under Schema (classes, slots,

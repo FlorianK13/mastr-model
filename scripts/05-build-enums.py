@@ -54,8 +54,8 @@ confidence:
 
 Usage
 -----
-    python fetch-catalog.py     # populate the catalog cache (prerequisite)
-    python build-enums.py       # rewrite linkml/mastr.yml in place
+    python scripts/04-fetch-catalog.py   # populate the catalog cache (prerequisite)
+    python scripts/05-build-enums.py     # rewrite linkml/mastr.yml in place
 """
 
 from __future__ import annotations
@@ -67,7 +67,6 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 import yaml
-
 from catalog_dirs import KATALOGKATEGORIEN, KATALOGWERTE, find_catalog_dir
 
 SCHEMA = Path("linkml/mastr.yml")
@@ -120,7 +119,7 @@ def load_catalog() -> tuple[dict[int, str], dict[int, list[tuple[str, str]]]]:
         raise SystemExit(
             "build-enums.py: could not find Katalogkategorien.xml and "
             "Katalogwerte.xml under the open-mastr data directory.\n"
-            "Run `python fetch-catalog.py` first to populate them."
+            "Run `python scripts/04-fetch-catalog.py` first to populate them."
         )
     kategorien_path = catalog_dir / KATALOGKATEGORIEN
     werte_path = catalog_dir / KATALOGWERTE
@@ -175,7 +174,9 @@ def _normalize(name: str) -> str:
     return re.sub(r"[^a-z0-9]", "", text)
 
 
-def _resolve_category(marker: str, categories: dict[int, str]) -> tuple[int | None, str]:
+def _resolve_category(
+    marker: str, categories: dict[int, str]
+) -> tuple[int | None, str]:
     """Match a marker name to a category.
 
     Returns ``(category_id, resolution)`` where resolution is one of
@@ -232,12 +233,17 @@ def _report(summary: dict) -> None:
     print(f"Unmatched (left unchanged): {len(summary['unmatched'])}", file=sys.stderr)
 
     if summary["ambiguous"] or summary["unmatched"]:
-        print("\nThe following marker categories could NOT be resolved to a "
-              "Katalogkategorie and are left as their existing range for manual "
-              "curation. Fix the marker in the PDF description or the category "
-              "naming, then re-run:", file=sys.stderr)
-        for resolution, names in (("ambiguous", summary["ambiguous"]),
-                                  ("unmatched", summary["unmatched"])):
+        print(
+            "\nThe following marker categories could NOT be resolved to a "
+            "Katalogkategorie and are left as their existing range for manual "
+            "curation. Fix the marker in the PDF description or the category "
+            "naming, then re-run:",
+            file=sys.stderr,
+        )
+        for resolution, names in (
+            ("ambiguous", summary["ambiguous"]),
+            ("unmatched", summary["unmatched"]),
+        ):
             for name in names:
                 print(f"  [{resolution}] {name}", file=sys.stderr)
         print("\nResolved markers (for reference):", file=sys.stderr)
@@ -285,9 +291,12 @@ def main() -> int:
         # sanitize to the same name do we disambiguate so no values are lost.
         existing_owner = enum_owner.get(enum_name)
         if existing_owner is not None and existing_owner != cat_id:
-            print(f"WARNING: enum name collision between categories "
-                  f"{existing_owner} and {cat_id}; disambiguating "
-                  f"{enum_name!r}", file=sys.stderr)
+            print(
+                f"WARNING: enum name collision between categories "
+                f"{existing_owner} and {cat_id}; disambiguating "
+                f"{enum_name!r}",
+                file=sys.stderr,
+            )
             enum_name = f"{enum_name}{cat_id}"
         if enum_name not in enums:
             enums[enum_name] = {"permissible_values": {k: v for k, v in payload}}
@@ -315,8 +324,10 @@ def main() -> int:
     SCHEMA.write_text(yaml.safe_dump(schema, sort_keys=False, allow_unicode=True))
 
     _report(summary)
-    print(f"build-enums.py: wrote {len(enums)} enums; rewrote {slots_rewritten} "
-          f"slot range(s) in {SCHEMA}")
+    print(
+        f"build-enums.py: wrote {len(enums)} enums; rewrote {slots_rewritten} "
+        f"slot range(s) in {SCHEMA}"
+    )
     return 0
 
 

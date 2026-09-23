@@ -1,6 +1,6 @@
 """Locate the MaStR catalog lookup files under the open-mastr data directory.
 
-Shared by fetch-catalog.py (populates the cache) and build-enums.py
+Shared by 04-fetch-catalog.py (populates the cache) and 05-build-enums.py
 (consumes it). The bulk download extracts the two XML lookup tables
 straight into ``<output_dir>/data/xml_download/``.
 """
