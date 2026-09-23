@@ -26,14 +26,14 @@ forms that do not exactly equal the schema's class names.
 
 Usage
 -----
-    python scripts/03-pdf-description-extraction.py \\
-        --pdf "Dokumentation MaStR Gesamtdatenexport.pdf" \\
-        --yml linkml/mastr.yml
+    python scripts/03-pdf-description-extraction.py
+
+Expects ``Dokumentation MaStR Gesamtdatenexport.pdf`` in the repo root and
+updates ``linkml/mastr.yml`` in place.
 """
 
 from __future__ import annotations
 
-import argparse
 import difflib
 import re
 from pathlib import Path
@@ -234,27 +234,15 @@ def apply_descriptions(
     return updated, classes_matched
 
 
-def main() -> None:
-    # TODO: Are argument parsers really necessary here? Instead default should just be the thing it looks for and if it is not there it fails
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--pdf",
-        type=Path,
-        default=Path("Dokumentation MaStR Gesamtdatenexport.pdf"),
-        help="Path to the MaStR documentation PDF.",
-    )
-    parser.add_argument(
-        "--yml",
-        type=Path,
-        default=Path("linkml/mastr.yml"),
-        help="LinkML schema to update in place.",
-    )
-    args = parser.parse_args()
+PDF_PATH = Path("Dokumentation MaStR Gesamtdatenexport.pdf")
+YML_PATH = Path("linkml/mastr.yml")
 
-    index = build_description_index(args.pdf)
-    updated, classes_matched = apply_descriptions(args.yml, index)
+
+def main() -> None:
+    index = build_description_index(PDF_PATH)
+    updated, classes_matched = apply_descriptions(YML_PATH, index)
     print(
-        f"Matched {classes_matched} class(es); updated {updated} attribute description(s) in {args.yml}"
+        f"Matched {classes_matched} class(es); updated {updated} attribute description(s) in {YML_PATH}"
     )
 
 

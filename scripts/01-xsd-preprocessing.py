@@ -28,12 +28,10 @@ succeeds.
 Usage
 -----
     python scripts/01-xsd-preprocessing.py            # process all *.xsd in ./xsd
-    python scripts/01-xsd-preprocessing.py path/to.xsd path/to/other.xsd
 """
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
 
 # XSD types that schema-automator cannot import -> equivalent type that it can.
@@ -58,12 +56,8 @@ def preprocess(path: Path) -> int:
     return count
 
 
-def main(argv: list[str]) -> None:
-    # TODO: is it really necessary to have argv for this here?
-    if argv:
-        paths = [Path(a) for a in argv]
-    else:
-        paths = sorted(XSD_DIR.glob("*.xsd"))
+def main() -> None:
+    paths = sorted(XSD_DIR.glob("*.xsd"))
 
     total = 0
     for path in paths:
@@ -76,4 +70,4 @@ def main(argv: list[str]) -> None:
 
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()
