@@ -8,7 +8,7 @@ python scripts/01-xsd-preprocessing.py
 echo "=== Step 2: Import XSD files to LinkML parts ==="
 mkdir -p linkml/parts
 rm -f linkml/parts/*.yml
-for xsd in xsd/*.xsd; do
+for xsd in sources/xsd/*.xsd; do
     name=$(basename "$xsd" .xsd)
     echo "Importing $xsd -> linkml/parts/${name}.yml"
     schemauto import-xsd "$xsd" -o "linkml/parts/${name}.yml"

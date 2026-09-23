@@ -20,8 +20,8 @@ are just range-restricted integers, substituting them is lossless for our
 purposes (LinkML does not model those bounds anyway). This script rewrites every
 such occurrence to ``xs:integer`` in-place so that, e.g.
 
-    schemauto import-xsd xsd/AnlagenEegWind.xsd -o wind.yml
-    schemauto import-xsd xsd/EinheitenWind.xsd -o wind_einheiten.yml
+    schemauto import-xsd sources/xsd/AnlagenEegWind.xsd -o wind.yml
+    schemauto import-xsd sources/xsd/EinheitenWind.xsd -o wind_einheiten.yml
 
 succeeds.
 
@@ -39,7 +39,7 @@ from pathlib import Path
 REPLACEMENT = "xs:integer"
 UNSUPPORTED_TYPES = ("xs:byte", "xs:short", "xs:long")
 
-XSD_DIR = Path("xsd")
+XSD_DIR = Path("sources/xsd")
 
 
 def preprocess(path: Path) -> int:

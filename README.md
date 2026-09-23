@@ -8,6 +8,8 @@ Marktstammdatenregister (MaStR) Gesamtdatenexport.
 The source data is the XSD schema files and the PDF documentation
 "Dokumentation des Exports" (Beschreibung des Exports) retrieved from the
 [Marktstammdatenregister](https://www.marktstammdatenregister.de/MaStR/Datendownload).
+These raw inputs live under `sources/` (`sources/xsd/` and
+`sources/Dokumentation MaStR Gesamtdatenexport.pdf`).
 
 The build pipeline is:
 
@@ -34,4 +36,4 @@ touched by the generator.
 The python scripts in this repo were created by LLMs.
 
 ## License
-The source docs files (xsd and Dokumentation MaStR Gesamtdatenexport.pdf) are from the Marktstammdatenregister, which is licensed under the **Datenlizenz Deutschland – Namensnennung – Version 2.0** (DL-DE-BY-2.0) | Copyright: [Marktstammdatenregister](https://www.marktstammdatenregister.de/MaStR) - © Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen | [DL-DE-BY-2.0](https://www.govdata.de/dl-de/by-2-0).
+The source docs files (`sources/xsd/` and `sources/Dokumentation MaStR Gesamtdatenexport.pdf`) are from the Marktstammdatenregister, which is licensed under the **Datenlizenz Deutschland – Namensnennung – Version 2.0** (DL-DE-BY-2.0) | Copyright: [Marktstammdatenregister](https://www.marktstammdatenregister.de/MaStR) - © Bundesnetzagentur für Elektrizität, Gas, Telekommunikation, Post und Eisenbahnen | [DL-DE-BY-2.0](https://www.govdata.de/dl-de/by-2-0).

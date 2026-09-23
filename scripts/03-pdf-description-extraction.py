@@ -28,8 +28,8 @@ Usage
 -----
     python scripts/03-pdf-description-extraction.py
 
-Expects ``Dokumentation MaStR Gesamtdatenexport.pdf`` in the repo root and
-updates ``linkml/mastr.yml`` in place.
+Expects ``sources/Dokumentation MaStR Gesamtdatenexport.pdf`` and updates
+``linkml/mastr.yml`` in place.
 """
 
 from __future__ import annotations
@@ -234,7 +234,7 @@ def apply_descriptions(
     return updated, classes_matched
 
 
-PDF_PATH = Path("Dokumentation MaStR Gesamtdatenexport.pdf")
+PDF_PATH = Path("sources/Dokumentation MaStR Gesamtdatenexport.pdf")
 YML_PATH = Path("linkml/mastr.yml")
 
 
