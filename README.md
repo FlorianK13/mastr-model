@@ -20,7 +20,13 @@ The build pipeline is:
 3. `scripts/03-pdf-description-extraction.py` parses the PDF automatically and
    injects attribute descriptions from the "Beschreibung" column into the
    matching schema classes.
-4. `scripts/06-extract-base-classes.py` induces inheritance: it creates abstract
+4. `scripts/04-fetch-catalog.py` streams the two MaStR catalog lookup tables
+   (`Katalogkategorien.xml` and `Katalogwerte.xml`) out of the remote export
+   archive.
+5. `scripts/05-build-enums.py` turns the "Katalogkategorie" attributes into
+   proper LinkML enumerations, using the catalog values fetched in step 4 as
+   their `permissible_values`.
+6. `scripts/06-extract-base-classes.py` induces inheritance: it creates abstract
    `Einheit` and `Anlage` base classes that hold attributes shared across the
    concrete `Einheit*` and `Anlage*` classes, determined by identifying slots
    that appear in multiple of these classes with identical definitions.
