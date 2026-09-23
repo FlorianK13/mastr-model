@@ -36,6 +36,7 @@ theme:
     - toc.integrate
 
 markdown_extensions:
+  - admonition
   - tables
   - attr_list
   - md_in_html
